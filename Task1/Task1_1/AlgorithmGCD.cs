@@ -6,6 +6,35 @@ namespace Task1_1ClassLibrary
 {
 	public class AlgorithmGCD
 	{
+		private int numOne;
+		private int numTwo;
+		private int numThree;
+		private int numFour;
+		public int NumOne { get { return numOne; } set { this.numOne = Math.Abs(value); } }
+		public int NumTwo { get { return numTwo; }  set { this.numTwo = Math.Abs(value); } }
+		public int NumThree { get { return numThree; } set { this.numThree = Math.Abs(value); } }
+		public int NumFour { get { return numFour; } set { this.numFour = Math.Abs(value); } }
+
+		public AlgorithmGCD(int numOne, int numTwo)
+		{
+			NumOne = numOne;
+			NumTwo = numTwo;
+		}
+
+		public AlgorithmGCD(int numOne, int numTwo, int numThree)
+		{
+			NumOne = numOne;
+			NumTwo = numTwo;
+			NumThree = numThree;
+		}
+		public AlgorithmGCD(int numOne, int numTwo, int numThree, int numFour)
+		{
+			NumOne = numOne;
+			NumTwo = numTwo;
+			NumThree = numThree;
+			NumFour = numFour;
+		}
+
 		/// <summary>
 		/// The Euclidean algorithm calculates (GCD) of two natural numbers numOne and numTwo.
 		/// </summary>
@@ -14,20 +43,22 @@ namespace Task1_1ClassLibrary
 		/// <returns>GCD of two numbers</returns>
 		public int EuclideanAlgorithm(int numOne, int numTwo)
 		{
-			numOne = Math.Abs(numOne);
-			numTwo = Math.Abs(numTwo);
-			while (numOne != numTwo)
+			//numOne = Math.Abs(numOne);
+			//numTwo = Math.Abs(numTwo);
+			
+
+			while (NumOne != NumTwo)
 			{
-				if (numOne > numTwo)
+				if (NumOne > NumTwo)
 				{
-					numOne = numOne - numTwo;
+					NumOne = NumOne - NumTwo;
 				}
 				else
 				{
-					numTwo = numTwo- numOne;
+					NumTwo = NumTwo- NumOne;
 				}
 			}
-			return numOne;
+			return NumOne;
 		}
 
 		/// <summary>
@@ -39,11 +70,13 @@ namespace Task1_1ClassLibrary
 		/// <returns>GCD of three numbers</returns>
 		public int EuclideanAlgorithm(int numOne, int numTwo, int numThree)
 		{
-			numOne = Math.Abs(numOne);
-			numTwo = Math.Abs(numTwo);
-			numThree = Math.Abs(numThree);
-			int tempNumb = EuclideanAlgorithm(numOne, numTwo);
-			int gcdThreeNumb = EuclideanAlgorithm(tempNumb, numThree);
+			//numOne = Math.Abs(numOne);
+			//numTwo = Math.Abs(numTwo);
+			//numThree = Math.Abs(numThree);
+			int gcdTwoNumb = EuclideanAlgorithm(numOne, numTwo);
+			numOne = gcdTwoNumb;
+			NumTwo = numThree;
+			int gcdThreeNumb = EuclideanAlgorithm(numOne, numThree);
 			return gcdThreeNumb;
 
 		}
@@ -57,15 +90,83 @@ namespace Task1_1ClassLibrary
 		/// <param name="numFour"></param>
 		/// <returns>GCD of four numbers</returns>
 		public int EuclideanAlgorithm(int numOne, int numTwo, int numThree, int numFour)
-		{
-			numOne = Math.Abs(numOne);
-			numTwo = Math.Abs(numTwo);
-			numThree = Math.Abs(numThree);
-			numFour = Math.Abs(numFour);
+		{	
 			int gcdTwoNumb = EuclideanAlgorithm(numOne, numTwo);
+			numOne = gcdTwoNumb;
+			NumTwo = numThree;
 			int gcdThreeNumb = EuclideanAlgorithm(gcdTwoNumb, numThree);
+			NumOne = gcdThreeNumb;
+			NumTwo = numFour;
 			int gcdFourNumb = EuclideanAlgorithm(gcdThreeNumb, numFour);
 			return gcdFourNumb;
 		}
+
+		/// <summary>
+		/// The method calculates (GCD) of two natural numbers numOne, numTwo.
+		/// </summary>
+		/// <param name="NumOne">number one</param>
+		/// <param name="NumTwo">number two</param>
+		/// <returns>GCD of four numbers</returns>
+		public int SteinsAlgorithm(int numOne, int numTwo)
+		{
+			int gcd = 1;
+			int tmp;
+			if (this.NumOne == 0)
+			{
+				return this.NumTwo;
+			}
+			if (this.NumTwo == 0)
+			{
+				return this.NumOne;
+			}
+			if (this.NumOne == this.NumTwo)
+			{
+				return this.NumOne;
+			}
+			if (this.NumOne == 1 || this.NumTwo == 1)
+			{
+				return 1;
+			}
+			while (this.NumOne != 0 && this.NumTwo != 0)
+			{
+
+				if (NumOne % 2 == 0 && NumTwo % 2 == 0)
+				{
+					gcd *= 2;
+					NumOne /= 2;
+					NumTwo /= 2;
+					continue;
+				}
+				if (NumOne % 2 == 0 && NumTwo % 2 != 0)
+				{
+					NumOne /= 2;
+					continue;
+				}
+				if (NumOne % 2 != 0 && NumTwo % 2 == 0)
+				{
+					NumTwo /= 2;
+					continue;
+				}
+				if (NumOne > NumTwo)
+				{
+					tmp = NumOne;
+					NumOne = NumTwo;
+					NumTwo = tmp;
+				}
+				tmp = NumOne;
+				NumOne = (NumTwo - NumOne) / 2;
+				NumTwo = tmp;
+			}
+			if (NumOne == 0)
+			{
+				return gcd * NumTwo;
+			}
+			else
+			{
+				return NumOne;
+			}
+		}
+
+
 	}
 }
