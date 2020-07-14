@@ -10,6 +10,7 @@ namespace Task1_1ClassLibrary
 		private int numTwo;
 		private int numThree;
 		private int numFour;
+		public double elapsedTime;
 		public int NumOne { get { return numOne; } set { this.numOne = Math.Abs(value); } }
 		public int NumTwo { get { return numTwo; }  set { this.numTwo = Math.Abs(value); } }
 		public int NumThree { get { return numThree; } set { this.numThree = Math.Abs(value); } }
@@ -17,6 +18,13 @@ namespace Task1_1ClassLibrary
 
 		public AlgorithmGCD(int numOne, int numTwo)
 		{
+			NumOne = numOne;
+			NumTwo = numTwo;
+		}
+		
+		public AlgorithmGCD(int numOne, int numTwo,out double elapsedTime)
+		{
+			elapsedTime = 0;
 			NumOne = numOne;
 			NumTwo = numTwo;
 		}
@@ -106,25 +114,36 @@ namespace Task1_1ClassLibrary
 		/// </summary>
 		/// <param name="NumOne">number one</param>
 		/// <param name="NumTwo">number two</param>
+		/// <param name="elapsedTime">elapsedtime</param>
 		/// <returns>GCD of four numbers</returns>
-		public int SteinsAlgorithm(int numOne, int numTwo)
+		public int SteinsAlgorithm(int numOne, int numTwo, out double elapsedTime)
 		{
+			var watch = new Stopwatch();
+			watch.Start();
 			int gcd = 1;
 			int tmp;
 			if (this.NumOne == 0)
 			{
+				watch.Stop();
+				elapsedTime = watch.ElapsedMilliseconds;
 				return this.NumTwo;
 			}
 			if (this.NumTwo == 0)
 			{
+				watch.Stop();
+				elapsedTime = watch.ElapsedMilliseconds;
 				return this.NumOne;
 			}
 			if (this.NumOne == this.NumTwo)
 			{
+				watch.Stop();
+				elapsedTime = watch.ElapsedMilliseconds;
 				return this.NumOne;
 			}
 			if (this.NumOne == 1 || this.NumTwo == 1)
 			{
+				watch.Stop();
+				elapsedTime = watch.ElapsedMilliseconds;
 				return 1;
 			}
 			while (this.NumOne != 0 && this.NumTwo != 0)
@@ -159,10 +178,14 @@ namespace Task1_1ClassLibrary
 			}
 			if (NumOne == 0)
 			{
+				watch.Stop();
+				elapsedTime = watch.ElapsedMilliseconds;
 				return gcd * NumTwo;
 			}
 			else
 			{
+				watch.Stop();
+				elapsedTime = watch.ElapsedMilliseconds;
 				return NumOne;
 			}
 		}
