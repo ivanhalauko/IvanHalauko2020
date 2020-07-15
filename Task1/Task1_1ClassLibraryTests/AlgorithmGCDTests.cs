@@ -1,10 +1,7 @@
 ﻿using NUnit.Framework;
-using Task1_1ClassLibrary;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Task1_1ClassLibrary;
 
 namespace Task1_1ClassLibrary.Tests
 {
@@ -88,5 +85,68 @@ namespace Task1_1ClassLibrary.Tests
 			var calculator = new AlgorithmGCD(numOne, numTwo);//,out elapsedTime);
 			return calculator.SteinsAlgorithm(numOne, numTwo, out elapsedTime);
 		}
+
+		/// <summary>
+		/// Test check up method's Stein result of three numbers.
+		/// </summary>
+		/// <param name="numOne"></param>
+		/// <param name="numTwo"></param>
+		/// <param name="numThree"></param>
+		/// <returns>GCD 3 numbers result</returns>
+		[TestCase(200, 100,10, ExpectedResult = 10, TestName = "GivenSteinsAlgorithm_WhenThreeTwoNumb_200_100_10_ThenIs10")]
+		[TestCase(16, 8,4, ExpectedResult = 4, TestName = "GivenSteinsAlgorithm_WhenForThreeNumb_16_8_4_ThenIs4")]
+		[TestCase(-200, -100,-10, ExpectedResult = 10, TestName = "GivenSteinsAlgorithm_WhenForThreeNegativeNumb_-200_-100_-10_ThenIs10")]
+		[TestCase(-16, -8,-4, ExpectedResult = 4, TestName = "GivenSteinsAlgorithm_WhenForThreeNegativeNumb_-16_-8_-4_ThenIs4")]
+		[TestCase(-16, 8,4, ExpectedResult = 4, TestName = "GivenSteinsAlgorithm_WhenForThreeNumbNegativeAndPositive_-16_8_4_ThenIs4")]
+		[TestCase(-4, 8,2, ExpectedResult = 2, TestName = "GivenSteinsAlgorithm_WhenForThreeNumbNegativeAndPositive_-4_8_2_ThenIs2")]
+		public int SteinsAlgorithmTest(int numOne, int numTwo,int numThree) //, out double elapsedTime)
+		{
+			double elapsedTime;
+			var calculator = new AlgorithmGCD(numOne, numTwo, numThree);//,out elapsedTime);
+			return calculator.SteinsAlgorithm(numOne, numTwo,numThree, out elapsedTime);
+		}
+
+		/// <summary>
+		/// Test check up method's Stein result of four numbers.
+		/// </summary>
+		/// <param name="numOne"></param>
+		/// <param name="numTwo"></param>
+		/// <param name="numThree"></param>
+		/// <param name="numFour"></param>
+		/// <returns>GCD 4 numbers result</returns>
+		[TestCase(200, 100, 10,5, ExpectedResult = 5, TestName = "GivenSteinsAlgorithm_WhenThreeTwoNumb_200_100_10_5_ThenIs5")]
+		[TestCase(16, 8, 4, ExpectedResult = 4, TestName = "GivenSteinsAlgorithm_WhenForThreeNumb_16_8_4_ThenIs4")]
+		[TestCase(-200, -100, -10,-5, ExpectedResult = 5, TestName = "GivenSteinsAlgorithm_WhenForThreeNegativeNumb_-200_-100_-10_-5_ThenIs5")]
+		[TestCase(-16, -8, -4,-2, ExpectedResult = 2, TestName = "GivenSteinsAlgorithm_WhenForThreeNegativeNumb_-16_-8_-4_-2_ThenIs2")]
+		[TestCase(-16, 8, 4,2, ExpectedResult = 2, TestName = "GivenSteinsAlgorithm_WhenForThreeNumbNegativeAndPositive_-16_8_4_2_ThenIs2")]
+		[TestCase(-4, 8, 2,6, ExpectedResult = 2, TestName = "GivenSteinsAlgorithm_WhenForThreeNumbNegativeAndPositive_-4_8_2_6_ThenIs2")]
+		public int SteinsAlgorithmTest(int numOne, int numTwo, int numThree, int numFour) //, out double elapsedTime)
+		{
+			double elapsedTime;
+			var calculator = new AlgorithmGCD(numOne, numTwo, numThree,numFour);//,out elapsedTime);
+			return calculator.SteinsAlgorithm(numOne, numTwo, numThree,numFour, out elapsedTime);
+		}
+
+		/// <summary>
+		/// A check is performed on the amount of filled data in the list, depending on the number of GCD.
+		/// </summary>
+		[Test]
+		public void GivenPrepareDataForHistogram_ForTwoParamsWhenOutIsOne()
+		{
+			// Arrange
+			List<DataForTheGraph> dataForTheGraph = new List<DataForTheGraph>();
+
+			List<DataForTheGraph> actual = new AlgorithmGCD(2,4);
+			String numParams = "Number of Gcd parameters: " + 2;
+
+			// Act
+			dataForTheGraph.Add(new DataForTheGraph(numParams, 0, 0));
+			var expectedOne = dataForTheGraph.Count;
+
+			// Assert
+			Assert.AreEqual(expectedOne, actual.Count);
+		}
+
+
 	}
 }

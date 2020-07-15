@@ -2,7 +2,7 @@
 
 namespace Task1_1ClassLibrary
 {
-	class DataForTheGraph
+	public class DataForTheGraph
 	{
 		public string QuantityOfParam { get; set; }
 		public double ElapsedTimeSteinsAlgorithm { get; set; }
