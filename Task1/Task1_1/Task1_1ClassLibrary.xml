@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task1_1ClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="F:Task1_1ClassLibrary.AlgorithmGCD.numOne">
+            <summary>
+            Field numOne 
+            </summary>
+        </member>
+        <member name="F:Task1_1ClassLibrary.AlgorithmGCD.numTwo">
+            <summary>
+            Field numTwo
+            </summary>
+        </member>
+        <member name="F:Task1_1ClassLibrary.AlgorithmGCD.numThree">
+            <summary>
+            Field numThree
+            </summary>
+        </member>
+        <member name="F:Task1_1ClassLibrary.AlgorithmGCD.numFour">
+            <summary>
+            Field numFour
+            </summary>
+        </member>
+        <member name="P:Task1_1ClassLibrary.AlgorithmGCD.NumOne">
+            <summary>
+            Properti NumOne
+            </summary>
+        </member>
+        <member name="P:Task1_1ClassLibrary.AlgorithmGCD.NumTwo">
+            <summary>
+            Properti NumTwo
+            </summary>
+        </member>
+        <member name="P:Task1_1ClassLibrary.AlgorithmGCD.NumThree">
+            <summary>
+            Properti NumThree
+            </summary>
+        </member>
+        <member name="P:Task1_1ClassLibrary.AlgorithmGCD.NumFour">
+            <summary>
+            Properti NumFour
+            </summary>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor for two parameters
+            </summary>
+            <param name="numOne"></param>
+            <param name="numTwo"></param>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor for three parameters
+            </summary>
+            <param name="numOne"></param>
+            <param name="numTwo"></param>
+            <param name="numThree"></param>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor for four parameters
+            </summary>
+            <param name="numOne"></param>
+            <param name="numTwo"></param>
+            <param name="numThree"></param>
+            <param name="numFour"></param>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.EuclideanAlgorithm(System.Int32,System.Int32,System.Double@)">
+            <summary>
+            The Euclidean algorithm calculates (GCD) of two natural numbers numOne and numTwo.
+            </summary>
+            <param name="numOne"></param>
+            <param name="numTwo"></param>
+            <param name="elapsedTime">elapsedtime</param>
+            <returns>GCD of two numbers</returns>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.EuclideanAlgorithm(System.Int32,System.Int32,System.Int32,System.Double@)">
+            <summary>
+            The method calculates (GCD) of three natural numbers numOne, numTwo, numThree.
+            </summary>
+            <param name="numOne">number one</param>
+            <param name="numTwo">number two</param>
+            <param name="numThree">number three</param>
+            <param name="elapsedTime">elapsedtime</param>
+            <returns>GCD of three numbers</returns>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.EuclideanAlgorithm(System.Int32,System.Int32,System.Int32,System.Int32,System.Double@)">
+            <summary>
+            The method calculates (GCD) of four natural numbers numOne, numTwo, numThree, numFour.
+            </summary>
+            <param name="numOne"></param>
+            <param name="numTwo"></param>
+            <param name="numThree"></param>
+            <param name="numFour"></param>
+            <param name="elapsedTime">elapsedtime</param>
+            <returns>GCD of four numbers</returns>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.SteinsAlgorithm(System.Int32,System.Int32,System.Double@)">
+            <summary>
+            The method calculates (GCD) of two natural numbers numOne, numTwo.
+            </summary>
+            <param name="NumOne">number one</param>
+            <param name="NumTwo">number two</param>
+            <param name="elapsedTime">elapsedtime</param>
+            <returns>GCD of four numbers</returns>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.SteinsAlgorithm(System.Int32,System.Int32,System.Int32,System.Double@)">
+            <summary>
+            The method calculates (GCD) of four natural numbers numOne, numTwo, numThree and numFour.
+            </summary>
+            <param name="numOne">number one</param>
+            <param name="numTwo">number two</param>
+            <param name="numThree">number three</param>
+            <param name="elapsedTime">elapsed time</param>
+            <returns>GCD of four numbers</returns>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.SteinsAlgorithm(System.Int32,System.Int32,System.Int32,System.Int32,System.Double@)">
+            <summary>
+            The method calculates (GCD) of four natural numbers numOne, numTwo, numThree and numFour.
+            </summary>
+            <param name="numOne">number one</param>
+            <param name="numTwo">number two</param>
+            <param name="numThree">number three</param>
+            <param name="numFour">number four</param>
+            <param name="elapsedTime">elapsed time</param>
+            <returns>GCD of four numbers</returns>
+        </member>
+        <member name="M:Task1_1ClassLibrary.AlgorithmGCD.PrepareDataForTheGraph(System.Int32[])">
+            <summary>
+            The method prepare data for graphical analysis
+            </summary>
+            <returns>prepare data for histogramm</returns>
+        </member>
+    </members>
+</doc>

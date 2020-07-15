@@ -7,27 +7,70 @@ namespace Task1_1ClassLibrary
 {
 	public class AlgorithmGCD
 	{
+		/// <summary>
+		/// Field numOne 
+		/// </summary>
 		private int numOne;
+		/// <summary>
+		/// Field numTwo
+		/// </summary>
 		private int numTwo;
+		/// <summary>
+		/// Field numThree
+		/// </summary>
 		private int numThree;
+		/// <summary>
+		/// Field numFour
+		/// </summary>
 		private int numFour;
+		/// <summary>
+		/// Properti NumOne
+		/// </summary>
 		public int NumOne { get { return numOne; } set { this.numOne = Math.Abs(value); } }
+		/// <summary>
+		/// Properti NumTwo
+		/// </summary>
 		public int NumTwo { get { return numTwo; }  set { this.numTwo = Math.Abs(value); } }
+		/// <summary>
+		/// Properti NumThree
+		/// </summary>
 		public int NumThree { get { return numThree; } set { this.numThree = Math.Abs(value); } }
+		/// <summary>
+		/// Properti NumFour
+		/// </summary>
 		public int NumFour { get { return numFour; } set { this.numFour = Math.Abs(value); } }
 
+		/// <summary>
+		/// Constructor for two parameters
+		/// </summary>
+		/// <param name="numOne"></param>
+		/// <param name="numTwo"></param>
 		public AlgorithmGCD(int numOne, int numTwo)
 		{
 			NumOne = numOne;
 			NumTwo = numTwo;
 		}
-		
+
+		/// <summary>
+		/// Constructor for three parameters
+		/// </summary>
+		/// <param name="numOne"></param>
+		/// <param name="numTwo"></param>
+		/// <param name="numThree"></param>
 		public AlgorithmGCD(int numOne, int numTwo, int numThree)
 		{
 			NumOne = numOne;
 			NumTwo = numTwo;
 			NumThree = numThree;
 		}
+
+		/// <summary>
+		/// Constructor for four parameters
+		/// </summary>
+		/// <param name="numOne"></param>
+		/// <param name="numTwo"></param>
+		/// <param name="numThree"></param>
+		/// <param name="numFour"></param>
 		public AlgorithmGCD(int numOne, int numTwo, int numThree, int numFour)
 		{
 			NumOne = numOne;
