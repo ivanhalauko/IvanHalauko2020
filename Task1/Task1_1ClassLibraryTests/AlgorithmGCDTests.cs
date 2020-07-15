@@ -25,8 +25,9 @@ namespace Task1_1ClassLibrary.Tests
 		[TestCase(-4, 8, ExpectedResult = 4, TestName = "GivenEuclideanAlgorithm_WhenForTwoNumbNegativeAndPositive_-4_8_ThenIs4")]
 		public int EuclideanAlgorithm_ForTwoNumb_Test(int numOne, int numTwo)
 		{
+			double elapsedTime;
 			var calculator = new AlgorithmGCD(numOne,numTwo);
-			return calculator.EuclideanAlgorithm(numOne, numTwo);
+			return calculator.EuclideanAlgorithm(numOne, numTwo, out elapsedTime);
 		}
 
 		/// <summary>
@@ -44,8 +45,9 @@ namespace Task1_1ClassLibrary.Tests
 		[TestCase(-4, -8, 2, ExpectedResult = 2, TestName = "GivenEuclideanAlgorithm_WhenForThreeNegativeAndPositiveNumb_-4_-8_2_ThenIs2")]
 		public int EuclideanAlgorithmTest(int numOne, int numTwo, int numThree)
 		{
+			double elapsedTime;
 			var calculator = new AlgorithmGCD(numOne, numTwo, numThree);
-			return calculator.EuclideanAlgorithm(numOne, numTwo, numThree);
+			return calculator.EuclideanAlgorithm(numOne, numTwo, numThree, out elapsedTime);
 		}
 
 		/// <summary>
@@ -63,8 +65,9 @@ namespace Task1_1ClassLibrary.Tests
 		[TestCase(-4, -8, 2, 10, ExpectedResult = 2, TestName = "GivenEuclideanAlgorithm_WhenForFourNegativeAndPositiveNumb_-4_-8_2_10_ThenIs2")]
 		public int EuclideanAlgorithmTest(int numOne, int numTwo, int numThree, int numFour)
 		{
+			double elapsedTime;
 			var calculator = new AlgorithmGCD(numOne, numTwo, numThree, numFour);
-			return calculator.EuclideanAlgorithm(numOne, numTwo, numThree, numFour);
+			return calculator.EuclideanAlgorithm(numOne, numTwo, numThree, numFour, out elapsedTime);
 		}
 
 		/// <summary>
@@ -73,15 +76,16 @@ namespace Task1_1ClassLibrary.Tests
 		/// <param name="numOne"></param>
 		/// <param name="numTwo"></param>
 		/// <returns>GCD 2 numbers result</returns>
-		[TestCase(200, 100,0.0, ExpectedResult = 100, TestName = "GivenSteinsAlgorithm_WhenForTwoNumb_200_100_ThenIs100")]
-		[TestCase(16, 8, 0.0, ExpectedResult = 8, TestName = "GivenSteinsAlgorithm_WhenForTwoNumb_16_8_ThenIs8")]
-		[TestCase(-200, -100, 0.0, ExpectedResult = 100, TestName = "GivenSteinsAlgorithm_WhenForTwoNegativeNumb_-200_-100_ThenIs100")]
-		[TestCase(-16, -8, 0.0, ExpectedResult = 8, TestName = "GivenSteinsAlgorithm_WhenForTwoNegativeNumb_-16_-8_ThenIs8")]
-		[TestCase(-16, 8, 0.0, ExpectedResult = 8, TestName = "GivenSteinsAlgorithm_WhenForTwoNumbNegativeAndPositive_-16_8_ThenIs8")]
-		[TestCase(-4, 8, 0.0, ExpectedResult = 4, TestName = "GivenSteinsAlgorithm_WhenForTwoNumbNegativeAndPositive_-4_8_ThenIs4")]
-		public int SteinsAlgorithmTest(int numOne, int numTwo, out double elapsedTime)
+		[TestCase(200, 100, ExpectedResult = 100, TestName = "GivenSteinsAlgorithm_WhenForTwoNumb_200_100_ThenIs100")]
+		[TestCase(16, 8, ExpectedResult = 8, TestName = "GivenSteinsAlgorithm_WhenForTwoNumb_16_8_ThenIs8")]
+		[TestCase(-200, -100, ExpectedResult = 100, TestName = "GivenSteinsAlgorithm_WhenForTwoNegativeNumb_-200_-100_ThenIs100")]
+		[TestCase(-16, -8, ExpectedResult = 8, TestName = "GivenSteinsAlgorithm_WhenForTwoNegativeNumb_-16_-8_ThenIs8")]
+		[TestCase(-16, 8, ExpectedResult = 8, TestName = "GivenSteinsAlgorithm_WhenForTwoNumbNegativeAndPositive_-16_8_ThenIs8")]
+		[TestCase(-4, 8, ExpectedResult = 4, TestName = "GivenSteinsAlgorithm_WhenForTwoNumbNegativeAndPositive_-4_8_ThenIs4")]
+		public int SteinsAlgorithmTest(int numOne, int numTwo) //, out double elapsedTime)
 		{
-			var calculator = new AlgorithmGCD(numOne, numTwo,out elapsedTime);
+			double elapsedTime;
+			var calculator = new AlgorithmGCD(numOne, numTwo);//,out elapsedTime);
 			return calculator.SteinsAlgorithm(numOne, numTwo, out elapsedTime);
 		}
 	}

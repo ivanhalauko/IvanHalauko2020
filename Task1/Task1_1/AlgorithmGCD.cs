@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Task1_1ClassLibrary
 {
@@ -10,7 +11,6 @@ namespace Task1_1ClassLibrary
 		private int numTwo;
 		private int numThree;
 		private int numFour;
-		public double elapsedTime;
 		public int NumOne { get { return numOne; } set { this.numOne = Math.Abs(value); } }
 		public int NumTwo { get { return numTwo; }  set { this.numTwo = Math.Abs(value); } }
 		public int NumThree { get { return numThree; } set { this.numThree = Math.Abs(value); } }
@@ -22,13 +22,6 @@ namespace Task1_1ClassLibrary
 			NumTwo = numTwo;
 		}
 		
-		public AlgorithmGCD(int numOne, int numTwo,out double elapsedTime)
-		{
-			elapsedTime = 0;
-			NumOne = numOne;
-			NumTwo = numTwo;
-		}
-
 		public AlgorithmGCD(int numOne, int numTwo, int numThree)
 		{
 			NumOne = numOne;
@@ -48,13 +41,13 @@ namespace Task1_1ClassLibrary
 		/// </summary>
 		/// <param name="numOne"></param>
 		/// <param name="numTwo"></param>
+		/// <param name="elapsedTime">elapsedtime</param>
 		/// <returns>GCD of two numbers</returns>
-		public int EuclideanAlgorithm(int numOne, int numTwo)
+		public int EuclideanAlgorithm(int numOne, int numTwo, out double elapsedTime)
 		{
-			//numOne = Math.Abs(numOne);
-			//numTwo = Math.Abs(numTwo);
-			
-
+			var watch = new Stopwatch();
+			watch.Start();
+			//Thread.Sleep(1000);
 			while (NumOne != NumTwo)
 			{
 				if (NumOne > NumTwo)
@@ -66,6 +59,8 @@ namespace Task1_1ClassLibrary
 					NumTwo = NumTwo- NumOne;
 				}
 			}
+			watch.Stop();
+			elapsedTime = watch.Elapsed.TotalMilliseconds;
 			return NumOne;
 		}
 
@@ -75,16 +70,15 @@ namespace Task1_1ClassLibrary
 		/// <param name="numOne">number one</param>
 		/// <param name="numTwo">number two</param>
 		/// <param name="numThree">number three</param>
+		/// <param name="elapsedTime">elapsedtime</param>
 		/// <returns>GCD of three numbers</returns>
-		public int EuclideanAlgorithm(int numOne, int numTwo, int numThree)
+		public int EuclideanAlgorithm(int numOne, int numTwo, int numThree, out double elapsedTime)
 		{
-			//numOne = Math.Abs(numOne);
-			//numTwo = Math.Abs(numTwo);
-			//numThree = Math.Abs(numThree);
-			int gcdTwoNumb = EuclideanAlgorithm(numOne, numTwo);
+			int gcdTwoNumb = EuclideanAlgorithm(numOne, numTwo, out elapsedTime);
 			numOne = gcdTwoNumb;
 			NumTwo = numThree;
-			int gcdThreeNumb = EuclideanAlgorithm(numOne, numThree);
+			//Thread.Sleep(1000);
+			int gcdThreeNumb = EuclideanAlgorithm(numOne, numThree, out elapsedTime);
 			return gcdThreeNumb;
 
 		}
@@ -96,16 +90,17 @@ namespace Task1_1ClassLibrary
 		/// <param name="numTwo"></param>
 		/// <param name="numThree"></param>
 		/// <param name="numFour"></param>
+		/// <param name="elapsedTime">elapsedtime</param>
 		/// <returns>GCD of four numbers</returns>
-		public int EuclideanAlgorithm(int numOne, int numTwo, int numThree, int numFour)
+		public int EuclideanAlgorithm(int numOne, int numTwo, int numThree, int numFour, out double elapsedTime)
 		{	
-			int gcdTwoNumb = EuclideanAlgorithm(numOne, numTwo);
+			int gcdTwoNumb = EuclideanAlgorithm(numOne, numTwo, out elapsedTime);
 			numOne = gcdTwoNumb;
 			NumTwo = numThree;
-			int gcdThreeNumb = EuclideanAlgorithm(gcdTwoNumb, numThree);
+			int gcdThreeNumb = EuclideanAlgorithm(gcdTwoNumb, numThree, out elapsedTime);
 			NumOne = gcdThreeNumb;
 			NumTwo = numFour;
-			int gcdFourNumb = EuclideanAlgorithm(gcdThreeNumb, numFour);
+			int gcdFourNumb = EuclideanAlgorithm(gcdThreeNumb, numFour, out elapsedTime);
 			return gcdFourNumb;
 		}
 
@@ -120,6 +115,7 @@ namespace Task1_1ClassLibrary
 		{
 			var watch = new Stopwatch();
 			watch.Start();
+			//Thread.Sleep(1000);
 			int gcd = 1;
 			int tmp;
 			if (this.NumOne == 0)
@@ -185,7 +181,7 @@ namespace Task1_1ClassLibrary
 			else
 			{
 				watch.Stop();
-				elapsedTime = watch.ElapsedMilliseconds;
+				elapsedTime = watch.Elapsed.TotalMilliseconds;
 				return NumOne;
 			}
 		}
