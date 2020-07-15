@@ -186,7 +186,44 @@ namespace Task1_1ClassLibrary
 			}
 		}
 
+		/// <summary>
+		/// The method calculates (GCD) of four natural numbers numOne, numTwo, numThree and numFour.
+		/// </summary>
+		/// <param name="numOne">number one</param>
+		/// <param name="numTwo">number two</param>
+		/// <param name="numThree">number three</param>
+		/// <param name="elapsedTime">elapsed time</param>
+		/// <returns>GCD of four numbers</returns>
+		public int SteinsAlgorithm(int numOne, int numTwo, int numThree, out double elapsedTime)
+		{
+			int gcdTwoNumb = SteinsAlgorithm(numOne, numTwo, out elapsedTime);
+			numOne = gcdTwoNumb;
+			NumTwo = numThree;
+			//Thread.Sleep(1000);
+			int gcdThreeNumb = SteinsAlgorithm(numOne, numThree, out elapsedTime);
+			return gcdThreeNumb;
+		}
 
+		/// <summary>
+		/// The method calculates (GCD) of four natural numbers numOne, numTwo, numThree and numFour.
+		/// </summary>
+		/// <param name="numOne">number one</param>
+		/// <param name="numTwo">number two</param>
+		/// <param name="numThree">number three</param>
+		/// <param name="numFour">number four</param>
+		/// <param name="elapsedTime">elapsed time</param>
+		/// <returns>GCD of four numbers</returns>
+		public int SteinsAlgorithm(int numOne, int numTwo, int numThree, int numFour, out double elapsedTime)
+		{
+			int gcdTwoNumb = SteinsAlgorithm(numOne, numTwo, out elapsedTime);
+			numOne = gcdTwoNumb;
+			NumTwo = numThree;
+			int gcdThreeNumb = SteinsAlgorithm(gcdTwoNumb, numThree, out elapsedTime);
+			NumOne = gcdThreeNumb;
+			NumTwo = numFour;
+			int gcdFourNumb = SteinsAlgorithm(gcdThreeNumb, numFour, out elapsedTime);
+			return gcdFourNumb;
+		}
 
 		/// <summary>
 		/// The method prepare data for graphical analysis
