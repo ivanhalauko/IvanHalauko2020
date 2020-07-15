@@ -187,5 +187,47 @@ namespace Task1_1ClassLibrary
 		}
 
 
+
+		/// <summary>
+		/// The method prepare data for graphical analysis
+		/// </summary>
+		/// <returns>prepare data for histogramm</returns>
+		public List<DataForTheGraph> PrepareDataForTheGraph(params Int32[] numbers)
+		{
+			double overallTimeSteinsAlgorithm;
+			double overallTimeEuclideanAlgorithm;
+			int minGcdNum = 2;
+			int maxGcdNum = 4;
+
+			List<DataForTheGraph> dataForTheGraphs = new List<DataForTheGraph>();
+			if (numbers != null & numbers.Length >= minGcdNum & numbers.Length <= maxGcdNum)
+			{
+				for (int i = minGcdNum; i <= numbers.Length; i++)
+				{
+					String numParams = "Number of Gcd parameters: " + i.ToString();
+					if (i == minGcdNum)
+					{
+						EuclideanAlgorithm(numbers[0], numbers[1], out overallTimeEuclideanAlgorithm);
+						SteinsAlgorithm(numbers[0], numbers[1], out overallTimeSteinsAlgorithm);
+						dataForTheGraphs.Add(new DataForTheGraph(numParams, overallTimeEuclideanAlgorithm, overallTimeSteinsAlgorithm));
+					}
+					else if (i == 3)
+					{
+						EuclideanAlgorithm(numbers[0], numbers[1], numbers[2], out overallTimeEuclideanAlgorithm);
+						SteinsAlgorithm(numbers[0], numbers[1], numbers[2], out overallTimeSteinsAlgorithm);
+						dataForTheGraphs.Add(new DataForTheGraph(numParams, overallTimeEuclideanAlgorithm, overallTimeSteinsAlgorithm));
+					}
+					else if (i == maxGcdNum)
+					{
+						EuclideanAlgorithm(numbers[0], numbers[1], numbers[2], numbers[3], out overallTimeEuclideanAlgorithm);
+						SteinsAlgorithm(numbers[0], numbers[1], numbers[2], numbers[3], out overallTimeSteinsAlgorithm);
+						dataForTheGraphs.Add(new DataForTheGraph(numParams, overallTimeEuclideanAlgorithm, overallTimeSteinsAlgorithm));
+					}
+				}
+			}
+
+			return dataForTheGraphs;
+		}
+
 	}
 }
