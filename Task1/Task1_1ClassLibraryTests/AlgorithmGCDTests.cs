@@ -135,8 +135,9 @@ namespace Task1_1ClassLibrary.Tests
 		{
 			// Arrange
 			List<DataForTheGraph> dataForTheGraph = new List<DataForTheGraph>();
-
-			List<DataForTheGraph> actual = new AlgorithmGCD(2,4);
+			AlgorithmGCD actualAlgorithmGCD = new AlgorithmGCD(2, 3);
+			actualAlgorithmGCD.PrepareDataForTheGraph(2, 3);
+			List<DataForTheGraph> actual = actualAlgorithmGCD.PrepareDataForTheGraph(2,4);	
 			String numParams = "Number of Gcd parameters: " + 2;
 
 			// Act
@@ -146,6 +147,56 @@ namespace Task1_1ClassLibrary.Tests
 			// Assert
 			Assert.AreEqual(expectedOne, actual.Count);
 		}
+
+		/// <summary>
+		/// A check is performed on the amount of filled data in the list, depending on the number of GCD.
+		/// </summary>
+		[Test]
+		public void GivenPrepareDataForHistogram_ForThreeParamsWhenOutIsTwo()
+		{
+			// Arrange
+			List<DataForTheGraph> dataForTheGraph = new List<DataForTheGraph>();
+			AlgorithmGCD actualAlgorithmGCD = new AlgorithmGCD(2, 3);
+			actualAlgorithmGCD.PrepareDataForTheGraph(2, 3);
+			List<DataForTheGraph> actual = actualAlgorithmGCD.PrepareDataForTheGraph(2, 4,8);
+			String numParams = "Number of Gcd parameters: " + 2;
+
+			// Act
+			dataForTheGraph.Add(new DataForTheGraph(numParams, 0, 0));
+			numParams = "Number of Gcd parameters: " + 3;
+			dataForTheGraph.Add(new DataForTheGraph(numParams, 0, 0));
+			var expectedTwo = dataForTheGraph.Count;
+
+			// Assert
+			Assert.AreEqual(expectedTwo, actual.Count);
+		}
+
+		/// <summary>
+		/// A check is performed on the amount of filled data in the list, depending on the number of GCD.
+		/// </summary>
+		[Test]
+		public void GivenPrepareDataForHistogram_ForFourParamsWhenOutIsThree()
+		{
+			// Arrange
+			List<DataForTheGraph> dataForTheGraph = new List<DataForTheGraph>();
+			AlgorithmGCD actualAlgorithmGCD = new AlgorithmGCD(2, 3);
+			actualAlgorithmGCD.PrepareDataForTheGraph(2, 3);
+			List<DataForTheGraph> actual = actualAlgorithmGCD.PrepareDataForTheGraph(2, 4, 8,12);
+			String numParams = "Number of Gcd parameters: " + 2;
+
+			// Act
+			dataForTheGraph.Add(new DataForTheGraph(numParams, 0, 0));
+			numParams = "Number of Gcd parameters: " + 3;
+			dataForTheGraph.Add(new DataForTheGraph(numParams, 0, 0));
+			numParams = "Number of Gcd parameters: " + 4;
+			dataForTheGraph.Add(new DataForTheGraph(numParams, 0, 0));
+			var expectedFour = dataForTheGraph.Count;
+
+			// Assert
+			Assert.AreEqual(expectedFour, actual.Count);
+		}
+
+
 
 
 	}
