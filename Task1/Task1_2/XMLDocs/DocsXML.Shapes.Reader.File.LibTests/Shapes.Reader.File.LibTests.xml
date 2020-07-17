@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Reader.File.LibTests</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Reader.File.LibTests.Creater.CreaterArrayFiguresTests">
+            <summary>
+            Class for testing CreaterArrayFigures class.
+            </summary>
+        </member>
+        <member name="M:Shapes.Reader.File.LibTests.Creater.CreaterArrayFiguresTests.GetBaseShapesTest">
+            <summary>
+            Test case method for testing GetBaseShapes  method from class.
+            </summary>
+        </member>
+        <member name="T:Shapes.Reader.File.Utilities.Tests.FileReaderTests">
+            <summary>
+            Class for testing FileReaderTests class.
+            </summary>
+        </member>
+        <member name="M:Shapes.Reader.File.Utilities.Tests.FileReaderTests.GetRowsTest">
+            <summary>
+            Test case method for testing GetRows method from class.
+            </summary>
+        </member>
+    </members>
+</doc>
