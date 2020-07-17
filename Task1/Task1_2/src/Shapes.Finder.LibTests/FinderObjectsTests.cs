@@ -1,8 +1,6 @@
 ﻿using NUnit.Framework;
-using Shapes.Finder.Lib;
 using Shapes.Reader.File.Creater;
 using src.Shapes.Model.Lib;
-using System;
 
 namespace Shapes.Finder.Lib.Tests
 {

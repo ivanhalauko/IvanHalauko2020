@@ -1,14 +1,11 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using src.Shapes.Model.Lib;
 using Shapes.Reader.File.Creater;
 
 namespace Shapes.Reader.File.LibTests.Creater
 {
 	/// <summary>
-	/// Class for testing CreaterArrayFigures class
+	/// Class for testing CreaterArrayFigures class.
 	/// </summary>
 	[TestFixture()]
 	public class CreaterArrayFiguresTests
