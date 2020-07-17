@@ -8,14 +8,29 @@ using System.Threading.Tasks;
 
 namespace Shapes.Reader.File.Creater
 {
+	/// <summary>
+	/// Class which creating fugures array from row array.
+	/// </summary>
 	public class CreaterArrayFigures
 	{
+		/// <summary>
+		/// Public field file reader.
+		/// </summary>
 		public FileReader _fileReader;
+
+		/// <summary>
+		/// Constructor initialised property path
+		/// </summary>
+		/// <param name="path"></param>
 		public CreaterArrayFigures(string path)
 		{
 			_fileReader = new FileReader(path);
 		}
 
+		/// <summary>
+		/// Method create base shape from string array then add to base shape array.
+		/// </summary>
+		/// <returns>Base shape array.</returns>
 		public BaseShape[] GetBaseShapes()
 		{
 			var rows = _fileReader.GetRows();

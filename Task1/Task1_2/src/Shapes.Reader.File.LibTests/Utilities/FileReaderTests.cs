@@ -8,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace Shapes.Reader.File.Utilities.Tests
 {
+
+	/// <summary>
+	/// Class for testing FileReaderTests class.
+	/// </summary>
 	[TestFixture()]
 	public class FileReaderTests
 	{
 		string path = @"textFile\FileWithShapes.txt";
+
+		/// <summary>
+		/// Test case method for testing GetRows method from class.
+		/// </summary>
 		[TestCase()]
 		public void GetRowsTest()
 		{

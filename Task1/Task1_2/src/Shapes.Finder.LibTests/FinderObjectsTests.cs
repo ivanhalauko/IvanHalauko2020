@@ -6,10 +6,17 @@ using System;
 
 namespace Shapes.Finder.Lib.Tests
 {
+	/// <summary>
+	/// Class for testing FinderObjects class
+	/// </summary>
 	[TestFixture()]
 	public class FinderObjectsTests
 	{
 		string path = @"textFile\FileWithShapes.txt";
+
+		/// <summary>
+		/// Test case method for testing FindElements method from class.
+		/// </summary>
 		[TestCase()]
 		public void FindElementsTest()
 		{

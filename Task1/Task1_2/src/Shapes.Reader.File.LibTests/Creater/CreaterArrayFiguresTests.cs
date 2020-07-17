@@ -7,10 +7,17 @@ using Shapes.Reader.File.Creater;
 
 namespace Shapes.Reader.File.LibTests.Creater
 {
+	/// <summary>
+	/// Class for testing CreaterArrayFigures class
+	/// </summary>
 	[TestFixture()]
 	public class CreaterArrayFiguresTests
 	{
 		string path = @"textFile\FileWithShapes.txt";
+
+		/// <summary>
+		/// Test case method for testing GetBaseShapes  method from class.
+		/// </summary>
 		[TestCase()]
 		public void GetBaseShapesTest()
 		{
