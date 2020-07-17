@@ -8,11 +8,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8EBEAADA-4ECC-4152-8F12-DDF846140194}</ProjectGuid>
+    <ProjectGuid>{4696F2EA-5323-4CEF-AB6D-9ED0A45EFA8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shapes.Model.Lib</RootNamespace>
-    <AssemblyName>Shapes.Model.Lib</AssemblyName>
+    <RootNamespace>Shapes.Reader.File</RootNamespace>
+    <AssemblyName>Shapes.Reader.File</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -53,14 +53,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseShape.cs" />
-    <Compile Include="Circle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Square.cs" />
+    <Compile Include="Utilities\FileReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shapes.Model.Lib\Shapes.Model.Lib.csproj">
+      <Project>{8EBEAADA-4ECC-4152-8F12-DDF846140194}</Project>
+      <Name>Shapes.Model.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
