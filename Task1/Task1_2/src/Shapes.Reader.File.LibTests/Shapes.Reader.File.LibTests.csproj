@@ -53,6 +53,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Creater\CreaterArrayFiguresTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\FileReaderTests.cs" />
   </ItemGroup>
@@ -60,6 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Shapes.Model.Lib\Shapes.Model.Lib.csproj">
+      <Project>{8EBEAADA-4ECC-4152-8F12-DDF846140194}</Project>
+      <Name>Shapes.Model.Lib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shapes.Reader.File\Shapes.Reader.File.Lib.csproj">
       <Project>{4696F2EA-5323-4CEF-AB6D-9ED0A45EFA8D}</Project>
       <Name>Shapes.Reader.File.Lib</Name>
