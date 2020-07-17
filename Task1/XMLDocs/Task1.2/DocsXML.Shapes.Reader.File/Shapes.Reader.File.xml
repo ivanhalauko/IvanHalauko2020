@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Reader.File</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Reader.File.Creater.CreaterArrayFigures">
+            <summary>
+            Class which creating fugures array from row array.
+            </summary>
+        </member>
+        <member name="F:Shapes.Reader.File.Creater.CreaterArrayFigures._fileReader">
+            <summary>
+            Public field file reader.
+            </summary>
+        </member>
+        <member name="M:Shapes.Reader.File.Creater.CreaterArrayFigures.#ctor(System.String)">
+            <summary>
+            Constructor initialised property path
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Shapes.Reader.File.Creater.CreaterArrayFigures.GetBaseShapes">
+            <summary>
+            Method create base shape from string array then add to base shape array.
+            </summary>
+            <returns>Base shape array.</returns>
+        </member>
+        <member name="T:Shapes.Reader.File.Utilities.FileReader">
+            <summary>
+            Public class for read file to string then to row array. 
+            </summary>
+        </member>
+        <member name="P:Shapes.Reader.File.Utilities.FileReader.Path">
+            <summary>
+            File path property for reading to array. 
+            </summary>
+        </member>
+        <member name="M:Shapes.Reader.File.Utilities.FileReader.#ctor(System.String)">
+            <summary>
+            Constuctor initialized file path property.
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Shapes.Reader.File.Utilities.FileReader.GetRows">
+            <summary>
+            Method which do rows from string.
+            </summary>
+            <returns>Rows array.</returns>
+        </member>
+        <member name="M:Shapes.Reader.File.Utilities.FileReader.GetString">
+            <summary>
+            Method which do string from user file.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Model.LibTests</name>
+    </assembly>
+    <members>
+        <member name="T:src.Shapes.Model.Lib.Tests.CircleTests">
+            <summary>
+            Test cases to testing class Circle.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.CircleTests.AreaPropertyCircleTest(System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="radius"></param>
+            <param name="expectedArea"></param>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.CircleTests.PerimetrPropertyCircleTest(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.CircleTests.EqualsCircleMethodTest(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="T:src.Shapes.Model.Lib.Tests.RectangleTests">
+            <summary>
+            Test cases to testing class rectangle.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.RectangleTests.AreaPropertyRectangleTest(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property area.
+            </summary>
+            <param name="length"></param>
+            <param name="width"></param>
+            <param name="expectedArea"></param>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.RectangleTests.PerimeterPropertyRectangleTest(System.Double,System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter.
+            </summary>
+            <param name="length"></param>
+            <param name="width"></param>
+            <param name="expectedPerimeter"></param>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.RectangleTests.EqualsRectangleMethodTest(System.Double,System.Double,System.Boolean)">
+            <summary>
+            Test case to testing equals.
+            </summary>
+            <param name="radius">Circle radius.</param>
+            <param name="expected">Expected True</param>
+        </member>
+        <member name="T:src.Shapes.Model.Lib.Tests.SquareTests">
+            <summary>
+            Test cases to testing class square.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.SquareTests.AreaPropertySquareTest(System.Double,System.Double)">
+            <summary>
+            Test case to testing property square area.
+            </summary>
+            <param name="length">Square length.</param>
+            <param name="expectedArea">Expected area.</param>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.SquareTests.PerimetrPropertySquareTest(System.Double,System.Double)">
+            <summary>
+            Test case to testing property perimeter. 
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expectedPerimeter">Expected perimeter.</param>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Tests.SquareTests.EqualsSquareMethodTest(System.Double,System.Boolean)">
+            <summary>
+            Test case to testing method equals.  
+            </summary>
+            <param name="length">Square length</param>
+            <param name="expected">Expected True</param>
+        </member>
+    </members>
+</doc>

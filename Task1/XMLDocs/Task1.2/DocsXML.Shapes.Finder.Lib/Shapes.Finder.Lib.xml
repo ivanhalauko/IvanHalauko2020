@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Finder.Lib</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Finder.Lib.FinderObjects">
+            <summary>
+            Public class for searching in the figures array of all figures equal to specified figure.
+            </summary>
+        </member>
+        <member name="F:Shapes.Finder.Lib.FinderObjects._baseShape">
+            <summary>
+            Private field base abstract figure.
+            </summary>
+        </member>
+        <member name="F:Shapes.Finder.Lib.FinderObjects._baseShapes">
+            <summary>
+            Private array field base abstract figures.
+            </summary>
+        </member>
+        <member name="M:Shapes.Finder.Lib.FinderObjects.#ctor(src.Shapes.Model.Lib.BaseShape[],src.Shapes.Model.Lib.BaseShape)">
+            <summary>
+            Finder object constructor initialised shapes array and  search object.
+            </summary>
+            <param name="baseShapes"></param>
+            <param name="baseShape"></param>
+        </member>
+        <member name="M:Shapes.Finder.Lib.FinderObjects.FindElements">
+            <summary>
+            Method for searching in the figures array of all figures equal to specified figure.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
