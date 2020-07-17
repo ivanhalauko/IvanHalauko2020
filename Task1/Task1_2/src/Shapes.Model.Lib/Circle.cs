@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task1_2ClassLibrary.ShapesLib
+namespace src.Shapes.Model.Lib
 {
 	public class Circle : BaseShape
 	{
@@ -27,23 +23,5 @@ namespace Task1_2ClassLibrary.ShapesLib
 				return Math.Round(Math.PI * 2 * Radius, 2);
 			}
 		}
-
-		// Define a circumference, since it's the more familiar term.
-		public double Circumference
-		{
-			get
-			{
-				return Perimeter;
-			}
-		}
-
-		public double Diameter
-		{
-			get
-			{
-				return Radius * 2;
-			}
-		}
-
 	}
 }

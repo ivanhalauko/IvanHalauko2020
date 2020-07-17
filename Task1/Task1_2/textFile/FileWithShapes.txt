@@ -1,0 +1,2 @@
+circle 35
+rectangle 64 64,7

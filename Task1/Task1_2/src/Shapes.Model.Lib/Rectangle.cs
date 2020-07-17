@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task1_2ClassLibrary.ShapesLib
+namespace src.Shapes.Model.Lib
 {
 	public class Rectangle : BaseShape
 	{
@@ -31,16 +27,6 @@ namespace Task1_2ClassLibrary.ShapesLib
 			{
 				return 2 * Length + 2 * Width;
 			}
-		}
-
-		public bool IsSquare()
-		{
-			return Length == Width;
-		}
-
-		public double Diagonal()
-		{
-			return Math.Round(Math.Sqrt(Math.Pow(Length, 2) + Math.Pow(Width, 2)), 2);
 		}
 	}
 	

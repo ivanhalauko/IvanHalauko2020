@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task1_2ClassLibrary.ShapesLib
+namespace src.Shapes.Model.Lib
 {
 	public class Square : BaseShape
 	{
@@ -23,12 +19,6 @@ namespace Task1_2ClassLibrary.ShapesLib
 		public override double Perimeter
 		{
 			get { return Side * 4; }
-		}
-
-		public double Diagonal
-		{
-			get
-			{ return Math.Round(Math.Sqrt(2) * Side, 2); }
 		}
 	}
 }

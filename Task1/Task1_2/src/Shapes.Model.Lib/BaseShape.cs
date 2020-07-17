@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Task1_2ClassLibrary.ShapesLib
+namespace src.Shapes.Model.Lib
 {
 	public abstract class BaseShape
 	{
