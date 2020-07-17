@@ -28,6 +28,24 @@ namespace src.Shapes.Model.Lib
 				return 2 * Length + 2 * Width;
 			}
 		}
+
+		public override bool Equals(Object obj)
+		{
+			if (obj == null || GetType() != obj.GetType())
+				return false;
+			Rectangle r = (Rectangle)obj;
+			return Length.Equals(r.Length) && Width.Equals(r.Width);
+		}
+
+		public override int GetHashCode()
+		{
+			return Length.GetHashCode() + Width.GetHashCode();
+		}
+
+		public override string ToString()
+		{
+			return string.Format("{0};{1};{2}", base.ToString(), Length, Width);
+		}
 	}
 	
 }
