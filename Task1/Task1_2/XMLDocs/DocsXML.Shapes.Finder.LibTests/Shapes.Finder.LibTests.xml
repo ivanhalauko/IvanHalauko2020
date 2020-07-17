@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Finder.LibTests</name>
+    </assembly>
+    <members>
+        <member name="T:Shapes.Finder.Lib.Tests.FinderObjectsTests">
+            <summary>
+            Class for testing FinderObjects class
+            </summary>
+        </member>
+        <member name="M:Shapes.Finder.Lib.Tests.FinderObjectsTests.FindElementsTest">
+            <summary>
+            Test case method for testing FindElements method from class.
+            </summary>
+        </member>
+    </members>
+</doc>

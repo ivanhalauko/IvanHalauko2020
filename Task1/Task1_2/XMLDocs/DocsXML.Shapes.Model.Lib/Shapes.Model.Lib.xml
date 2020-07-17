@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shapes.Model.Lib</name>
+    </assembly>
+    <members>
+        <member name="T:src.Shapes.Model.Lib.BaseShape">
+            <summary>
+            Base Abstrac class for other figures 
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.BaseShape.Area">
+            <summary>
+            Abstract property figure's area 
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.BaseShape.Perimeter">
+            <summary>
+            Abstract property figure's perimetr
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.BaseShape.ToString">
+            <summary>
+            Override base method ToString for get name of class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.BaseShape.GetArea(src.Shapes.Model.Lib.BaseShape)">
+            <summary>
+            Static method which returns shape's area. 
+            </summary>
+            <param name="shape"></param>
+            <returns>shape's area</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.BaseShape.GetPerimeter(src.Shapes.Model.Lib.BaseShape)">
+            <summary>
+            Static method which returns shape's perimetr.
+            </summary>
+            <param name="shape"></param>
+            <returns>shape's perimetr</returns>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Circle.Radius">
+            <summary>
+            Property radius.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Circle.#ctor(System.Double)">
+            <summary>
+            Constructor initialized circle object with radius parametr.
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Circle.Area">
+            <summary>
+            Override property getting circle Area. 
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Circle.Perimeter">
+            <summary>
+            Override property getting perimetr.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Circle.Equals(System.Object)">
+            <summary>
+            Comparison one figure with another.
+            </summary>
+            <param name="obj"></param>
+            <returns>Return "true" if equal and "false" if not equal.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Circle.GetHashCode">
+            <summary>
+            Calculate hash code for comparison one figure with another.
+            </summary>
+            <returns>Hash code.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Circle.ToString">
+            <summary>
+            Conversion class members in string format.
+            </summary>
+            <returns>Return members in string format.</returns>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Rectangle.Length">
+            <summary>
+            Property lenght rectangle
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Rectangle.Width">
+            <summary>
+            Property width rectangle
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Rectangle.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor initialized rectangle object with lenghth and widht parametr
+            </summary>
+            <param name="length"></param>
+            <param name="width"></param>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Rectangle.Area">
+            <summary>
+            Override property getting rectangle area.
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Rectangle.Perimeter">
+            <summary>
+            Override property getting perimetr for rectangle object.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Rectangle.Equals(System.Object)">
+            <summary>
+            Comparison one figure with another.
+            </summary>
+            <param name="obj"></param>
+            <returns>Return "true" if equal and "false" if not equal.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Rectangle.GetHashCode">
+            <summary>
+            Calculate hash code for comparison one figure with another.
+            </summary>
+            <returns>Hash code.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Rectangle.ToString">
+            <summary>
+            Conversion class members in string format.
+            </summary>
+            <returns>Return members in string format.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Square.#ctor(System.Double)">
+            <summary>
+            Constructor initialized lenghth parameter
+            </summary>
+            <param name="length"></param>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Square.Side">
+            <summary>
+            Property square side.
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Square.Area">
+            <summary>
+            Override property getting square Area.
+            </summary>
+        </member>
+        <member name="P:src.Shapes.Model.Lib.Square.Perimeter">
+            <summary>
+            Override property getting circle perimeter.
+            </summary>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Square.Equals(System.Object)">
+            <summary>
+            Comparison one figure with another.
+            </summary>
+            <param name="obj"></param>
+            <returns>Return "true" if equal and "false" if not equal.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Square.GetHashCode">
+            <summary>
+            Calculate hash code for comparison one figure with another.
+            </summary>
+            <returns>Hash code.</returns>
+        </member>
+        <member name="M:src.Shapes.Model.Lib.Square.ToString">
+            <summary>
+            Conversion class members in string format.
+            </summary>
+            <returns>Return members in string format.</returns>
+        </member>
+    </members>
+</doc>
