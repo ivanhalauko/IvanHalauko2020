@@ -53,7 +53,20 @@ namespace Task201
 		{
 			return new Vector(v1.X + v2.X, v1.Y + v2.Y, v1.Z + v2.Z);
 		}
-		//TODO:Need create + - * == !=
+		
+
+		/// <summary>
+		/// The method overrides the mathematical "minus" operation for working with two vectors
+		/// </summary>
+		/// <param name="v1">first vector</param>
+		/// <param name="v2">second vector</param>
+		/// <returns>return vector result</returns>
+		public static Vector operator -(Vector v1, Vector v2)
+		{
+			return new Vector(v1.X - v2.X, v1.Y - v2.Y, v1.Z - v2.Z);
+		}
+
+		//TODO:Need create * == !=
 
 
 
