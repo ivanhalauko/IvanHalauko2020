@@ -41,5 +41,44 @@ namespace Task201
 			this.y = y;
 			this.z = z;
 		}
+
+		//Operator overloading
+		/// <summary>
+		/// The method overrides the mathematical "plus" operation for working with vectors
+		/// </summary>
+		/// <param name="v1">first vector</param>
+		/// <param name="v2">second vector</param>
+		/// <returns>return vector result</returns>
+		public static Vector operator +(Vector v1, Vector v2)
+		{
+			return new Vector(v1.X + v2.X, v1.Y + v2.Y, v1.Z + v2.Z);
+		}
+		//TODO:Need create + - * == !=
+
+
+
+		/// <summary>
+		/// Comparring the properties of two vectors. Override Equals method for work with two vectors.
+		/// </summary>
+		/// <param name="obj">vector object</param>
+		/// <returns>Return result after compare</returns>
+		public override bool Equals(object obj)
+		{
+			if (obj is Vector vector)
+			{
+				return ((this.X == vector.X) && (this.Y == vector.Y) && (this.Z == vector.Z));
+			}
+			return false;
+		}
+
+		/// <summary>
+		/// Hash calculation
+		/// </summary>
+		/// <returns></returns>
+		public override int GetHashCode()
+		{
+			return 12 * X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode();
+		}
+
 	}
 }
