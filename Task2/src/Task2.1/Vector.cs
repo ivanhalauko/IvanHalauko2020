@@ -66,7 +66,30 @@ namespace Task201
 			return new Vector(v1.X - v2.X, v1.Y - v2.Y, v1.Z - v2.Z);
 		}
 
-		//TODO:Need create * == !=
+		
+		/// <summary>
+		/// The method overrides the mathematical "multiply" operation for working with vectors and scalar
+		/// </summary>
+		/// <param name="v1">first vector</param>
+		/// <param name="k">scalar</param>
+		/// <returns>returns vector result after multipling the vector by a scalar</returns>
+		public static Vector operator *(Vector v1, double k)
+		{
+			return new Vector(v1.X * k, v1.Y * k, v1.Z * k);
+		}
+		/// <summary>
+		/// The method overrides the mathematical "multiply" operation for working with two vectors
+		/// </summary>
+		/// <param name="v1">first vector</param>
+		/// <param name="v2">second vector</param>
+		/// <returns>return vector result after multipling two vectors</returns>
+		public static Vector operator *(Vector v1, Vector v2)
+		{
+			return new Vector(v1.X * v2.X, v1.Y * v2.Y, v1.Z * v2.Z);
+		}
+		
+		//TODO:Need create == !=
+
 
 
 

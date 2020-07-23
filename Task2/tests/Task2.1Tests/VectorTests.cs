@@ -265,6 +265,166 @@ namespace Task201.Tests
 			Assert.AreEqual(expectedVector, actual);
 		}
 
+		/// <summary>
+		/// Test cases for testing operator vector "multiply" whith positive numbers.  
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+		/// <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+		/// <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+		/// <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+		[TestCase(10, 10, 10, 1, 1, 1, 10, 10, 10)]
+		[TestCase(5, 5, 5, 1, 1, 1, 5, 5, 5)]
+		[TestCase(2, 2, 2, 1, 1, 1, 2, 2, 2)]
+		public void GivenOverrideOperatorMultiply_WhenTwoVectorsIsPositive_ThenOutIsPositive(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			int vectorExpectedX, int vectorExpectedY, int vectorExpectedZ)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			Vector expectedVector = new Vector(vectorExpectedX, vectorExpectedY, vectorExpectedZ);
+
+			//Act
+			Vector actual = vectorFirst * vectorSecond;
+
+			//Assert
+			Assert.AreEqual(expectedVector, actual);
+		}
+
+		/// <summary>
+		/// Test cases for testing operator vector "multiply" whith negative numbers.  
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+		/// <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+		/// <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+		/// <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+		[TestCase(-10, -10, -10, -1, -1, -1, 10, 10, 10)]
+		[TestCase(-5, -5, -5, -1, -1, -1, 5, 5, 5)]
+		[TestCase(-15, -15, -15, -2, -2, -2, 30, 30, 30)]
+		public void GivenOverrideOperatorMultiply_WhenTwoVectorsIsNegative_ThenOutIsPozitive(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			int vectorExpectedX, int vectorExpectedY, int vectorExpectedZ)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			Vector expectedVector = new Vector(vectorExpectedX, vectorExpectedY, vectorExpectedZ);
+
+			//Act
+			Vector actual = vectorFirst * vectorSecond;
+
+			//Assert
+			Assert.AreEqual(expectedVector, actual);
+		}
+
+		/// <summary>
+		/// Test cases for testing operator vector "multiply" whith negative and positive numbers.  
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+		/// <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+		/// <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+		/// <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+		[TestCase(-10, -10, -10, 1, 1, 1, -10, -10, -10)]
+		[TestCase(-5, -5, -5, 1, 1, 1, -5, -5, -5)]
+		[TestCase(-15, -15, -15, 2, 2, 2, -30, -30, -30)]
+		public void GivenOverrideOperatorMultiply_WhenSecondVectorsIsNegativeAndFirstVectorIsPositive_ThenOutIsNegative(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			int vectorExpectedX, int vectorExpectedY, int vectorExpectedZ)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			Vector expectedVector = new Vector(vectorExpectedX, vectorExpectedY, vectorExpectedZ);
+
+			//Act
+			Vector actual = vectorFirst * vectorSecond;
+
+			//Assert
+			Assert.AreEqual(expectedVector, actual);
+		}
+
+		/// <summary>
+		/// Test cases for testing operator vector "multiply" whith negative and "0" numbers.  
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+		/// <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+		/// <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+		/// <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+		[TestCase(-10, -10, -10, 0, 0, 0, 0, 0, 0)]
+		[TestCase(-5, -5, -5, 0, 0, 0, 0, 0, 0)]
+		[TestCase(-15, -15, -15, 0, 0, 0, 0, 0, 0)]
+		public void GivenOverrideOperatorMultiply_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsNegative(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			int vectorExpectedX, int vectorExpectedY, int vectorExpectedZ)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			Vector expectedVector = new Vector(vectorExpectedX, vectorExpectedY, vectorExpectedZ);
+
+			//Act
+			Vector actual = vectorFirst * vectorSecond;
+
+			//Assert
+			Assert.AreEqual(expectedVector, actual);
+		}
+
+		/// <summary>
+		/// Test cases for testing operator vector "multiply" whith negative and numbers and scalar.  
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+		/// <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+		/// <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+		/// <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+		[TestCase(-10, -10, -10, 5,  -50, -50, -50)]
+		[TestCase(-5, -5, -5, -6, 30, 30, 30)]
+		[TestCase(-15, -15, -15, 0, 0, 0, 0)]
+		public void GivenOverrideOperatorMultiply_WhenFirstVectorIsNegativeAndSecondIsScalar_ThenOutIsPositive_NegativeVector(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			double scalar,
+			int vectorExpectedX, int vectorExpectedY, int vectorExpectedZ)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			
+			Vector expectedVector = new Vector(vectorExpectedX, vectorExpectedY, vectorExpectedZ);
+
+			//Act
+			Vector actual = vectorFirst * scalar;
+
+			//Assert
+			Assert.AreEqual(expectedVector, actual);
+		}
+
 
 
 
