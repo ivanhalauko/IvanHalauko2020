@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Task201
 {
+	/// <summary>
+	/// Class for vektor work. 
+	/// </summary>
     public class Vector
     {
 		private double x;
@@ -87,8 +90,34 @@ namespace Task201
 		{
 			return new Vector(v1.X * v2.X, v1.Y * v2.Y, v1.Z * v2.Z);
 		}
-		
-		//TODO:Need create == !=
+
+		/// <summary>
+		/// The method overrides the mathematical "equally" operation for working with two vectors
+		/// </summary>
+		/// <param name="vectorFirst"></param>
+		/// <param name="vectorSecond"></param>
+		/// <returns>Return 'true' or 'false' after comparison</returns>
+		public static bool operator ==(Vector vectorFirst, Vector vectorSecond)
+		{
+			return ((vectorFirst.X == vectorSecond.X) &&
+				(vectorFirst.Y == vectorSecond.Y) &&
+				(vectorFirst.Z == vectorSecond.Z));
+		}
+
+		/// <summary>
+		/// The method overrides the mathematical "not equally" operation for working with two vectors
+		/// </summary>
+		/// <param name="vectorFirst"></param>
+		/// <param name="vectorSecond"></param>
+		/// <returns>Return 'true' or 'false' after comparison</returns>
+		public static bool operator !=(Vector vectorFirst, Vector vectorSecond)
+		{
+			//return !(vectorFirst.X == vectorSecond.X) &&
+			//	!(vectorFirst.Y == vectorSecond.Y) &&
+			//	!(vectorFirst.Z == vectorSecond.Z);
+			return !(vectorFirst == vectorSecond);
+
+		}
 
 
 

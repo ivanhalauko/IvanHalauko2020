@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Task201.Tests
 {
+	/// <summary>
+	/// Public class for testing Vector class.
+	/// </summary>
 	[TestFixture()]
 	public class VectorTests
 	{
@@ -425,9 +428,240 @@ namespace Task201.Tests
 			Assert.AreEqual(expectedVector, actual);
 		}
 
+		/// <summary>
+		/// Test case for testing operator vector "==" whith negative and "0". 
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "false"</param>
+		[TestCase(-10, -10, -10, 0, 0, 0, false)]
+		[TestCase(-5, -5, -5, 0, 0, 0, false)]
+		[TestCase(-15, -15, -15, 0, 0, 0, false)]
+		public void GivenOverrideMethodEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsFalse(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
 
+			//Act
+			actual = (vectorFirst == vectorSecond);
 
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
 
+		/// <summary>
+		/// Test case for testing operator vector "==" whith positive numbers. 
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "false"</param>
+		[TestCase(10, 10, 10, 9, 10, 10, false)]
+		[TestCase(5, 5, 5, 5, 3, 5, false)]
+		[TestCase(15, 15, 15, 15, 5, 15, false)]
+		public void GivenOverrideMethodEquals_WhenFirstVectorIsPositiveAndSecondVectorIsPositive_ThenOutIsFalse(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
 
+			//Act
+			actual = (vectorFirst == vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		/// <summary>
+		/// Test case for testing operator vector "==" whith "0" numbers. 
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "true"</param>
+		[TestCase(0, 0, 0, 0, 0, 0, true)]
+		public void GivenOverrideMethodEquals_WhenFirstVectorIsNullAndSecondVectorIsNull_ThenOutIsTrue(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
+
+			//Act
+			actual = (vectorFirst == vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		/// <summary>
+		/// Test case for testing operator vector "==" whith negative numbers. 
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "true"</param>
+		[TestCase(-10, -10, -10, -10, -10, -10, true)]
+		[TestCase(-5, -5, -5, -5, -5, -5, true)]
+		[TestCase(-15, -15, -15, -15, -15, -15, true)]
+		public void GivenOverrideMethodEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNegative_ThenOutIsTrue(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
+
+			//Act
+			actual = (vectorFirst == vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		/// <summary>
+		/// Test case for testing operator vector "=!" whith negative and "0".
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "true"</param>
+		[TestCase(-10, -10, -10, 0, 0, 0, true)]
+		[TestCase(-5, -5, -5, 0, 0, 0, true)]
+		[TestCase(-15, -15, -15, 0, 0, 0, true)]
+		public void GivenOverrideMethodNotEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsTrue(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
+
+			//Act
+			actual = (vectorFirst != vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		/// <summary>
+		/// Test case for testing operator vector "=!" whith positive numbers.
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "true"</param>
+		[TestCase(10, 10, 10, 10, 5, 10, true)]
+		[TestCase(5, 5, 5, 5, 15, 5, true)]
+		[TestCase(15, 15, 15, 15, 5, 15, true)]
+		public void GivenOverrideMethodNotEquals_WhenFirstVectorIsPositiveAndSecondVectorIsPositive_ThenOutIsTrue(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
+
+			//Act
+			actual = (vectorFirst != vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		/// <summary>
+		/// Test case for testing operator vector "=!" whith "0" numbers.
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "false"</param>
+		[TestCase(0, 0, 0, 0, 0, 0, false)]
+		public void GivenOverrideMethodNotEquals_WhenFirstVectorIsNullAndSecondVectorIsNull_ThenOutIsFalse(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
+
+			//Act
+			actual = (vectorFirst != vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
+
+		/// <summary>
+		/// Test case for testing operator vector "!=" whith negative numbers.
+		/// </summary>
+		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
+		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
+		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
+		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
+		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+		/// <param name="expected">expected "false"</param>
+		[TestCase(-10, -10, -10, -10, -10, -10, false)]
+		[TestCase(-5, -5, -5, -5, -5, -5, false)]
+		[TestCase(-15, -15, -15, -15, -15, -15, false)]
+		public void GivenOverrideMethodNotEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNegative_ThenOutIsFalse(
+			int vectorFirstX, int vectorFirstY, int vectorFirstZ,
+			int vectorSecondX, int vectorSecondY, int vectorSecondZ,
+			bool expected)
+		{
+			//Arrange
+			Vector vectorFirst = new Vector(vectorFirstX, vectorFirstY, vectorFirstZ);
+			Vector vectorSecond = new Vector(vectorSecondX, vectorSecondY, vectorSecondZ);
+			bool actual;
+
+			//Act
+			actual = (vectorFirst != vectorSecond);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
 	}
 }
