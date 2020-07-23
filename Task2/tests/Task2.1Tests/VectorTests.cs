@@ -1,10 +1,4 @@
 ﻿using NUnit.Framework;
-using Task201;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task201.Tests
 {
@@ -108,6 +102,7 @@ namespace Task201.Tests
 			//Assert
 			Assert.AreEqual(expectedVector, actual);
 		}
+
 		/// <summary>
 		/// Test cases for testing operator vector "+" whith negative and "0" numbers.  
 		/// </summary>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2.1</name>
+    </assembly>
+    <members>
+        <member name="T:Task201.Vector">
+            <summary>
+            Class for vektor work. 
+            </summary>
+        </member>
+        <member name="F:Task201.Vector.x">
+            <summary>
+            Field vector's x.
+            </summary>
+        </member>
+        <member name="F:Task201.Vector.y">
+            <summary>
+            Field vector's y.
+            </summary>
+        </member>
+        <member name="F:Task201.Vector.z">
+            <summary>
+            Field vector's z.
+            </summary>
+        </member>
+        <member name="P:Task201.Vector.X">
+            <summary>
+            vector properties
+            </summary>
+        </member>
+        <member name="M:Task201.Vector.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            The constructor initializes the tree-dimension vector
+            </summary>
+            <param name="x">The first vector dimension</param>
+            <param name="y">The second vector dimension</param>
+            <param name="z">The third vector dimension</param>
+        </member>
+        <member name="M:Task201.Vector.op_Addition(Task201.Vector,Task201.Vector)">
+            <summary>
+            The method overrides the mathematical "plus" operation for working with vectors
+            </summary>
+            <param name="v1">first vector</param>
+            <param name="v2">second vector</param>
+            <returns>return vector result</returns>
+        </member>
+        <member name="M:Task201.Vector.op_Subtraction(Task201.Vector,Task201.Vector)">
+            <summary>
+            The method overrides the mathematical "minus" operation for working with two vectors
+            </summary>
+            <param name="v1">first vector</param>
+            <param name="v2">second vector</param>
+            <returns>return vector result</returns>
+        </member>
+        <member name="M:Task201.Vector.op_Multiply(Task201.Vector,System.Double)">
+            <summary>
+            The method overrides the mathematical "multiply" operation for working with vectors and scalar
+            </summary>
+            <param name="v1">first vector</param>
+            <param name="k">scalar</param>
+            <returns>returns vector result after multipling the vector by a scalar</returns>
+        </member>
+        <member name="M:Task201.Vector.op_Multiply(Task201.Vector,Task201.Vector)">
+            <summary>
+            The method overrides the mathematical "multiply" operation for working with two vectors
+            </summary>
+            <param name="v1">first vector</param>
+            <param name="v2">second vector</param>
+            <returns>return vector result after multipling two vectors</returns>
+        </member>
+        <member name="M:Task201.Vector.op_Equality(Task201.Vector,Task201.Vector)">
+            <summary>
+            The method overrides the mathematical "equally" operation for working with two vectors
+            </summary>
+            <param name="vectorFirst"></param>
+            <param name="vectorSecond"></param>
+            <returns>Return 'true' or 'false' after comparison</returns>
+        </member>
+        <member name="M:Task201.Vector.op_Inequality(Task201.Vector,Task201.Vector)">
+            <summary>
+            The method overrides the mathematical "not equally" operation for working with two vectors
+            </summary>
+            <param name="vectorFirst"></param>
+            <param name="vectorSecond"></param>
+            <returns>Return 'true' or 'false' after comparison</returns>
+        </member>
+        <member name="M:Task201.Vector.Equals(System.Object)">
+            <summary>
+            Comparring the properties of two vectors. Override Equals method for work with two vectors.
+            </summary>
+            <param name="obj">vector object</param>
+            <returns>Return result after compare</returns>
+        </member>
+        <member name="M:Task201.Vector.GetHashCode">
+            <summary>
+            Hash calculation
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

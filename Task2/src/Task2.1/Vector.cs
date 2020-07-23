@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Task201
 {
@@ -11,10 +7,18 @@ namespace Task201
 	/// </summary>
     public class Vector
     {
+		/// <summary>
+		/// Field vector's x.
+		/// </summary>
 		private double x;
+		/// <summary>
+		/// Field vector's y.
+		/// </summary>
 		private double y;
+		/// <summary>
+		/// Field vector's z.
+		/// </summary>
 		private double z;
-
 
 		/// <summary>
 		/// vector properties
@@ -57,7 +61,6 @@ namespace Task201
 			return new Vector(v1.X + v2.X, v1.Y + v2.Y, v1.Z + v2.Z);
 		}
 		
-
 		/// <summary>
 		/// The method overrides the mathematical "minus" operation for working with two vectors
 		/// </summary>
@@ -69,7 +72,6 @@ namespace Task201
 			return new Vector(v1.X - v2.X, v1.Y - v2.Y, v1.Z - v2.Z);
 		}
 
-		
 		/// <summary>
 		/// The method overrides the mathematical "multiply" operation for working with vectors and scalar
 		/// </summary>
@@ -119,9 +121,6 @@ namespace Task201
 
 		}
 
-
-
-
 		/// <summary>
 		/// Comparring the properties of two vectors. Override Equals method for work with two vectors.
 		/// </summary>
@@ -144,6 +143,5 @@ namespace Task201
 		{
 			return 12 * X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode();
 		}
-
 	}
 }
