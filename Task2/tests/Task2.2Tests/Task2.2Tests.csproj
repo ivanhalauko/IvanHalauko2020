@@ -60,7 +60,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Polynomial\Task2.2.csproj">
+    <ProjectReference Include="..\..\src\Task2.2\Task2.2.csproj">
       <Project>{C9F1FD1A-4EC8-4D66-A8F6-254F46F47C85}</Project>
       <Name>Task2.2</Name>
     </ProjectReference>

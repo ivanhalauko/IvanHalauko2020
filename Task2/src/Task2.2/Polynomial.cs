@@ -64,5 +64,21 @@ namespace Polynomial
 			}
 			return PolynomResult;
 		}
+		//TODO: + -
+
+
+
+		public override bool Equals(object obj)
+		{
+			if (obj == null || GetType() != obj.GetType())
+				return false;
+			Polynomial polynom = (Polynomial)obj;
+			return Enumerable.SequenceEqual(CoefPolynom, polynom.CoefPolynom);
+		}
+
+		public override int GetHashCode()
+		{
+			return CoefPolynom.GetHashCode();
+		}
 	}
 }
