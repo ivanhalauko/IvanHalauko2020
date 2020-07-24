@@ -10,7 +10,7 @@ namespace Product.Model.Lib
 		public string Brand { get; set; }
 
 		/// <summary>
-		/// Constructor class BaseProduct.
+		/// Constructor class PhoneProduct.
 		/// </summary>
 		/// <param name="name">Parameter phone product name.</param>
 		/// <param name="cost">Parameter phone product cost.</param>
@@ -38,5 +38,14 @@ namespace Product.Model.Lib
 										(phoneFirst.Cost + phoneSecond.Cost) / 2,
 										phoneFirst.Brand);
 		}
+
+		public static explicit operator PhoneProducts(PencilProducts pencilProducts)
+		{
+			string name = pencilProducts.Name;
+			double cost = pencilProducts.Cost;
+			PhoneProducts newPhone = new PhoneProducts(name, cost, null);
+			return newPhone;
+		}
+
 	}
 }
