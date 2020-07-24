@@ -157,7 +157,7 @@ namespace Polynomial
 		/// Comparring the properties of two polynomials. Override Equals method for work with two polynomials.
 		/// </summary>
 		/// <param name="obj"></param>
-		/// <returns></returns>
+		/// <returns>Return "true" or "false" after comparer.</returns>
 		public override bool Equals(object obj)
 		{
 			if (obj == null || GetType() != obj.GetType())
