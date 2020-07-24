@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2.2Tests</name>
+    </assembly>
+    <members>
+        <member name="T:Polynomial.Tests.PolynomialTests">
+            <summary>
+            Test class for testing polunomial class.
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorMultiply_WhenForTwoPositivePolynomials_ThenIsPossitive(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test check up operator "Multiply" for two positive polynomials. 
+            </summary>
+            <param name="firstСoefFirstPolynom">First test parameter polynomial's first. </param>
+            <param name="secondCoefFirstPolynom">Second test parameter polynomial's first.</param>
+            <param name="firstСoefSecondPolynom">First test parameter polynomial's second.</param>
+            <param name="secondCoefSecondPolynom">Second test parameter polynomial's second.</param>
+            <param name="firstСoefExpectedPolynom">First test parameter polynomial's expected.</param>
+            <param name="secondCoefExpectedPolynom">Second test parameter polynomial's expected.</param>
+            <param name="thirdСoefExpectedPolynom">Third test parameter polynomial's expected.</param>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorMultiply_WhenForTwoNegativePolynomials_ThenIsNegative(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+             Test check up operator "Multiply" for two Negative polynomials. 
+            </summary>
+            <param name="firstСoefFirstPolynom">First test parameter polynomial's first. </param>
+            <param name="secondCoefFirstPolynom">Second test parameter polynomial's first.</param>
+            <param name="firstСoefSecondPolynom">First test parameter polynomial's second.</param>
+            <param name="secondCoefSecondPolynom">Second test parameter polynomial's second.</param>
+            <param name="firstСoefExpectedPolynom">First test parameter polynomial's expected.</param>
+            <param name="secondCoefExpectedPolynom">Second test parameter polynomial's expected.</param>
+            <param name="thirdСoefExpectedPolynom">Third test parameter polynomial's expected.</param>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorMultiply_WhenForFirstIsNullAndSecondPositivePolynomials_ThenIsNullReferenceException">
+            <summary>
+             Test check up operator "Multiply" for null-polynomial and positive polynomials. 
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorMultiply_WhenForFirstPositivePolynomialsAndSecondIsNull_ThenIsNullReferenceException">
+            <summary>
+            Test check up operator "Multyply" for positive polynomials and null-polynomial. 
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorPlus_WhenForTwoPositivePolynomials_ThenIsPossitive(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test check up operator "Plus" for two positive polynomials. 
+            </summary>
+            <param name="firstСoefFirstPolynom">First test parameter polynomial's first. </param>
+            <param name="secondCoefFirstPolynom">Second test parameter polynomial's first.</param>
+            <param name="firstСoefSecondPolynom">First test parameter polynomial's second.</param>
+            <param name="secondCoefSecondPolynom">Second test parameter polynomial's second.</param>
+            <param name="firstСoefExpectedPolynom">First test parameter polynomial's expected.</param>
+            <param name="secondCoefExpectedPolynom">Second test parameter polynomial's expected.</param>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorPlus_WhenForTwoNegativePolynomials_ThenIsNegative(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+             Test check up operator "Plus" for two Negative polynomials. 
+            </summary>
+            <param name="firstСoefFirstPolynom">First test parameter polynomial's first. </param>
+            <param name="secondCoefFirstPolynom">Second test parameter polynomial's first.</param>
+            <param name="firstСoefSecondPolynom">First test parameter polynomial's second.</param>
+            <param name="secondCoefSecondPolynom">Second test parameter polynomial's second.</param>
+            <param name="firstСoefExpectedPolynom">First test parameter polynomial's expected.</param>
+            <param name="secondCoefExpectedPolynom">Second test parameter polynomial's expected.</param>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorPlus_WhenForFirstIsNullAndSecondPositivePolynomials_ThenIsNullReferenceException">
+            <summary>
+             Test check up operator "Plus" for null-polynomial and positive polynomials. 
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorPlus_WhenForFirstPositivePolynomialsAndSecondIsNull_ThenIsNullReferenceException">
+            <summary>
+            Test check up operator "Plus" for positive polynomials and null-polynomial. 
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorDeduct_WhenForTwoPositivePolynomials_ThenIsRezult(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Test check up operator "deduct" for two positive polynomials. 
+            </summary>
+            <param name="firstСoefFirstPolynom">First test parameter polynomial's first. </param>
+            <param name="secondCoefFirstPolynom">Second test parameter polynomial's first.</param>
+            <param name="firstСoefSecondPolynom">First test parameter polynomial's second.</param>
+            <param name="secondCoefSecondPolynom">Second test parameter polynomial's second.</param>
+            <param name="firstСoefExpectedPolynom">First test parameter polynomial's expected.</param>
+            <param name="secondCoefExpectedPolynom">Second test parameter polynomial's expected.</param>		
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorDeduct_WhenForTwoNegativePolynomials_ThenIsNegative(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+             Test check up operator "Deduct" for two Negative polynomials. 
+            </summary>
+            <param name="firstСoefFirstPolynom">First test parameter polynomial's first. </param>
+            <param name="secondCoefFirstPolynom">Second test parameter polynomial's first.</param>
+            <param name="firstСoefSecondPolynom">First test parameter polynomial's second.</param>
+            <param name="secondCoefSecondPolynom">Second test parameter polynomial's second.</param>
+            <param name="firstСoefExpectedPolynom">First test parameter polynomial's expected.</param>
+            <param name="secondCoefExpectedPolynom">Second test parameter polynomial's expected.</param>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorDeduct_WhenForFirstIsNullAndSecondPositivePolynomials_ThenIsNullReferenceException">
+            <summary>
+             Test check up operator "Deduct" for null-polynomial and positive polynomials. 
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.PolynomialTests.GivenOverrideOperatorDeduct_WhenForFirstPositivePolynomialsAndSecondIsNull_ThenIsNullReferenceException">
+            <summary>
+            Test check up operator "Deduct" for positive polynomials and null-polynomial. 
+            </summary>
+        </member>
+    </members>
+</doc>
