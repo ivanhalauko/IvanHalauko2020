@@ -38,7 +38,10 @@ namespace Product.Model.Lib
 										(phoneFirst.Cost + phoneSecond.Cost) / 2,
 										phoneFirst.Brand);
 		}
-
+		/// <summary>
+		/// Explicit operator from pencil products to phone products.
+		/// </summary>
+		/// <param name="pencilProducts">Object pencil product.</param>
 		public static explicit operator PhoneProducts(PencilProducts pencilProducts)
 		{
 			string name = pencilProducts.Name;
@@ -47,5 +50,36 @@ namespace Product.Model.Lib
 			return newPhone;
 		}
 
+		/// <summary>
+		/// Explicit operator from double cost pencil products to int cost.
+		/// </summary>
+		/// <param name="phone">Object phone product.</param>
+		public static explicit operator int(PhoneProducts phone)
+		{
+			double phoneCostCents = phone.Cost * 100;
+			int phoneCostInt = (int)phoneCostCents;
+			return phoneCostInt;
+		}
+
+		/// <summary>
+		/// Comparring the properties of products. Override Equals method for work with two products.
+		/// </summary>
+		/// <param name="obj"></param>
+		/// <returns>Return "true" or "false" after comparer.</returns>
+		public override bool Equals(object obj)
+		{
+			if (obj == null || GetType() != obj.GetType())
+				return false;
+			PhoneProducts phone = (PhoneProducts)obj;
+			return Brand.Equals(phone.Brand) && base.Equals(obj);
+		}
+		/// <summary>
+		/// Hash calculation
+		/// </summary>
+		/// <returns>Return hash code.</returns>
+		public override int GetHashCode()
+		{
+			return Tuple.Create(Brand, base.GetHashCode()).GetHashCode();
+		}
 	}
 }

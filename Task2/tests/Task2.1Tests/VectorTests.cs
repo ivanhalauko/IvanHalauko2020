@@ -397,9 +397,7 @@ namespace Task201.Tests
 		/// <param name="vectorFirstX">Test parameter "X" first vector</param>
 		/// <param name="vectorFirstY">Test parameter "Y" first vector</param>
 		/// <param name="vectorFirstZ">Test parameter "Z" first vector</param>
-		/// <param name="vectorSecondX">Test parameter "X" second vector</param>
-		/// <param name="vectorSecondY">Test parameter "Y" second vector</param>
-		/// <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+		/// <param name="scalar"></param>
 		/// <param name="vectorExpectedX">Test parameter "X" expected vector</param>
 		/// <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
 		/// <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>

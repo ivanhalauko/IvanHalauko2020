@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Product.Model.Lib
 {
@@ -41,6 +37,51 @@ namespace Product.Model.Lib
 			return new PencilProducts(pencilFirst.Name + "-" + pencilSecond.Name,
 										(pencilFirst.Cost + pencilSecond.Cost) / 2,
 										pencilFirst.Purpose);
+		}
+
+		/// <summary>
+		/// Explicit operator from phone products to pencil products.
+		/// </summary>
+		/// <param name="phoneProducts">Object phone product.</param>
+		public static explicit operator PencilProducts(PhoneProducts phoneProducts)
+		{
+			string name = phoneProducts.Name;
+			double cost = phoneProducts.Cost;
+			PencilProducts newPencil = new PencilProducts(name, cost, null);
+			return newPencil;
+		}
+
+		/// <summary>
+		/// Explicit operator from double cost pencil products to int cost.
+		/// </summary>
+		/// <param name="phone">Object phone product.</param>
+		public static explicit operator int(PencilProducts pencil)
+		{
+			double pencilCostCents = pencil.Cost * 100;
+			int pencilCostInt = (int)pencilCostCents;
+			return pencilCostInt;
+		}
+
+		/// <summary>
+		/// Comparring the properties of two products. Override Equals method for work with two products.
+		/// </summary>
+		/// <param name="obj"></param>
+		/// <returns>Return "true" or "false" after comparer.</returns>
+		public override bool Equals(object obj)
+		{
+			if (obj == null || GetType() != obj.GetType())
+				return false;
+			PencilProducts pencil = (PencilProducts)obj;
+			return Purpose.Equals(pencil.Purpose) && base.Equals(obj);
+		}
+
+		/// <summary>
+		/// Hash calculation
+		/// </summary>
+		/// <returns>Return hash code.</returns>
+		public override int GetHashCode()
+		{
+			return Tuple.Create(Purpose, base.GetHashCode()).GetHashCode();
 		}
 
 	}
