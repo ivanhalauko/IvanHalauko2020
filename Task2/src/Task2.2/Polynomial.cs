@@ -1,21 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Polynomial
 {
+	/// <summary>
+	/// Public class for work with polynomial.
+	/// </summary>
     public class Polynomial
     {
+		/// <summary>
+		/// Field polynom's coeffiсients.
+		/// </summary>
 		private readonly double[] _coefPolynom;
+
+		/// <summary>
+		/// Property polynom's coeffiсients.
+		/// </summary>
 		public double[] CoefPolynom => _coefPolynom;
 
+		/// <summary>
+		/// Constructor polynomial class.
+		/// </summary>
+		/// <param name="сoefPolynom"></param>
 		public Polynomial(double[] сoefPolynom)
 		{
 			_coefPolynom = сoefPolynom;
 		}
 
+		/// <summary>
+		/// Indexator for access to polynomial coefficients.
+		/// </summary>
+		/// <param name="i"></param>
+		/// <returns></returns>
 		public double this[int i]
 		{
 			get
@@ -65,7 +82,6 @@ namespace Polynomial
 			return PolynomResult;
 		}
 		
-
 		/// <summary>
 		/// The method overrides the mathimatical "plus" operation for working with two polynomials
 		/// </summary>
@@ -100,7 +116,6 @@ namespace Polynomial
 
 			return PolynomResult;
 		}
-
 
 		/// <summary>
 		/// The method overrides the mathimatical "minus" operation for working with two polynomials
@@ -138,7 +153,11 @@ namespace Polynomial
 			return PolynomResult;
 		}
 
-
+		/// <summary>
+		/// Comparring the properties of two polynomials. Override Equals method for work with two polynomials.
+		/// </summary>
+		/// <param name="obj"></param>
+		/// <returns></returns>
 		public override bool Equals(object obj)
 		{
 			if (obj == null || GetType() != obj.GetType())
@@ -147,6 +166,10 @@ namespace Polynomial
 			return Enumerable.SequenceEqual(CoefPolynom, polynom.CoefPolynom);
 		}
 
+		/// <summary>
+		/// Hash calculation
+		/// </summary>
+		/// <returns>Return hash code.</returns>
 		public override int GetHashCode()
 		{
 			return CoefPolynom.GetHashCode();

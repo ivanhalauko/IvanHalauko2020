@@ -138,7 +138,7 @@ namespace Task201
 		/// <summary>
 		/// Hash calculation
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>Return hash code.</returns>
 		public override int GetHashCode()
 		{
 			return 12 * X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode();

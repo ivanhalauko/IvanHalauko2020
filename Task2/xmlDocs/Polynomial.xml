@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Polynomial</name>
+    </assembly>
+    <members>
+        <member name="T:Polynomial.Polynomial">
+            <summary>
+            Public class for work with polynomial.
+            </summary>
+        </member>
+        <member name="F:Polynomial.Polynomial._coefPolynom">
+            <summary>
+            Field polynom's coeffiсients.
+            </summary>
+        </member>
+        <member name="P:Polynomial.Polynomial.CoefPolynom">
+            <summary>
+            Property polynom's coeffiсients.
+            </summary>
+        </member>
+        <member name="M:Polynomial.Polynomial.#ctor(System.Double[])">
+            <summary>
+            Constructor polynomial class.
+            </summary>
+            <param name="сoefPolynom"></param>
+        </member>
+        <member name="P:Polynomial.Polynomial.Item(System.Int32)">
+            <summary>
+            Indexator for access to polynomial coefficients.
+            </summary>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Polynomial.Polynomial.op_Multiply(Polynomial.Polynomial,Polynomial.Polynomial)">
+            <summary>
+            The method overrides the mathimatical "multiply" operation for working with two polynomials
+            </summary>
+            <param name="firstPolynom"> the first polynomial</param>
+            <param name="secondPolynom">the second polynomial</param>
+            <returns>return polynomial's result</returns>
+        </member>
+        <member name="M:Polynomial.Polynomial.op_Addition(Polynomial.Polynomial,Polynomial.Polynomial)">
+            <summary>
+            The method overrides the mathimatical "plus" operation for working with two polynomials
+            </summary>
+            <param name="firstPolynom"> the first polynomial</param>
+            <param name="secondPolynom">the second polynomial</param>
+            <returns>return polynomial's result</returns>
+        </member>
+        <member name="M:Polynomial.Polynomial.op_Subtraction(Polynomial.Polynomial,Polynomial.Polynomial)">
+            <summary>
+            The method overrides the mathimatical "minus" operation for working with two polynomials
+            </summary>
+            <param name="firstPolynom"> the first polynomial</param>
+            <param name="secondPolynom">the second polynomial</param>
+            <returns>return polynomial's result</returns>
+        </member>
+        <member name="M:Polynomial.Polynomial.Equals(System.Object)">
+            <summary>
+            Comparring the properties of two polynomials. Override Equals method for work with two polynomials.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Polynomial.Polynomial.GetHashCode">
+            <summary>
+            Hash calculation
+            </summary>
+            <returns>Return hash code.</returns>
+        </member>
+    </members>
+</doc>
