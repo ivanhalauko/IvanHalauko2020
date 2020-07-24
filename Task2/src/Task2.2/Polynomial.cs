@@ -100,8 +100,43 @@ namespace Polynomial
 
 			return PolynomResult;
 		}
-		//TODO: -
 
+
+		/// <summary>
+		/// The method overrides the mathimatical "minus" operation for working with two polynomials
+		/// </summary>
+		/// <param name="firstPolynom"> the first polynomial</param>
+		/// <param name="secondPolynom">the second polynomial</param>
+		/// <returns>return polynomial's result</returns>
+		public static Polynomial operator -(Polynomial firstPolynom, Polynomial secondPolynom)
+		{
+			if (firstPolynom == null)
+				throw new NullReferenceException("First polinom is null");
+
+			if (secondPolynom == null)
+				throw new NullReferenceException("Second polinom is null");
+
+			int degreePolynomResult = 0;
+			if (firstPolynom._coefPolynom.Length > secondPolynom._coefPolynom.Length)
+			{
+				degreePolynomResult = firstPolynom._coefPolynom.Length;
+			}
+			else if (firstPolynom._coefPolynom.Length <= secondPolynom._coefPolynom.Length)
+			{
+				degreePolynomResult = firstPolynom._coefPolynom.Length;
+			}
+
+			double[] koefPolynomResult = new double[degreePolynomResult];
+
+			Polynomial PolynomResult = new Polynomial(koefPolynomResult);
+
+			for (int i = 0; i < degreePolynomResult; i++)
+			{
+				PolynomResult._coefPolynom[i] = firstPolynom._coefPolynom[i] - secondPolynom._coefPolynom[i];
+			}
+
+			return PolynomResult;
+		}
 
 
 		public override bool Equals(object obj)
