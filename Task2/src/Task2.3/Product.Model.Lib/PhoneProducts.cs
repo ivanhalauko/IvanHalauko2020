@@ -51,17 +51,6 @@ namespace Product.Model.Lib
 		}
 
 		/// <summary>
-		/// Explicit operator from double cost pencil products to int cost.
-		/// </summary>
-		/// <param name="phone">Object phone product.</param>
-		public static explicit operator int(PhoneProducts phone)
-		{
-			double phoneCostCents = phone.Cost * 100;
-			int phoneCostInt = (int)phoneCostCents;
-			return phoneCostInt;
-		}
-
-		/// <summary>
 		/// Comparring the properties of products. Override Equals method for work with two products.
 		/// </summary>
 		/// <param name="obj"></param>

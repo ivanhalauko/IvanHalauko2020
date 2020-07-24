@@ -93,8 +93,7 @@ namespace Product.Model.Lib.Tests
 			//Arrange
 			int intActualCostExplicit = (int)phoneDouble;
 			//Asssert
-			//Assert.AreEqual(intExpectedCost, intActualCostExplicit);
+			Assert.AreEqual(intExpectedCost, intActualCostExplicit);
 		}
-
 	}
 }

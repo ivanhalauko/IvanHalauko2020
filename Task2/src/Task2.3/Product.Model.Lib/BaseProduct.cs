@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Product.Model.Lib
 {
-    public abstract class BaseProduct
+    public class BaseProduct
     {
 		/// <summary>
 		/// Property base product name.
@@ -28,13 +24,27 @@ namespace Product.Model.Lib
 			Name = name;
 			Cost = cost;
 		}
+
 		/// <summary>
-		/// Constructor class BaseProduct without parameters.
+		/// Explicit operator from double cost products to int cost.
 		/// </summary>
-		public BaseProduct()
+		/// <param name="phone">Object phone product.</param>
+		public static explicit operator int(BaseProduct product)
 		{
+			double productCostCents = product.Cost * 100;
+			int productCostInt = (int)productCostCents;
+			return productCostInt;
 		}
 
+		/// <summary>
+		/// Cost returns to float.
+		/// </summary>
+		/// <param name="baseProduct">Cost returns to float.</param>
+		public static explicit operator float(BaseProduct baseProduct)
+		{
+			return (float)baseProduct.Cost;
+		}
+		
 		/// <summary>
 		/// Comparring the properties of two base products. Override Equals method for work with two base products.
 		/// </summary>
@@ -46,6 +56,14 @@ namespace Product.Model.Lib
 				return false;
 			BaseProduct phone = (BaseProduct)obj;
 			return Name.Equals(phone.Name) && Cost.Equals(phone.Cost);
+		}
+		/// <summary>
+		/// Calculate hash code.
+		/// </summary>
+		/// <returns>The total hesh code.</returns>
+		public override int GetHashCode()
+		{
+			return Tuple.Create(Name, Cost).GetHashCode();
 		}
 	}
 }

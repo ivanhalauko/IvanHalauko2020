@@ -114,11 +114,7 @@ namespace Task201
 		/// <returns>Return 'true' or 'false' after comparison</returns>
 		public static bool operator !=(Vector vectorFirst, Vector vectorSecond)
 		{
-			//return !(vectorFirst.X == vectorSecond.X) &&
-			//	!(vectorFirst.Y == vectorSecond.Y) &&
-			//	!(vectorFirst.Z == vectorSecond.Z);
 			return !(vectorFirst == vectorSecond);
-
 		}
 
 		/// <summary>
@@ -128,11 +124,10 @@ namespace Task201
 		/// <returns>Return result after compare</returns>
 		public override bool Equals(object obj)
 		{
-			if (obj is Vector vector)
-			{
-				return ((this.X == vector.X) && (this.Y == vector.Y) && (this.Z == vector.Z));
-			}
-			return false;
+			if (obj == null || GetType() != obj.GetType())
+				return false;
+			Vector vector = (Vector)obj;
+			return X.Equals(vector.X)&& Y.Equals(vector.Y)&& Z.Equals(vector.Z);
 		}
 
 		/// <summary>
@@ -141,7 +136,7 @@ namespace Task201
 		/// <returns>Return hash code.</returns>
 		public override int GetHashCode()
 		{
-			return 12 * X.GetHashCode() + Y.GetHashCode() + Z.GetHashCode();
+			return Tuple.Create(X,Y,Z).GetHashCode();
 		}
 	}
 }

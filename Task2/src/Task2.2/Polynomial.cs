@@ -53,10 +53,10 @@ namespace Polynomial
 		public static Polynomial operator *(Polynomial firstPolynom, Polynomial secondPolynom)
 		{
 			if (firstPolynom == null)
-				throw new NullReferenceException("First polinom is null");
+				throw new ArgumentNullException("First polinom is null");
 
 			if (secondPolynom == null)
-				throw new NullReferenceException("Second polinom is null");
+				throw new ArgumentNullException("Second polinom is null");
 
 			int degreePolynomResult = 0;
 			if (firstPolynom._coefPolynom.Length > secondPolynom._coefPolynom.Length)
@@ -91,10 +91,10 @@ namespace Polynomial
 		public static Polynomial operator +(Polynomial firstPolynom, Polynomial secondPolynom)
 		{
 			if (firstPolynom == null)
-				throw new NullReferenceException("First polinom is null");
+				throw new ArgumentNullException("First polinom is null");
 
 			if (secondPolynom == null)
-				throw new NullReferenceException("Second polinom is null");
+				throw new ArgumentNullException("Second polinom is null");
 
 			int degreePolynomResult = 0;
 			if (firstPolynom._coefPolynom.Length > secondPolynom._coefPolynom.Length)
@@ -126,10 +126,10 @@ namespace Polynomial
 		public static Polynomial operator -(Polynomial firstPolynom, Polynomial secondPolynom)
 		{
 			if (firstPolynom == null)
-				throw new NullReferenceException("First polinom is null");
+				throw new ArgumentNullException("First polinom is null");
 
 			if (secondPolynom == null)
-				throw new NullReferenceException("Second polinom is null");
+				throw new ArgumentNullException("Second polinom is null");
 
 			int degreePolynomResult = 0;
 			if (firstPolynom._coefPolynom.Length > secondPolynom._coefPolynom.Length)
@@ -149,7 +149,6 @@ namespace Polynomial
 			{
 				PolynomResult._coefPolynom[i] = firstPolynom._coefPolynom[i] - secondPolynom._coefPolynom[i];
 			}
-
 			return PolynomResult;
 		}
 
@@ -164,15 +163,6 @@ namespace Polynomial
 				return false;
 			Polynomial polynom = (Polynomial)obj;
 			return Enumerable.SequenceEqual(CoefPolynom, polynom.CoefPolynom);
-		}
-
-		/// <summary>
-		/// Hash calculation
-		/// </summary>
-		/// <returns>Return hash code.</returns>
-		public override int GetHashCode()
-		{
-			return CoefPolynom.GetHashCode();
 		}
 	}
 }
