@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Product.Model.Lib</name>
+    </assembly>
+    <members>
+        <member name="P:Product.Model.Lib.BaseProduct.Name">
+            <summary>
+            Property base product name.
+            </summary>
+        </member>
+        <member name="P:Product.Model.Lib.BaseProduct.Cost">
+            <summary>
+            Property base product cost.
+            </summary>
+        </member>
+        <member name="M:Product.Model.Lib.BaseProduct.#ctor(System.String,System.Double)">
+            <summary>
+            Constructor class BaseProduct.
+            </summary>
+            <param name="name">Parameter base product name.</param>
+            <param name="cost">Parameter base product cost.</param>
+        </member>
+        <member name="M:Product.Model.Lib.BaseProduct.op_Explicit(Product.Model.Lib.BaseProduct)~System.Int32">
+            <summary>
+            Explicit operator from double cost products to int cost.
+            </summary>
+            <param name="phone">Object phone product.</param>
+        </member>
+        <member name="M:Product.Model.Lib.BaseProduct.op_Explicit(Product.Model.Lib.BaseProduct)~System.Single">
+            <summary>
+            Cost returns to float.
+            </summary>
+            <param name="baseProduct">Cost returns to float.</param>
+        </member>
+        <member name="M:Product.Model.Lib.BaseProduct.Equals(System.Object)">
+            <summary>
+            Comparring the properties of two base products. Override Equals method for work with two base products.
+            </summary>
+            <param name="obj"></param>
+            <returns>Return "true" or "false" after comparer.</returns>
+        </member>
+        <member name="M:Product.Model.Lib.BaseProduct.GetHashCode">
+            <summary>
+            Calculate hash code.
+            </summary>
+            <returns>The total hesh code.</returns>
+        </member>
+        <member name="P:Product.Model.Lib.PencilProducts.Purpose">
+            <summary>
+            Property pencil product purpose.
+            </summary>
+        </member>
+        <member name="M:Product.Model.Lib.PencilProducts.#ctor(System.String,System.Double,System.String)">
+            <summary>
+            Constructor class PencilProduct.
+            </summary>
+            <param name="name">Parameter pencil product name.</param>
+            <param name="cost">Parameter pencil product cost.</param>
+            <param name="purpose">Parameter pencil product purpose.</param>
+        </member>
+        <member name="M:Product.Model.Lib.PencilProducts.op_Addition(Product.Model.Lib.PencilProducts,Product.Model.Lib.PencilProducts)">
+            <summary>
+            The method overrides the mathematical "plus" operation for working with PhoneProducts objects.
+            </summary>
+            <param name="pencilFirst">First PencilProduct object.</param>
+            <param name="pencilSecond">Second PencilProduct object.</param>
+            <returns>Return result PencilProduct object.</returns>
+        </member>
+        <member name="M:Product.Model.Lib.PencilProducts.op_Explicit(Product.Model.Lib.PhoneProducts)~Product.Model.Lib.PencilProducts">
+            <summary>
+            Explicit operator from phone products to pencil products.
+            </summary>
+            <param name="phoneProducts">Object phone product.</param>
+        </member>
+        <member name="M:Product.Model.Lib.PencilProducts.Equals(System.Object)">
+            <summary>
+            Comparring the properties of two products. Override Equals method for work with two products.
+            </summary>
+            <param name="obj"></param>
+            <returns>Return "true" or "false" after comparer.</returns>
+        </member>
+        <member name="M:Product.Model.Lib.PencilProducts.GetHashCode">
+            <summary>
+            Hash calculation
+            </summary>
+            <returns>Return hash code.</returns>
+        </member>
+        <member name="P:Product.Model.Lib.PhoneProducts.Brand">
+            <summary>
+            Property phone product brand.
+            </summary>
+        </member>
+        <member name="M:Product.Model.Lib.PhoneProducts.#ctor(System.String,System.Double,System.String)">
+            <summary>
+            Constructor class PhoneProduct.
+            </summary>
+            <param name="name">Parameter phone product name.</param>
+            <param name="cost">Parameter phone product cost.</param>
+            <param name="brand">Parameter phone product brand</param>
+        </member>
+        <member name="M:Product.Model.Lib.PhoneProducts.op_Addition(Product.Model.Lib.PhoneProducts,Product.Model.Lib.PhoneProducts)">
+            <summary>
+            The method overrides the mathematical "plus" operation for working with PhoneProducts objects.
+            </summary>
+            <param name="phoneFirst">First PhoneProduct object.</param>
+            <param name="phoneSecond">Second PhoneProduct object.</param>
+            <returns>Return result PhoneProduct object.</returns>
+        </member>
+        <member name="M:Product.Model.Lib.PhoneProducts.op_Explicit(Product.Model.Lib.PencilProducts)~Product.Model.Lib.PhoneProducts">
+            <summary>
+            Explicit operator from pencil products to phone products.
+            </summary>
+            <param name="pencilProducts">Object pencil product.</param>
+        </member>
+        <member name="M:Product.Model.Lib.PhoneProducts.Equals(System.Object)">
+            <summary>
+            Comparring the properties of products. Override Equals method for work with two products.
+            </summary>
+            <param name="obj"></param>
+            <returns>Return "true" or "false" after comparer.</returns>
+        </member>
+        <member name="M:Product.Model.Lib.PhoneProducts.GetHashCode">
+            <summary>
+            Hash calculation
+            </summary>
+            <returns>Return hash code.</returns>
+        </member>
+    </members>
+</doc>

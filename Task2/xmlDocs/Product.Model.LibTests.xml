@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Product.Model.LibTests</name>
+    </assembly>
+    <members>
+        <member name="T:Product.Model.Lib.Tests.PencilProductsTests">
+            <summary>
+            Test class for testing PencilProduct class.
+            </summary>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PencilProductsTests.GivenOverrideOperatorPlus_WhenForFirstProductIsAndSecondProductIs_ThenIsTotalSumm(System.String,System.Double,System.String,System.String,System.Double,System.String,System.String,System.Double,System.String)">
+            <summary>
+            Test cases for testing operator pencil "+" whith positive numbers.
+            </summary>
+            <param name="nameFirstPencil">Pencil First name.</param>
+            <param name="doubleCostFirstPencil">Pencil first cost.</param>
+            <param name="purposeFirstPencil">Pencil first purpose.</param>
+            <param name="nameSecondPencil">Pencil second name.</param>
+            <param name="doubleCostSecondPencil">Pencil second cost.</param>
+            <param name="purposeSecondPencil">Pencil second purpose.</param>
+            <param name="nameExpectedPencil">Pencil expected name.</param>
+            <param name="doubleCostExpectedPencil">Pencil expected cost.</param>
+            <param name="purposeExpectedPencil">Pencil expected purpose.</param>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PencilProductsTests.GivenOverrideOperatorPlus_WhenForFirstProductIsAndSecondProductIsNull_ThenIsTotalExeption(System.String,System.Double,System.String,Product.Model.Lib.PencilProducts)">
+            <summary>
+            Test case for override operator with first "null" product.  
+            </summary>
+            <param name="nameFirstPencil">Pencil First name.</param>
+            <param name="doubleCostFirstPencil">Pencil first double type cost.</param>
+            <param name="purposeFirstPencil">Pencil First purpose.</param>
+            <param name="nullObject">Object "null"</param>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PencilProductsTests.GivenOverrideOperatorPlus_WhenForFirstProductIsNullAndSecondProductIsNotNull_ThenIsTotalExeption(System.String,System.Double,System.String,Product.Model.Lib.PencilProducts)">
+            <summary>
+            Test case for override operator with second "null" product.  
+            </summary>
+            <param name="nameFirstPencil">Pencil First name.</param>
+            <param name="doubleCostFirstPencil">Pencil first double type cost.</param>
+            <param name="purposeFirstPencil">Pencil First purpose.</param>
+            <param name="nullObject">Object "null"</param>
+        </member>
+        <!-- Проигнорирован некорректный комментарий XML для члена "M:Product.Model.Lib.Tests.PencilProductsTests.GivenExplicitTypeOfCost_WhenDoubleCost_ThenIsIntCost(System.String,System.Double,System.String,System.Int32)" -->
+        <member name="T:Product.Model.Lib.Tests.PhoneProductsTests">
+            <summary>
+            Test class for testing PhoneProduct class.
+            </summary>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PhoneProductsTests.GivenOverrideOperatorPlus_WhenForFirstProductIsAndSecondProductIs_ThenIsTotalSumm(System.String,System.Double,System.String,System.String,System.Double,System.String,System.String,System.Double,System.String)">
+            <summary>
+            Test cases for testing operator phoneProdact "+" whith positive numbers.
+            </summary>
+            <param name="nameFirstPhone">Phone First name.</param>
+            <param name="doubleCostFirstPhone">Phone first cost.</param>
+            <param name="brandFirstPhone">Phone first brand.</param>
+            <param name="nameSecondPhone">Phone second name.</param>
+            <param name="doubleCostSecondPhone">Phone second cost.</param>
+            <param name="brandSecondPhone">Phone second brand.</param>
+            <param name="nameExpectedPhone">Phone expected name.</param>
+            <param name="doubleCostExpectedPhone">Phone expected cost.</param>
+            <param name="brandExpectedPhone">Phone expected brand.</param>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PhoneProductsTests.GivenOverrideOperatorPlus_WhenForFirstProductIsAndSecondProductIsNull_ThenIsTotalExeption(System.String,System.Double,System.String,Product.Model.Lib.PhoneProducts)">
+            <summary>
+            Test case for override operator with first "null" product.  
+            </summary>
+            <param name="nameFirstPhone">Phone First name.</param>
+            <param name="doubleCostFirstPhone">Phone first cost.</param>
+            <param name="brandFirstPhone">Phone first brand.</param>
+            <param name="nullObject">Object "null"</param>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PhoneProductsTests.GivenOverrideOperatorPlus_WhenForFirstProductIsNullAndSecondProductIsNotNull_ThenIsTotalExeption(System.String,System.Double,System.String,Product.Model.Lib.PhoneProducts)">
+            <summary>
+            Test case for override operator with second "null" product.  
+            </summary>
+            <param name="nameFirstPhone">Phone First name.</param>
+            <param name="doubleCostFirstPhone">Phone first cost.</param>
+            <param name="brandFirstPhone">Phone first brand.</param>
+            <param name="nullObject">Object "null"</param>
+        </member>
+        <member name="M:Product.Model.Lib.Tests.PhoneProductsTests.GivenExplicitTypeOfCost_WhenDoubleCost_ThenIsIntCost(System.String,System.Double,System.String,System.Int32)">
+            <summary>
+            Test for check up explicit type from doble cost type to int cost type.
+            </summary>
+            <param name="name">Name phone</param>
+            <param name="doubleCost">Cost phone in double type.</param>
+            <param name="brand">Brand phone.</param>
+            <param name="intActualCost">Expected cost in int type.</param>
+        </member>
+    </members>
+</doc>

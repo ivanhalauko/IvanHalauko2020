@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2.1Tests</name>
+    </assembly>
+    <members>
+        <member name="T:Task201.Tests.VectorTests">
+            <summary>
+            Public class for testing Vector class.
+            </summary>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorPlus_WhenTwoVectorsIsPositive_ThenOutIsPositive(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "+" whith positive numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorPlus_WhenTwoVectorsIsNegative_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "+" whith negative numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorPlus_WhenSecondVectorsIsNegativeAndFirstVectorIsPositive_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "+" whith negative and positive numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorPlus_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "+" whith negative and "0" numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorSubtract_WhenTwoVectorsIsPositive_ThenOutIsPositive(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "-" whith positive numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorSubtract_WhenTwoVectorsIsNegative_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "-" whith negative numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorSubtract_WhenSecondVectorsIsNegativeAndFirstVectorIsPositive_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "-" whith negative and positive numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorSubtract_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "-" whith negative and "0" numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorMultiply_WhenTwoVectorsIsPositive_ThenOutIsPositive(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "multiply" whith positive numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorMultiply_WhenTwoVectorsIsNegative_ThenOutIsPozitive(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "multiply" whith negative numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorMultiply_WhenSecondVectorsIsNegativeAndFirstVectorIsPositive_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "multiply" whith negative and positive numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorMultiply_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsNegative(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "multiply" whith negative and "0" numbers.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideOperatorMultiply_WhenFirstVectorIsNegativeAndSecondIsScalar_ThenOutIsPositive_NegativeVector(System.Int32,System.Int32,System.Int32,System.Double,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Test cases for testing operator vector "multiply" whith negative and numbers and scalar.  
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>
+            <param name="vectorExpectedX">Test parameter "X" expected vector</param>
+            <param name="vectorExpectedY">Test parameter "Y" expected vector</param>
+            <param name="vectorExpectedZ">Test parameter "Z" expected vector</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsFalse(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "==" whith negative and "0". 
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "false"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodEquals_WhenFirstVectorIsPositiveAndSecondVectorIsPositive_ThenOutIsFalse(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "==" whith positive numbers. 
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "false"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodEquals_WhenFirstVectorIsNullAndSecondVectorIsNull_ThenOutIsTrue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "==" whith "0" numbers. 
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "true"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNegative_ThenOutIsTrue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "==" whith negative numbers. 
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "true"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodNotEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNull_ThenOutIsTrue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "=!" whith negative and "0".
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "true"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodNotEquals_WhenFirstVectorIsPositiveAndSecondVectorIsPositive_ThenOutIsTrue(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "=!" whith positive numbers.
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "true"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodNotEquals_WhenFirstVectorIsNullAndSecondVectorIsNull_ThenOutIsFalse(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "=!" whith "0" numbers.
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "false"</param>
+        </member>
+        <member name="M:Task201.Tests.VectorTests.GivenOverrideMethodNotEquals_WhenFirstVectorIsNegativeAndSecondVectorIsNegative_ThenOutIsFalse(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Test case for testing operator vector "!=" whith negative numbers.
+            </summary>
+            <param name="vectorFirstX">Test parameter "X" first vector</param>
+            <param name="vectorFirstY">Test parameter "Y" first vector</param>
+            <param name="vectorFirstZ">Test parameter "Z" first vector</param>
+            <param name="vectorSecondX">Test parameter "X" second vector</param>
+            <param name="vectorSecondY">Test parameter "Y" second vector</param>
+            <param name="vectorSecondZ">Test parameter "Z" second vector</param>>
+            <param name="expected">expected "false"</param>
+        </member>
+    </members>
+</doc>
