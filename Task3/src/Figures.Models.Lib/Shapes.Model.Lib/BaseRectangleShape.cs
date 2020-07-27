@@ -34,7 +34,7 @@ namespace Shapes.Model.Lib
 		}
 
 		/// <summary>
-		/// Constructor initialized rectangle object with length and widht parametr
+		/// Constructor initialized rectangle object with length and widht parametr.
 		/// </summary>
 		/// <param name="length">Rectangle's length.</param>
 		/// <param name="width">Rectangle's width.</param>

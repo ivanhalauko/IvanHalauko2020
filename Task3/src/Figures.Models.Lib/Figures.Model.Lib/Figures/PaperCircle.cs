@@ -4,10 +4,14 @@ using Shapes.Model.Lib;
 
 namespace Figures.Model.Lib.Figures
 {
-	class PaperCircle : BaseCircleShape, IPaper, IColor
+	public class PaperCircle : BaseCircleShape, IPaper, IColor
 	{
-		public PaperCircle(double radius) : base(radius)
+		public PaperCircle(double radius, Enums.ColorEnum colorEnum) : base(radius)
 		{
 		}
+
+		public IColor Color { get; set; }
+
+		bool IPaper.IsReColored => throw new NotImplementedException();
 	}
 }

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLStreamReaderWriter", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.Model.LibTests", "src\Figures.Models.Lib\Shapes.Model.LibTests\Shapes.Model.LibTests.csproj", "{0B656DBC-E379-4F9D-9998-82815E407F84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes.Model.LibTests1", "tests\Shapes.Model.LibTests1\Shapes.Model.LibTests1.csproj", "{6E868D70-59DC-4D05-ADFD-B5C2FCDC1720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "tests\NUnitTestProject1\NUnitTestProject1.csproj", "{5ED21F4D-EADC-4FF4-9643-9B2BAEA7FB3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{0B656DBC-E379-4F9D-9998-82815E407F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B656DBC-E379-4F9D-9998-82815E407F84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B656DBC-E379-4F9D-9998-82815E407F84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E868D70-59DC-4D05-ADFD-B5C2FCDC1720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E868D70-59DC-4D05-ADFD-B5C2FCDC1720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E868D70-59DC-4D05-ADFD-B5C2FCDC1720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E868D70-59DC-4D05-ADFD-B5C2FCDC1720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED21F4D-EADC-4FF4-9643-9B2BAEA7FB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED21F4D-EADC-4FF4-9643-9B2BAEA7FB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED21F4D-EADC-4FF4-9643-9B2BAEA7FB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED21F4D-EADC-4FF4-9643-9B2BAEA7FB3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +74,8 @@ Global
 		{E1674C9C-1471-4340-AD20-FA0FF30C74D4} = {9C4A5D64-905E-42CE-8C4B-75BD969D7824}
 		{4C70DFB0-B395-4383-A204-DE5FF9ED4B84} = {E1674C9C-1471-4340-AD20-FA0FF30C74D4}
 		{0B656DBC-E379-4F9D-9998-82815E407F84} = {F5148DD1-8C10-4648-8646-096F11D60F17}
+		{6E868D70-59DC-4D05-ADFD-B5C2FCDC1720} = {F5148DD1-8C10-4648-8646-096F11D60F17}
+		{5ED21F4D-EADC-4FF4-9643-9B2BAEA7FB3E} = {F5148DD1-8C10-4648-8646-096F11D60F17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E5A5C42-C52B-4F43-B35A-87EA6D2E2567}

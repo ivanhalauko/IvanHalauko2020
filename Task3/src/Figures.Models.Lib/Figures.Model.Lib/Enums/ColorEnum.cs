@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Figures.Model.Lib.Enums
 {
 	/// <summary>
-	/// Enum type with 16 Colors fields copied from https://docs.microsoft.com/en-us/dotnet/api/system.consolecolor
+	/// Enum type with 16 Colors
 	/// </summary>
-	enum ColorEnum
+	public enum ColorEnum
 	{
 		Black,          //  0   The color black
 		DarkBlue,       //  1   The color dark blue

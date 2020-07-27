@@ -5,10 +5,14 @@ using System.Collections.Generic;
 
 namespace Figures.Model.Lib.Figures
 {
-	class PaperRectangle : BaseCircleShape, IPaper, IColor
+	public class PaperRectangle : BaseCircleShape, IPaper, IColor
 	{
-		public PaperRectangle(double radius) : base(radius)
+		public PaperRectangle(double radius, double v, Enums.ColorEnum colorEnum) : base(radius)
 		{
 		}
+
+		public bool IsReColored => throw new NotImplementedException();
+
+		public IColor Color { get ; set; }
 	}
 }
