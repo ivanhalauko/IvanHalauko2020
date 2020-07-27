@@ -25,9 +25,6 @@ namespace BoxWithFiguresLibrary
 		/// </summary>
 		public BoxWithFigures() : this(new List<BaseShape>())
 		{
-
-		}
-
-		
+		}	
 	}
 }
