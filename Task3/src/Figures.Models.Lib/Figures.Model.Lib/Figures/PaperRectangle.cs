@@ -7,5 +7,8 @@ namespace Figures.Model.Lib.Figures
 {
 	class PaperRectangle : BaseCircleShape, IPaper, IColor
 	{
+		public PaperRectangle(double radius) : base(radius)
+		{
+		}
 	}
 }

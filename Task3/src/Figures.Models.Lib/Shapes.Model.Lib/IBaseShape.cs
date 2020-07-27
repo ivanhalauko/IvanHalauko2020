@@ -1,12 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shapes.Model.Lib
 {
-    public class IBaseShape
+	/// <summary>
+	/// Base shape contract. 
+	/// </summary>
+	interface IBaseShape
     {
-    }
+		/// <summary>
+		/// Property figure's area 
+		/// </summary>
+		double Area { get; }
+		/// <summary>
+		/// Property figure's perimetr.
+		/// </summary>
+		double Perimeter { get; }
+		/// <summary>
+		/// Base method ToString for get name of class.
+		/// </summary>
+		/// <returns></returns>
+		string ToString();
+	}
 }

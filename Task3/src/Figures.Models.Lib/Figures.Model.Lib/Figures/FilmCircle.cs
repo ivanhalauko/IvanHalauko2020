@@ -6,5 +6,8 @@ namespace Figures.Model.Lib.Figures
 {
 	public class FilmCircle : BaseCircleShape, IFilm
 	{
+		public FilmCircle(double radius) : base(radius)
+		{
+		}
 	}
 }

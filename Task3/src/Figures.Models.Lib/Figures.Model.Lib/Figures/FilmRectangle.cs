@@ -6,5 +6,8 @@ namespace Figures.Model.Lib.Figures
 {
 	class FilmRectangle : BaseRectangleShape, IFilm
 	{
+		public FilmRectangle(double length, double width) : base(length, width)
+		{
+		}
 	}
 }
