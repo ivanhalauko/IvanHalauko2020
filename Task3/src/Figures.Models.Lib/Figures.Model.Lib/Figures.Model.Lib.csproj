@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdditionalInterfaces\IColor.cs" />
-    <Compile Include="AdditionalInterfaces\IFilm.cs" />
-    <Compile Include="AdditionalInterfaces\IPaper.cs" />
+    <Compile Include="Interfaces\IColor.cs" />
+    <Compile Include="Interfaces\IFilm.cs" />
+    <Compile Include="Interfaces\IPaper.cs" />
     <Compile Include="Enums\ColorEnum.cs" />
     <Compile Include="Figures\FilmCircle.cs" />
     <Compile Include="Figures\FilmRectangle.cs" />

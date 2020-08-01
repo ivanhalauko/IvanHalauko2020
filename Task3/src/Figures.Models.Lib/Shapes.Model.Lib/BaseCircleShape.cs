@@ -22,11 +22,21 @@ namespace Shapes.Model.Lib
 		}
 
 		/// <summary>
+		/// Constructor to cut shape from another.
+		/// </summary>
+		/// <param name="currentShape">Shape's blank.</param>
+		/// <param name="cuttingShape">Cut out shape.</param>
+		public BaseCircleShape(BaseCircleShape currentShape, BaseCircleShape cuttingShape) : base(currentShape, cuttingShape)
+		{
+			UserException.AreaCutting(currentShape, cuttingShape);
+		}
+
+		/// <summary>
 		/// Property circle's area.
 		/// </summary>
 		public override double Area
 		{
-			get { return CalculateArea(Radius); }
+			get { return CalculateArea(); }
 		}
 
 		/// <summary>
@@ -34,7 +44,7 @@ namespace Shapes.Model.Lib
 		/// </summary>
 		public override double Perimeter
 		{
-			get { return CalculatePerimeter(Radius); }
+			get { return CalculatePerimeter(); }
 		}
 
 		/// <summary>
@@ -42,9 +52,9 @@ namespace Shapes.Model.Lib
 		/// </summary>
 		/// <param name="radius">Shape's radius.</param>
 		/// <returns>Return shape's area.</returns>
-		private double CalculateArea(double radius)
+		private double CalculateArea()
 		{
-			return Math.Round(Math.PI * Math.Pow(radius, 2), 2);
+			return Math.Round(Math.PI * Math.Pow(Radius, 2), 2);
 		}
 
 		/// <summary>
@@ -52,7 +62,7 @@ namespace Shapes.Model.Lib
 		/// </summary>
 		/// <param name="radius">Shape's radius.</param>
 		/// <returns>Return shape's perimetr.</returns>
-		private double CalculatePerimeter(double radius)
+		private double CalculatePerimeter()
 		{
 			return Math.Round(Math.PI * 2 * Radius, 2);
 		}

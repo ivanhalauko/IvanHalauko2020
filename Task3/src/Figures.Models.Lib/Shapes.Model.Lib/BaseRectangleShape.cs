@@ -22,7 +22,7 @@ namespace Shapes.Model.Lib
 		/// </summary>
 		public override double Area
 		{
-			get { return CalculateArea(Length,Width); }
+			get { return CalculateArea(); }
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Shapes.Model.Lib
 		/// </summary>
 		public override double Perimeter
 		{
-			get { return CalculatePerimeter(Length, Width); }
+			get { return CalculatePerimeter(); }
 		}
 
 		/// <summary>
@@ -44,15 +44,26 @@ namespace Shapes.Model.Lib
 			Width = width;
 		}
 
+
+		/// <summary>
+		/// Constructor to cut shape from another.
+		/// </summary>
+		/// <param name="currentShape">Shape's blank.</param>
+		/// <param name="cuttingShape">Cut out shape.</param>
+		public BaseRectangleShape(BaseRectangleShape currentShape, BaseRectangleShape cuttingShape) : base(currentShape, cuttingShape)
+		{
+			UserException.AreaCutting(currentShape, cuttingShape);
+		}
+
 		/// <summary>
 		/// Method calculate shape's area.
 		/// </summary>
 		/// <param name="length">Shape's lenght.</param>
 		/// <param name="width">Shape's width.</param>
 		/// <returns>Return shape's perimetr.</returns>
-		private double CalculateArea(double length, double width)
+		private double CalculateArea()
 		{
-			return length * width;
+			return Length * Width;
 		}
 
 		/// <summary>
@@ -61,7 +72,7 @@ namespace Shapes.Model.Lib
 		/// <param name="length">Shape's lenght.</param>
 		/// <param name="width">Shape's width.</param>
 		/// <returns>Return shape's perimetr.</returns>
-		private double CalculatePerimeter(double length, double width)
+		private double CalculatePerimeter()
 		{
 			return 2 * Length + 2 * Width;
 		}
