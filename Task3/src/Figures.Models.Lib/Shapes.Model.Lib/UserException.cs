@@ -12,6 +12,11 @@ namespace Shapes.Model.Lib
 		{
 		}
 
+		/// <summary>
+		/// Constructor to cut shape from another.
+		/// </summary>
+		/// <param name="currentShape">Shape's blank.</param>
+		/// <param name="cuttingShape">Cut out shape.</param>
 		internal static void AreaCutting(BaseShape currentShape, BaseShape cuttingShape)
 		{
 			if (cuttingShape.Area > currentShape.Area)

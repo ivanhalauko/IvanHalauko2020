@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Figures.Model.Lib.AdditionalInterfaces
+namespace Figures.Model.Lib.Interfaces
 {
 	/// <summary>
 	/// Interface with colors.

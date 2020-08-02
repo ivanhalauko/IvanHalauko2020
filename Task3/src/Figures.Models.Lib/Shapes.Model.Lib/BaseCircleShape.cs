@@ -26,7 +26,7 @@ namespace Shapes.Model.Lib
 		/// </summary>
 		/// <param name="currentShape">Shape's blank.</param>
 		/// <param name="cuttingShape">Cut out shape.</param>
-		public BaseCircleShape(BaseCircleShape currentShape, BaseCircleShape cuttingShape) : base(currentShape, cuttingShape)
+		public BaseCircleShape(BaseShape currentShape, BaseCircleShape cuttingShape) : base(currentShape, cuttingShape)
 		{
 			UserException.AreaCutting(currentShape, cuttingShape);
 		}
