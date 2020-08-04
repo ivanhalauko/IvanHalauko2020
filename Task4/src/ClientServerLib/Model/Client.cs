@@ -78,7 +78,6 @@ namespace ClientServerLib.Model
                 while (true)
                 {
                     message = string.Format("Client name: {0}; Client message: {1}", Name, Message);
-
                     data = Encoding.Unicode.GetBytes(message);
                     NetworkStream.Write(data, 0, data.Length);
                     break;
