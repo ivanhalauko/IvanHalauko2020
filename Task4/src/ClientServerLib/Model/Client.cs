@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientServerLib.ServerAndClientEventArgs;
+using System;
 using System.Diagnostics;
 using System.Net.Sockets;
 using System.Text;
@@ -7,6 +8,11 @@ namespace ClientServerLib.Model
 {
     public class Client
     {
+        /// <summary>
+        /// Event to track new messages.
+        /// </summary>
+        public event EventHandler<NewMessageToClientEventArgs> NewMessage;
+
         /// <summary>
         /// Client name.
         /// </summary>
@@ -53,7 +59,7 @@ namespace ClientServerLib.Model
             {
                 TcpClient = new TcpClient(IpAddress, Port);
             }
-            catch (SocketException)
+            catch (Exception)
             {
                 throw new Exception("Connection Error");
             }
@@ -89,5 +95,25 @@ namespace ClientServerLib.Model
                     TcpClient.Close();
             }
         }
+
+        /// <summary>
+        /// Used to synchronously call the methods supported by the delegate object.
+        /// </summary>
+        /// <param name="newMessageToClientEventArgs"> Type to receive a message when an event occurs. </param>
+        protected void OnNewMessage(NewMessageToClientEventArgs newMessageToClientEventArgs)
+        {
+            NewMessage?.Invoke(this, newMessageToClientEventArgs);
+        }
+
+        /// <summary>
+        /// Method for notifying receipt of a new message.
+        /// </summary>
+        /// <param name="message">New message.</param>
+        public void GetNewMessage(string message)
+        {
+            NewMessageToClientEventArgs e = new NewMessageToClientEventArgs(message);
+            OnNewMessage(e);
+        }
+
     }
 }
