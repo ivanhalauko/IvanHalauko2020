@@ -6,6 +6,9 @@ using ClientServerLib.Repositories;
 
 namespace ClientServerLib.Model
 {
+    /// <summary>
+    /// Class create new connection on server.
+    /// </summary>
     public class ClientsConnections
     {
         /// <summary>

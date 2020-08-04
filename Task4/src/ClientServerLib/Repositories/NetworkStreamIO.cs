@@ -3,6 +3,9 @@ using System.Text;
 
 namespace ClientServerLib.Repositories
 {
+    /// <summary>
+    /// IO class for write or read data from/to stream.
+    /// </summary>
     public class NetworkStreamIO
     {
         /// <summary>

@@ -8,6 +8,9 @@ using ClientServerLib.Repositories;
 
 namespace ClientServerLib.Model
 {
+    /// <summary>
+    /// Main server class.
+    /// </summary>
     public class Server
     {
         /// <summary>

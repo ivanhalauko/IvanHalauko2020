@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\LEARNdotNET\IvanHalauko2020\Task4\src\ClientServerLib\ClientServerLib.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>

@@ -7,6 +7,9 @@ using System.Text;
 
 namespace ClientServerLib.Model
 {
+    /// <summary>
+    /// Class client for user.
+    /// </summary>
     public class Client
     {
         /// <summary>

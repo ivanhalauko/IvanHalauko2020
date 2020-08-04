@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClientServerLibTests</name>
+    </assembly>
+    <members>
+        <member name="T:ClientServerLibTests.Model.ClientTests">
+            <summary>
+            Class for testing client class.
+            </summary>
+        </member>
+        <member name="M:ClientServerLibTests.Model.ClientTests.GivenOpenStreamWhenServerIsStartedTheOutIsConnectedTrue">
+            <summary>
+            Test for testing client class.
+            </summary>
+        </member>
+        <member name="M:ClientServerLibTests.Model.ClientTests.GivenClientWhenInitInstancTheOutString(System.String,System.String,System.Int32)">
+            <summary>
+            Test for testing client class.
+            </summary>
+            <param name="actualName">Client name.</param>
+            <param name="actualIp">Ip-adress.</param>
+            <param name="actualPort">Port connection.</param>
+        </member>
+        <member name="T:ClientServerLib.Model.Tests.ServerTest">
+            <summary>
+            Class for testing server class.
+            </summary>
+        </member>
+        <member name="M:ClientServerLib.Model.Tests.ServerTest.GivenServerWhenInitInstancTheOutIsTwoClients(System.String,System.String,System.Int32)">
+            <summary>
+            Test for testing server class.
+            </summary>
+            <param name="actualNameOne">Client name.</param>
+            <param name="actualIp">Ip-adress.</param>
+            <param name="actualPort">Port connection.</param>
+        </member>
+        <member name="T:ClientServerLib.Repositories.Tests.ServerMessageRepositoryTests">
+            <summary>
+            Class for testing class.
+            </summary>
+        </member>
+        <member name="M:ClientServerLib.Repositories.Tests.ServerMessageRepositoryTests.GivenServerMessageRepositoryTheOutIsConnectionError(System.String,System.String,System.Int32)">
+            <summary>
+            Test method for check up transliteration method.
+            </summary>
+            <param name="actualName">Name.</param>
+            <param name="actualIp">IP-adress.</param>
+            <param name="actualPort">Connection port.</param>
+        </member>
+    </members>
+</doc>

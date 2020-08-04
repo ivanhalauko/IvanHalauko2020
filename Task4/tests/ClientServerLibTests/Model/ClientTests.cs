@@ -7,9 +7,15 @@ using System.Threading;
 
 namespace ClientServerLibTests.Model
 {
+    /// <summary>
+    /// Class for testing client class.
+    /// </summary>
     [TestFixture()]
     public class ClientTests
     {
+        /// <summary>
+        /// Test for testing client class.
+        /// </summary>
         [TestCase()]
         public void GivenOpenStreamWhenServerIsStartedTheOutIsConnectedTrue()
         {
@@ -26,6 +32,12 @@ namespace ClientServerLibTests.Model
             Assert.AreEqual(true, tcpClient.TcpClient.Connected);
         }
 
+        /// <summary>
+        /// Test for testing client class.
+        /// </summary>
+        /// <param name="actualName">Client name.</param>
+        /// <param name="actualIp">Ip-adress.</param>
+        /// <param name="actualPort">Port connection.</param>
         [TestCase("Ivan", "127.0.0.1", 8887)]
         public void GivenClientWhenInitInstancTheOutString(string actualName, string actualIp, int actualPort)
         {

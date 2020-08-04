@@ -4,10 +4,19 @@ using System.Threading;
 
 namespace ClientServerLib.Repositories.Tests
 {
+    /// <summary>
+    /// Class for testing class.
+    /// </summary>
     [TestFixture()]
     public class ServerMessageRepositoryTests
     {
-        [TestCase("Van", "127.0.0.1", 8884)]
+        /// <summary>
+        /// Test method for check up transliteration method.
+        /// </summary>
+        /// <param name="actualName">Name.</param>
+        /// <param name="actualIp">IP-adress.</param>
+        /// <param name="actualPort">Connection port.</param>
+        [TestCase("Ivan", "127.0.0.1", 8884)]
         public void GivenServerMessageRepositoryTheOutIsConnectionError(string actualName, string actualIp, int actualPort)
         {
             //Arrange

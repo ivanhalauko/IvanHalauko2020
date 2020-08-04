@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace ClientServerLib.Repositories
 {
+    /// <summary>
+    /// Class for working with messages.
+    /// </summary>
     public class ServerMessageRepository
     {
         /// <summary>
