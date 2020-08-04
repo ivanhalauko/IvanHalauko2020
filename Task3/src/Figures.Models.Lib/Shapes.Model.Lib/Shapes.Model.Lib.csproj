@@ -53,6 +53,7 @@
     <Compile Include="BaseShape.cs" />
     <Compile Include="IBaseShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
