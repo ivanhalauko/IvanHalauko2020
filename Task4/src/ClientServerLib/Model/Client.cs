@@ -1,4 +1,5 @@
-﻿using ClientServerLib.ServerAndClientEventArgs;
+﻿using ClientServerLib.Repositories;
+using ClientServerLib.ServerAndClientEventArgs;
 using System;
 using System.Diagnostics;
 using System.Net.Sockets;
@@ -69,8 +70,7 @@ namespace ClientServerLib.Model
         /// Method for exchanging messages with the server.
         /// </summary>
         public void OpenStream()
-        {
-            byte[] data = new byte[64];
+        {       
             try
             {
                 NetworkStream = TcpClient.GetStream();
@@ -78,8 +78,10 @@ namespace ClientServerLib.Model
                 while (true)
                 {
                     message = string.Format("Client name: {0}; Client message: {1}", Name, Message);
-                    data = Encoding.Unicode.GetBytes(message);
-                    NetworkStream.Write(data, 0, data.Length);
+                    NetworkStreamIO.SendMessage(message, NetworkStream);
+                    string gettingMessage = NetworkStreamIO.GetMessage(NetworkStream);
+
+                    GetNewMessage(gettingMessage);
                     break;
                 }
             }

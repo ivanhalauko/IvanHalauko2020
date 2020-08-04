@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Diagnostics;
-using System.Text;
 using ClientServerLib.ServerAndClientEventArgs;
+using ClientServerLib.Repositories;
 
 namespace ClientServerLib.Model
 {
@@ -54,15 +54,16 @@ namespace ClientServerLib.Model
             try
             {
                 NetworkStream = TcpClient.GetStream();
-                byte[] data = new byte[64];
 
                 while (true)
                 {
                     try
                     {
-                        string message = "Message";
-                        data= Encoding.Unicode.GetBytes(message);
-                        NetworkStream.Write(data, 0, data.Length);
+                        string message = NetworkStreamIO.GetMessage(NetworkStream);
+
+                        GetNewMessage(message, ClientId);
+
+                        NetworkStreamIO.SendMessage("Message from server received, Транслитом: сообщение от сервера принято", NetworkStream);
                     }
                     catch (Exception)
                     {
