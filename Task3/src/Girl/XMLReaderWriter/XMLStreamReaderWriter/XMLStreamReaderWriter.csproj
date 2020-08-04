@@ -48,11 +48,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringReader.cs" />
+    <Compile Include="XMLReaderWriter.cs" />
+    <Compile Include="XMLStreamReaderWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Figures.Models.Lib\Figures.Model.Lib\Figures.Model.Lib.csproj">
+      <Project>{AD6D078E-8BC9-4FF6-8957-85E9A681F266}</Project>
+      <Name>Figures.Model.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Figures.Models.Lib\Shapes.Model.Lib\Shapes.Model.Lib.csproj">
+      <Project>{930B39AC-8411-4FE0-9275-A01653B56E81}</Project>
+      <Name>Shapes.Model.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BoxWithFigures\BoxWithFigures.csproj">
+      <Project>{95CEF741-5B51-4A54-A930-B4850CB6017C}</Project>
+      <Name>BoxWithFigures</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -18,6 +18,22 @@ namespace Shapes.Model.Lib
 		public abstract double Perimeter { get; }
 
 		/// <summary>
+		/// Empty costructor.
+		/// </summary>
+		public BaseShape()
+		{
+		}
+
+		/// <summary>
+		/// Copy constructor.
+		/// </summary>
+		/// <param name="baseShape">Copy param.</param>
+		public BaseShape(BaseShape currentShape, BaseShape cuttingShape)
+		{
+			UserException.AreaCutting(currentShape, cuttingShape);
+		}
+
+		/// <summary>
 		/// Comparring the properties of two base shapes. Override Equals method for work with two base shapes.
 		/// </summary>
 		/// <param name="obj"></param>
