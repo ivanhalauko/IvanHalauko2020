@@ -8,6 +8,10 @@ namespace Task51.AVLTreeLib
     public class AVLTreeNode<TNode>:IComparable<TNode> where TNode:IComparable
     {
         /// <summary>
+        /// Field tree.
+        /// </summary>
+        AVLTree<TNode> _tree;
+        /// <summary>
         /// Root's left descendent.
         /// </summary>
         AVLTreeNode<TNode> _left;
@@ -20,10 +24,11 @@ namespace Task51.AVLTreeLib
         /// </summary>
         /// <param name="value">Value of node.</param>
         /// <param name="parent">Parent of node.</param>
-        public AVLTreeNode(TNode value, AVLTreeNode<TNode> parent)
+        public AVLTreeNode(TNode value, AVLTreeNode<TNode> parent, AVLTree<TNode> tree)
         {
             value = value;
             parent = parent;
+            _tree = tree;
         }
         /// <summary>
         /// Node's parent reference.
@@ -103,7 +108,7 @@ namespace Task51.AVLTreeLib
         }
 
         /// <summary>
-        /// Property height right tree.
+        /// Property of height right tree.
         /// </summary>
         private int RightHeight
         {
@@ -144,7 +149,7 @@ namespace Task51.AVLTreeLib
         }
 
         /// <summary>
-        /// Method find height.
+        /// Method finds height.
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
@@ -157,7 +162,102 @@ namespace Task51.AVLTreeLib
             return 0;
         }
 
+        /// <summary>
+        /// Method left rotation tree. 
+        /// </summary>
+        private void LeftRotation()
+        {
+            AVLTreeNode<TNode> newRoot = Right;
+            ReplaceRoot(newRoot);
 
+            Right = newRoot.Left;
+            newRoot.Left = this;
+
+        }
+        /// <summary>
+        /// Method right rotation tree.
+        /// </summary>
+        private void RightRotation()
+        {
+            AVLTreeNode<TNode> newRoot = Left;
+            ReplaceRoot(newRoot);
+
+            Left = newRoot.Right;
+            newRoot.Right = this;
+        }
+
+        /// <summary>
+        /// Method root repalace.
+        /// </summary>
+        /// <param name="newRoot">New root.</param>
+        private void ReplaceRoot(AVLTreeNode<TNode> newRoot)
+        {
+            if (this.Parent != null)
+            {
+                if (this.Parent.Left == this)
+                {
+                    this.Parent.Left = newRoot;
+                }
+                else if (this.Parent.Right == this)
+                {
+                    this.Parent.Right = newRoot;
+                }
+            }
+            else
+            {
+                _tree.Head = newRoot;
+            }
+            newRoot.Parent = this.Parent;
+            this.Parent = newRoot;
+        }
+
+        /// <summary>
+        /// Balance method.
+        /// </summary>
+        internal void Balance()
+        {
+            if (State == TreeStateEnum.RightHeavy)
+            {
+                if (Right != null && Right.BalanceFactor < 0)
+                {
+                    LeftRightRotation();
+                }
+                else
+                {
+                    LeftRotation();
+                }
+            }
+            else if (State == TreeStateEnum.LeftHeavy)
+            {
+                if (Left != null && Left.BalanceFactor > 0)
+                {
+                    RightLeftRotation();
+                }
+                else
+                {
+                    RightRotation();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Comparing one node with another.
+        /// </summary>
+        /// <param name="obj">The compared node.</param>
+        /// <returns>True if equal. False if not equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            AVLTreeNode<TNode> node = (AVLTreeNode<TNode>)obj;
+            return Value.Equals(node.Value);
+        }
+
+        /// <summary>
+        /// Calculate hash code.
+        /// </summary>
+        /// <returns>The total hash code.</returns>
+        public override int GetHashCode() => Value.GetHashCode();
 
     }
 }
