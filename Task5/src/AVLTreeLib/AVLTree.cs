@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AVLTreeLib
 {
@@ -77,7 +78,7 @@ namespace AVLTreeLib
         /// Method make in order travesal.
         /// </summary>
         /// <returns></returns>
-        public IEnumerator<T> InOrderTravesal()
+        public IEnumerable<T> InOrderTravesal()
         {
             if (Head != null)
             {
@@ -118,7 +119,7 @@ namespace AVLTreeLib
         /// <returns></returns>
         public IEnumerator<T> GetEnumerator()
         {
-            return InOrderTravesal();
+            return (IEnumerator<T>)InOrderTravesal().ToList();
         }
         /// <summary>
         /// 

@@ -8,14 +8,25 @@ using System.Threading.Tasks;
 
 namespace StudentInformationtRepository
 {
-    public class Repository
+    public class Repository<T>  where T : IComparable
     {
-        public AVLTree<StudentInfo> StudentAVLTree { get; set; }
-                
+        public AVLTree<T> AVLTree { get; set; }
+
+
         public Repository()
         {
-            StudentAVLTree = new AVLTree<StudentInfo>();
+            AVLTree = new AVLTree<T>();         
+
         }
+
+        public IEnumerable<T> ShowAllTree(Func<T, string> keySelector, bool desinding)
+        {
+            if (desinding)
+                return AVLTree.InOrderTravesal().OrderBy(keySelector);
+            else
+                return AVLTree.InOrderTravesal().OrderByDescending(keySelector);
+        }
+
 
     }
 }
