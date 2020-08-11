@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Task51.AVLTreeLib
+namespace AVLTreeLib
 {
     /// <summary>
     /// Node's type.
     /// </summary>
-    public class AVLTreeNode<TNode>:IComparable<TNode> where TNode:IComparable
+    public class AVLTreeNode<TNode> : IComparable<TNode> where TNode : IComparable
     {
         /// <summary>
         /// Field tree.
@@ -26,8 +26,8 @@ namespace Task51.AVLTreeLib
         /// <param name="parent">Parent of node.</param>
         public AVLTreeNode(TNode value, AVLTreeNode<TNode> parent, AVLTree<TNode> tree)
         {
-            value = value;
-            parent = parent;
+            Value = value;
+            Parent = parent;
             _tree = tree;
         }
         /// <summary>
@@ -218,25 +218,12 @@ namespace Task51.AVLTreeLib
         {
             if (State == TreeStateEnum.RightHeavy)
             {
-                if (Right != null && Right.BalanceFactor < 0)
-                {
-                    LeftRightRotation();
-                }
-                else
-                {
-                    LeftRotation();
-                }
+                LeftRotation();
+                
             }
             else if (State == TreeStateEnum.LeftHeavy)
             {
-                if (Left != null && Left.BalanceFactor > 0)
-                {
-                    RightLeftRotation();
-                }
-                else
-                {
-                    RightRotation();
-                }
+                RightRotation();
             }
         }
 
