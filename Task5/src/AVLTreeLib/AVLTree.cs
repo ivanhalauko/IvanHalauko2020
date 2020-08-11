@@ -11,7 +11,7 @@ namespace AVLTreeLib
         public AVLTreeNode<T> Head
         {
             get;
-            internal set;
+            set;
         }
 
         /// <summary>
@@ -129,5 +129,23 @@ namespace AVLTreeLib
             return GetEnumerator();
         }
 
+        /// <summary>
+        /// Comparing one node with another.
+        /// </summary>
+        /// <param name="obj">The compared node.</param>
+        /// <returns>True if equal. False if not equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            AVLTree<T> node = (AVLTree<T>)obj;
+            return Head.Equals(node.Head);
+        }
+
+        /// <summary>
+        /// Calculate hash code.
+        /// </summary>
+        /// <returns>The total hash code.</returns>
+        public override int GetHashCode() => Head.GetHashCode();
     }
 }

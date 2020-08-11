@@ -30,13 +30,26 @@ namespace AVLTreeLib
             Parent = parent;
             _tree = tree;
         }
+
+        public AVLTreeNode(TNode value)
+        {
+            Value = value;
+        }
+
+        public AVLTreeNode(TNode value, AVLTreeNode<TNode> left, AVLTreeNode<TNode> right )
+        {
+            Value = value;
+            Left = left;
+            Right = right;
+        }
+
         /// <summary>
         /// Node's parent reference.
         /// </summary>
         public AVLTreeNode<TNode> Parent
         {
             get;
-            internal set;
+            set;
         }
 
         /// <summary>
@@ -48,7 +61,7 @@ namespace AVLTreeLib
             {
                 return _left;
             }
-            internal set
+            set
             {
                 _left = value;
                 if (_left != null)
@@ -67,7 +80,7 @@ namespace AVLTreeLib
             {
                 return _right;
             }
-            internal set
+            set
             {
                 _right = value;
                 if (_right != null)
@@ -83,7 +96,7 @@ namespace AVLTreeLib
         public TNode Value
         {
             get;
-            private set;
+            set;
         }
 
         /// <summary>

@@ -54,13 +54,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AVLTreeNodeTests.cs" />
+    <Compile Include="AVLTreeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AVLTreeLib\AVLTreeLib.csproj">
+    <ProjectReference Include="..\..\src\AVLTreeLib\AVLTreeLib.csproj">
       <Project>{AB7BFC8C-FEF7-46F0-BC36-47DE3563D240}</Project>
       <Name>AVLTreeLib</Name>
     </ProjectReference>
