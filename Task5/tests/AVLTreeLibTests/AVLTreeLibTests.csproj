@@ -65,6 +65,14 @@
       <Project>{AB7BFC8C-FEF7-46F0-BC36-47DE3563D240}</Project>
       <Name>AVLTreeLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\StudentInformationClass\StudentInformationClass.csproj">
+      <Project>{FD352200-1574-43D3-B5E0-5BB407ED0AF0}</Project>
+      <Name>StudentInformationClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\StudentInformationtRepository\StudentInformationtRepository.csproj">
+      <Project>{FF3B291A-87AC-45BB-B973-ECC087EBB212}</Project>
+      <Name>StudentInformationtRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
