@@ -1,15 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentInformationClass
 {
+    /// <summary>
+    /// Student model.
+    /// </summary>
+    [Serializable]
     public class StudentInfo : Entity
-    {    
-        public string StudentName { get; set; }
-
-        
+    {   
+        /// <summary>
+        /// Property student's name.
+        /// </summary>
+        public string StudentName { get; set; }      
     }
 }
