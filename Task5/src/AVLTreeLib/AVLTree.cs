@@ -4,6 +4,10 @@ using System.Linq;
 
 namespace AVLTreeLib
 {
+    /// <summary>
+    /// AVL tree class.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class AVLTree<T> : IEnumerable<T> where T : IComparable
     {
         /// <summary>
@@ -119,7 +123,8 @@ namespace AVLTreeLib
         /// <returns></returns>
         public IEnumerator<T> GetEnumerator()
         {
-            return (IEnumerator<T>)InOrderTravesal().ToList();
+            List<T> test = InOrderTravesal().ToList();
+            return test.GetEnumerator();
         }
         /// <summary>
         /// 
