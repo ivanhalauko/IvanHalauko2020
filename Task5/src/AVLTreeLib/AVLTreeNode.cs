@@ -30,12 +30,20 @@ namespace AVLTreeLib
             Parent = parent;
             _tree = tree;
         }
-
+        /// <summary>
+        /// Constructor AVL tree node class.
+        /// </summary>
+        /// <param name="value">Value of node.</param>
         public AVLTreeNode(TNode value)
         {
             Value = value;
         }
-
+        /// <summary>
+        /// Constructor AVL tree node class.
+        /// </summary>
+        /// <param name="value">Node's value.</param>
+        /// <param name="left">Root's left descendent.</param>
+        /// <param name="right">Root's right descendent.</param>
         public AVLTreeNode(TNode value, AVLTreeNode<TNode> left, AVLTreeNode<TNode> right )
         {
             Value = value;
@@ -66,7 +74,7 @@ namespace AVLTreeLib
                 _left = value;
                 if (_left != null)
                 {
-                    _left.Parent = this; //установка указателя на родительский элемент
+                    _left.Parent = this;
                 }
             }
         }
@@ -85,7 +93,7 @@ namespace AVLTreeLib
                 _right = value;
                 if (_right != null)
                 {
-                    _right.Parent = this; //установка указателя на родительский элемент
+                    _right.Parent = this;
                 }
             }
         }
@@ -187,6 +195,7 @@ namespace AVLTreeLib
             newRoot.Left = this;
 
         }
+
         /// <summary>
         /// Method right rotation tree.
         /// </summary>
@@ -258,6 +267,5 @@ namespace AVLTreeLib
         /// </summary>
         /// <returns>The total hash code.</returns>
         public override int GetHashCode() => Value.GetHashCode();
-
     }
 }
