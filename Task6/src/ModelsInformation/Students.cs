@@ -29,5 +29,12 @@ namespace ModelsInformation
         /// </summary>
         public int IDGroup { get; set; }
 
+        public string FullInfo
+        {
+            get
+            {
+                return $"{Name} {Surname} {Patronymic}({BirthDate})";
+            }
+        }
     }
 }
