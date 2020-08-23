@@ -1,12 +1,18 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
+    [Table("Students")]
     /// <summary>
     /// Student's class.
     /// </summary>
-    public class Students : Substance
+    public class Students : ISubstance
     {
+        /// <summary>
+        /// Implement interface ISubstance. 
+        /// </summary>
+        public int ID { get ; set; }
         /// <summary>
         /// Student's name property.
         /// </summary>
@@ -29,12 +35,7 @@ namespace ModelsInformation
         /// </summary>
         public int IDGroup { get; set; }
 
-        public string FullInfo
-        {
-            get
-            {
-                return $"{Name} {Surname} {Patronymic}({BirthDate})";
-            }
-        }
+        
+
     }
 }

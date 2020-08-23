@@ -5,8 +5,12 @@ namespace ModelsInformation
     /// <summary>
     /// Class student's examine results.
     /// </summary>
-    public class ExamStudResults : Substance
+    public class ExamStudResults : ISubstance
     {
+        /// <summary>
+        /// Implement interface ISubstance. 
+        /// </summary>
+        public int ID { get; set; }
         /// <summary>
         /// Student's ID property.
         /// </summary>

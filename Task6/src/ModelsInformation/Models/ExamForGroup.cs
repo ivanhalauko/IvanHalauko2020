@@ -5,8 +5,12 @@ namespace ModelsInformation
     /// <summary>
     /// Class student's exam groupe.
     /// </summary>
-    public class ExamForGroup : Substance
+    public class ExamForGroup : ISubstance
     {
+        /// <summary>
+        /// Implement interface ISubstance. 
+        /// </summary>
+        public int ID { get; set; }
         /// <summary>
         /// Student's examination term ID property.
         /// </summary>

@@ -8,8 +8,12 @@ namespace ModelsInformation
     /// <summary>
     /// Student's exam.
     /// </summary>
-    public class Exam : Substance
+    public class Exam : ISubstance
     {
+        /// <summary>
+        /// Implement interface ISubstance. 
+        /// </summary>
+        public int ID { get; set; }
         /// <summary>
         /// Student's exam name property.
         /// </summary>
