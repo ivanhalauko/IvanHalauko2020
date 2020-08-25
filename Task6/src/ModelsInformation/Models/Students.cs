@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
@@ -9,10 +10,11 @@ namespace ModelsInformation
     /// </summary>
     public class Students : ISubstance
     {
+        [Key]
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        public int ID { get ; set; }
+        public int Id { get ; set; }
         /// <summary>
         /// Student's name property.
         /// </summary>

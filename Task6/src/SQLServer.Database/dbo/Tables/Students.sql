@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Students]
 (
-	[Id] INT NOT NULL PRIMARY KEY, 
+	[Id] INT IDENTITY(1,1) PRIMARY KEY, 
     [Name] NVARCHAR(50) NULL, 
     [Surname] NVARCHAR(50) NULL, 
     [Patronymic] NVARCHAR(50) NULL, 

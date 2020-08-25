@@ -10,7 +10,7 @@ namespace ModelsInformation
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        public int ID { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// Student's ID property.
         /// </summary>

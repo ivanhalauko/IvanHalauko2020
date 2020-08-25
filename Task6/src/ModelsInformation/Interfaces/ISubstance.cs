@@ -12,6 +12,6 @@ namespace ModelsInformation
         /// Property interfaces's Id.
         /// </summary>
         [Key]
-        int ID { get; set; }
+        int Id { get; set; }
     }
 }

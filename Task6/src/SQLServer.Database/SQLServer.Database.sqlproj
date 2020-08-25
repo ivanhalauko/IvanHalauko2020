@@ -69,7 +69,7 @@
     <Build Include="dbo\Tables\ExamStudResults.sql" />
     <Build Include="dbo\Tables\ExamForGroup.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\ShowAllStudents.sql" />
-    <Build Include="dbo\StoredProcedure\spStudents\AddStudent.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\AddStudents.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\UpdateStudents.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\DeleteStudent.sql" />
   </ItemGroup>

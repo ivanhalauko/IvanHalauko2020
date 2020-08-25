@@ -8,13 +8,12 @@ namespace DAO.DataAccesLayer
 {
     public interface ICRUD<T>
     {
+        void CreateElement(T substance);
 
-        void CreateElement();
+        void ReadElementFromDatabase(int byId);
 
-        void ReadElementFromDatabase();
+        void UpdateDatabase(T substance);
 
-        void UpdateDatabase();
-
-        void DeleteElement();
+        void DeleteElement(int byId);
     }
 }

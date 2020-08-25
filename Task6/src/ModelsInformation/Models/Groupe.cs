@@ -1,16 +1,20 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
+    [Table("Groups")]
     /// <summary>
     /// Student's groupe class.
     /// </summary>
     public class Groupe : ISubstance
     {
+        [Key]
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        public int ID { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// Student's groupe name property.
         /// </summary>

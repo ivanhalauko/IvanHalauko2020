@@ -15,6 +15,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Database", "src\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccesLayer", "src\DAO.DataAccesLayer\DAO.DataAccesLayer.csproj", "{E2D5516A-5443-43AE-ABA8-4A8742128F7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccesLayerTests", "src\DAO.DataAccesLayerTests\DAO.DataAccesLayerTests.csproj", "{1F73877A-2B00-42C3-B01A-3B5FAB217E92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
