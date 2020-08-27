@@ -8,7 +8,7 @@ namespace ModelsInformation
     /// <summary>
     /// Student's groupe class.
     /// </summary>
-    public class Groupe : ISubstance
+    public class Groups : ISubstance
     {
         [Key]
         /// <summary>
@@ -18,7 +18,7 @@ namespace ModelsInformation
         /// <summary>
         /// Student's groupe name property.
         /// </summary>
-        public string GropesName { get; set; }
+        public string GropeName { get; set; }
         
     }
 }

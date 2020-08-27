@@ -6,5 +6,5 @@
     [Patronymic] NVARCHAR(50) NULL, 
     [BirthDate] DATE NULL, 
     [IDGroupe] INT NOT NULL, 
-    CONSTRAINT [FK_Students_Groupe] FOREIGN KEY ([IDGroupe]) REFERENCES [Groupe]([Id]), 
+    CONSTRAINT [FK_Students_Groups] FOREIGN KEY ([IDGroupe]) REFERENCES [Groups]([Id]) 
 )

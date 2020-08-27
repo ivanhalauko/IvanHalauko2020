@@ -60,10 +60,11 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="dbo\StoredProcedure" />
     <Folder Include="dbo\StoredProcedure\spStudents" />
+    <Folder Include="dbo\StoredProcedure\spGroups" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
-    <Build Include="dbo\Tables\Groupe.sql" />
+    <Build Include="dbo\Tables\Groups.sql" />
     <Build Include="dbo\Tables\ExamTerms.sql" />
     <Build Include="dbo\Tables\Exam.sql" />
     <Build Include="dbo\Tables\ExamStudResults.sql" />
@@ -75,5 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="SQLServer.Database.refactorlog" />
   </ItemGroup>
 </Project>

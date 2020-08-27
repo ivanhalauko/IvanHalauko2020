@@ -13,16 +13,24 @@ namespace DAO.DataAccesLayer.Tests
     public class ADOTests
     {
         [Test()]
-        public void CreateElementTest()
+        public void CreateGroupeTest()
         {
-            //Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            DateTime birth = new DateTime(2015, 10, 5, 3, 4, 5);
-            Groupe groupe = new Groupe() { GropesName = "ER"};
-            
 
+            Groups groupe = new Groups() { GropeName = "ER" };
+            ADO<Groups> instanceGroupe = new ADO<Groups>(connectionString);
+            instanceGroupe.CreateElement(groupe);
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void CreateStudentTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+          
+            DateTime birth = new DateTime(2015, 10, 5, 3, 4, 5);  
             Students student = new Students() { Name = "Vasya",Surname="Ivanov",Patronymic="Petrovich", BirthDate =birth, IDGroupe = 1};
-
             ADO<Students> instance = new ADO<Students>(connectionString);
             instance.CreateElement(student);
 

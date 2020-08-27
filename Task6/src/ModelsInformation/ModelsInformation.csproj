@@ -47,7 +47,7 @@
     <Compile Include="Models\ExamForGroup.cs" />
     <Compile Include="Models\ExamStudResults.cs" />
     <Compile Include="Models\ExamTerms.cs" />
-    <Compile Include="Models\Groupe.cs" />
+    <Compile Include="Models\Groups.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
