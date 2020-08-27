@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Groupe]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [GropesName] NVARCHAR(50) NULL
+	[Id] INT IDENTITY(1,1)   PRIMARY KEY,
+    [GroupesName] NVARCHAR(50) NULL
 )

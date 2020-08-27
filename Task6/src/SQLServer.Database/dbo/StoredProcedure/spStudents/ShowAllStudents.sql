@@ -1,5 +1,4 @@
 ﻿CREATE PROCEDURE [dbo].[ShowAllStudents]
 AS
-	SELECT *
-	FROM Students
+	SELECT *FROM Students
 GO

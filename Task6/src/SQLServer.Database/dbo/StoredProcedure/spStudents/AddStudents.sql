@@ -3,9 +3,9 @@
 	@Surname nvarchar(50),
 	@Patronymic nvarchar(50),
 	@BirthDate date,
-	@IDGroup int
+	@IDGroupe int
 AS
-	INSERT INTO Students(Name, Surname, Patronymic, BirthDate, IDGroup)
-    VALUES (@Name, @Surname, @Patronymic, @BirthDate, @IDGroup)
+	INSERT INTO Students(Name, Surname, Patronymic, BirthDate, IDGroupe)
+    VALUES (@Name, @Surname, @Patronymic, @BirthDate, @IDGroupe)
 	SELECT SCOPE_IDENTITY()
 GO
