@@ -35,7 +35,7 @@ namespace ModelsInformation
         /// <summary>
         /// Student's groupe ID property.
         /// </summary>
-        public int IDGroup { get; set; }
+        public int IDGroupe { get; set; }
 
         
 
