@@ -73,6 +73,7 @@
     <Build Include="dbo\StoredProcedure\spStudents\AddStudents.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\UpdateStudents.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\DeleteStudent.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />

@@ -17,7 +17,7 @@ namespace DAO.DataAccesLayer.Tests
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-            Groups groupe = new Groups() { GropeName = "ER" };
+            Groups groupe = new Groups() { GroupeName = "ER" };
             ADO<Groups> instanceGroupe = new ADO<Groups>(connectionString);
             instanceGroupe.CreateElement(groupe);
 

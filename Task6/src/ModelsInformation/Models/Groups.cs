@@ -18,7 +18,7 @@ namespace ModelsInformation
         /// <summary>
         /// Student's groupe name property.
         /// </summary>
-        public string GropeName { get; set; }
+        public string GroupeName { get; set; }
         
     }
 }
