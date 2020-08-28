@@ -1,10 +1,5 @@
 ﻿using NUnit.Framework;
-using DAO.DataAccesLayer;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ModelsInformation;
 
 namespace DAO.DataAccesLayer.Tests
@@ -14,12 +9,25 @@ namespace DAO.DataAccesLayer.Tests
     {
 
         [Test()]
-        public void CreateExamTermsTest()
+        public void CreateExamStudResultTest()
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ExamStudResults exam = new ExamStudResults() { IDStudent = 1, IDExamForGroupe = 1, Rating = 8 };
+            ADO<ExamStudResults> instanceExamTerms = new ADO<ExamStudResults>(connectionString);
+            instanceExamTerms.CreateElement(exam);
 
-            ExamTerms exam = new ExamTerms() { ExamTermName = "First" };
-            ADO<ExamTerms> instanceExamTerms = new ADO<ExamTerms>(connectionString);
+            //Assert.Fail();
+        }
+
+
+
+        [Test()]
+        public void CreateExamForGroupTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            DateTime dateGroupeExam = new DateTime(2015, 10, 5, 3, 4, 5);
+            ExamForGroup exam = new ExamForGroup() { IDExam = 1, IDGroupe=1, IDExamTerm=1, DateGroupeExam=dateGroupeExam};
+            ADO<ExamForGroup> instanceExamTerms = new ADO<ExamForGroup>(connectionString);
             instanceExamTerms.CreateElement(exam);
 
             //Assert.Fail();

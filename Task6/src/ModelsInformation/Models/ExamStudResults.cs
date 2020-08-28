@@ -1,12 +1,16 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
+    [Table("ExamStudentResults")]
     /// <summary>
     /// Class student's examine results.
     /// </summary>
     public class ExamStudResults : ISubstance
     {
+        [Key]
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>

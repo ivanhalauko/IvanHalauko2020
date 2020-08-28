@@ -63,6 +63,8 @@
     <Folder Include="dbo\StoredProcedure\spGroups" />
     <Folder Include="dbo\StoredProcedure\spExam" />
     <Folder Include="dbo\StoredProcedure\spExamTerms" />
+    <Folder Include="dbo\StoredProcedure\spExamForGroup" />
+    <Folder Include="dbo\StoredProcedure\spExamStudResults" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
@@ -78,6 +80,8 @@
     <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
     <Build Include="dbo\StoredProcedure\spExam\AddExam.sql" />
     <Build Include="dbo\StoredProcedure\spExamTerms\AddExamTerms.sql" />
+    <Build Include="dbo\StoredProcedure\spExamForGroup\AddExamForGroup.sql" />
+    <Build Include="dbo\StoredProcedure\spExamStudResults\AddExamStudResults.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
