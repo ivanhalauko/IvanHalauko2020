@@ -1,12 +1,16 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
+    [Table ("ExamTerms")]
     /// <summary>
     /// Examination terms.
     /// </summary>
     public class ExamTerms  : ISubstance
     {
+        [Key]
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
@@ -14,6 +18,6 @@ namespace ModelsInformation
         /// <summary>
         /// Student's exam name property.
         /// </summary>
-        public string ExamsTermName { get; set; }
+        public string ExamTermName { get; set; }
     }
 }

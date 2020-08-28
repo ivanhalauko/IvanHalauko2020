@@ -12,6 +12,19 @@ namespace DAO.DataAccesLayer.Tests
     [TestFixture()]
     public class ADOTests
     {
+
+        [Test()]
+        public void CreateExamTermsTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            ExamTerms exam = new ExamTerms() { ExamTermName = "First" };
+            ADO<ExamTerms> instanceExamTerms = new ADO<ExamTerms>(connectionString);
+            instanceExamTerms.CreateElement(exam);
+
+            //Assert.Fail();
+        }
+
         [Test()]
         public void CreateExamTest()
         {

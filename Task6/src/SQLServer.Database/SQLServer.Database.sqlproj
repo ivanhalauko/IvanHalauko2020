@@ -62,6 +62,7 @@
     <Folder Include="dbo\StoredProcedure\spStudents" />
     <Folder Include="dbo\StoredProcedure\spGroups" />
     <Folder Include="dbo\StoredProcedure\spExam" />
+    <Folder Include="dbo\StoredProcedure\spExamTerms" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
@@ -76,6 +77,7 @@
     <Build Include="dbo\StoredProcedure\spStudents\DeleteStudent.sql" />
     <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
     <Build Include="dbo\StoredProcedure\spExam\AddExam.sql" />
+    <Build Include="dbo\StoredProcedure\spExamTerms\AddExamTerms.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
