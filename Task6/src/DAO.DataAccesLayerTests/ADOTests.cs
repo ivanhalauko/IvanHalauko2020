@@ -13,6 +13,18 @@ namespace DAO.DataAccesLayer.Tests
     public class ADOTests
     {
         [Test()]
+        public void CreateExamTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            Exam exam = new Exam() { ExamName = "Phisics" };
+            ADO<Exam> instanceExam = new ADO<Exam>(connectionString);
+            instanceExam.CreateElement(exam);
+
+            //Assert.Fail();
+        }
+
+        [Test()]
         public void CreateGroupeTest()
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
