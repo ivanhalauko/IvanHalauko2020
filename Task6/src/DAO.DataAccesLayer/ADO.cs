@@ -42,23 +42,97 @@ namespace DAO.DataAccesLayer
 
         public void DeleteElement(int byId)
         {
-            //string tableName = new T().GetType().Name;
-            //string storedProcedure = "Delete" + tableName + "ById";
+            string tableName = new T().GetType().Name;
+            string storedProcedure = "Delete" + tableName + "ById";
 
-            //using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
-            //{
-            //    SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
-            //    SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection, parameters);
+            using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+            {
+                SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
 
-            //    sqlConnection.Open();
-            //    sqlCommand.ExecuteNonQuery();
-            //}
+                SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCommand.Parameters.AddRange(parameters);
+
+
+                sqlConnection.Open();
+                sqlCommand.ExecuteNonQuery();
+            }
         }
 
-        public void ReadElementFromDatabase(int byId)
+        public T ReadElementFromDatabase(int byId)
         {
-            throw new NotImplementedException();
+            if (byId == 0)
+                throw new NullReferenceException("byId should not be 0");
+
+            string tableName = new T().GetType().Name;
+            string storedProcedure = "Show" + tableName + "ById";
+
+            using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+            {
+                SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
+
+                SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCommand.Parameters.AddRange(parameters);
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                try
+                {
+                    DataSet ds = new DataSet();
+                    sqlDataAdapter.Fill(ds);
+                    DataTable test = ds.Tables[0];
+                    T test3 = ToEnumerable(test).ToList().SingleOrDefault();
+
+                    return test3;
+                }
+                catch (SqlException sqlEx)
+                {
+                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
         }
+
+
+        /// <summary>
+        /// Method to convert table to IEnumerable<T>
+        /// </summary>
+        /// <typeparam name="T">Type</typeparam>
+        /// <param name="table">input table</param>
+        /// <returns>Returns IEnumerable<T> of table</returns>
+        public IEnumerable<T> ToEnumerable(DataTable table)
+        {
+            List<T> list = new List<T>();
+
+            foreach (var row in table.AsEnumerable())
+            {
+                T obj = new T();
+
+                foreach (var prop in obj.GetType().GetProperties())
+                {
+                    try
+                    {
+                        PropertyInfo propertyInfo = obj.GetType().GetProperty(prop.Name);
+                        propertyInfo.SetValue(obj, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                }
+                list.Add(obj);
+            }
+            return list;
+        }
+
 
         public void UpdateDatabase(T substance)
         {

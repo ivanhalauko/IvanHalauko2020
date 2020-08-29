@@ -9,6 +9,31 @@ namespace DAO.DataAccesLayer.Tests
     {
 
         [Test()]
+        public void ReadInformationAboutStudentFromDatabaseByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id = 1;
+            ADO<Students> instance = new ADO<Students>(connectionString);
+            var result = instance.ReadElementFromDatabase(Id);
+
+            //Assert.Fail();
+        }
+
+
+        [Test()]
+        public void DeleteStudentTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id=1002;
+            ADO<Students> instance = new ADO<Students>(connectionString);
+            instance.DeleteElement(Id);
+
+            //Assert.Fail();
+        }
+
+        [Test()]
         public void CreateExamStudResultTest()
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";

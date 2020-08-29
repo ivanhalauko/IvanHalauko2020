@@ -10,7 +10,7 @@ namespace DAO.DataAccesLayer
     {
         void CreateElement(T substance);
 
-        void ReadElementFromDatabase(int byId);
+        T ReadElementFromDatabase(int byId);
 
         void UpdateDatabase(T substance);
 
