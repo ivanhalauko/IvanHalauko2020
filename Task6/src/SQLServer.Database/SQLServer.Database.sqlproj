@@ -65,6 +65,7 @@
     <Folder Include="dbo\StoredProcedure\spExamTerms" />
     <Folder Include="dbo\StoredProcedure\spExamForGroup" />
     <Folder Include="dbo\StoredProcedure\spExamStudResults" />
+    <Folder Include="dbo\PostDeploy" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Students.sql" />
@@ -85,8 +86,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
+    <Build Include="dbo\PostDeploy\GroupsPostDeploy.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SQLServer.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="dbo\PostDeploy\Main.Script.PostDeployment.sql" />
+    <Build Include="dbo\PostDeploy\StudentsPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\ExamPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\ExamForGroupPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\ExamTermsPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\ExamStudResultsPostDeploy.sql" />
   </ItemGroup>
 </Project>

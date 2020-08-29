@@ -19,8 +19,6 @@ namespace DAO.DataAccesLayer.Tests
             //Assert.Fail();
         }
 
-
-
         [Test()]
         public void CreateExamForGroupTest()
         {

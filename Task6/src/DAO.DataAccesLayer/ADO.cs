@@ -42,17 +42,17 @@ namespace DAO.DataAccesLayer
 
         public void DeleteElement(int byId)
         {
-            ////string tableName = new T().GetType().Name;
-            ////string storedProcedure = "Delete" + tableName + "ById";
+            //string tableName = new T().GetType().Name;
+            //string storedProcedure = "Delete" + tableName + "ById";
 
-            ////using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
-            ////{
-            ////    SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
-            ////    SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection, parameters);
+            //using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+            //{
+            //    SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
+            //    SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection, parameters);
 
-            ////        sqlConnection.Open();
-            ////        sqlCommand.ExecuteNonQuery();
-            ////}
+            //    sqlConnection.Open();
+            //    sqlCommand.ExecuteNonQuery();
+            //}
         }
 
         public void ReadElementFromDatabase(int byId)
