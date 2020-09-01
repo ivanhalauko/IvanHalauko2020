@@ -12,3 +12,4 @@ and IDExamForGroupe=1 and Rating=4)
 		INSERT ExamStudResults (IDStudent,IDExamForGroupe,Rating) VALUES(3,1,4)
 		INSERT ExamStudResults (IDStudent,IDExamForGroupe,Rating) VALUES(4,2,3)
 	end
+	GO

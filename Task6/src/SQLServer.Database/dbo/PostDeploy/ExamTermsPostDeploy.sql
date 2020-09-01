@@ -13,3 +13,4 @@ INSERT INTO ExamTerms(ExamTermName) VALUES('Eight session')
 INSERT INTO ExamTerms(ExamTermName) VALUES('Ninth session')
 INSERT INTO ExamTerms(ExamTermName) VALUES('Tenth session')
 end
+GO

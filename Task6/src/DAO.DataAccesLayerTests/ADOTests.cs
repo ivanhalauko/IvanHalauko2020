@@ -7,6 +7,41 @@ namespace DAO.DataAccesLayer.Tests
     [TestFixture()]
     public class ADOTests
     {
+        [Test()]
+        public void ReadExamForGroupFromDatabaseByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id = 1;
+            ADO<ExamForGroup> instance = new ADO<ExamForGroup>(connectionString);
+            var result = instance.ReadElementFromDatabase(Id);
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void ReadExamStudResultsFromDatabaseByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id = 1;
+            ADO<ExamStudResults> instance = new ADO<ExamStudResults>(connectionString);
+            var result = instance.ReadElementFromDatabase(Id);
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void ReadGroupFromDatabaseByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id = 1;
+            ADO<Groups> instance = new ADO<Groups>(connectionString);
+            var result = instance.ReadElementFromDatabase(Id);
+
+            //Assert.Fail();
+        }
 
         [Test()]
         public void ReadInformationAboutStudentFromDatabaseByIdTest()
@@ -16,7 +51,7 @@ namespace DAO.DataAccesLayer.Tests
             int Id = 1;
             ADO<Students> instance = new ADO<Students>(connectionString);
             var result = instance.ReadElementFromDatabase(Id);
-
+            
             //Assert.Fail();
         }
 

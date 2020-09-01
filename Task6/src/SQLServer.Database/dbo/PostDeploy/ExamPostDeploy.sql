@@ -7,3 +7,4 @@ INSERT INTO Exam(ExamName) VALUES('Chemist')
 INSERT INTO Exam(ExamName) VALUES('Math')
 INSERT INTO Exam(ExamName) VALUES('English')
 end
+GO

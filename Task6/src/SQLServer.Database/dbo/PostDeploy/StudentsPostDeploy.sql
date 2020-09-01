@@ -13,3 +13,4 @@ VALUES('Petya','Gavrilov','Rigogich','2015.01.15',3)
 INSERT INTO Students (Name, Surname, Patronymic, BirthDate,IDGroupe) 
 VALUES('Gena','Stepanov','Losevich','2015.08.20',4)
 end
+GO

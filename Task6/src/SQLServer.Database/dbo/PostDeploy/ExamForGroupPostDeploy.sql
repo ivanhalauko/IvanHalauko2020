@@ -7,3 +7,4 @@ INSERT INTO ExamForGroup (IDExamTerm, IDExam, IDGroupe,DateGroupeExam) VALUES(1,
 INSERT INTO ExamForGroup (IDExamTerm, IDExam, IDGroupe,DateGroupeExam) VALUES(2, 2, 2, '2015.10.5')
 INSERT INTO ExamForGroup (IDExamTerm, IDExam, IDGroupe,DateGroupeExam) VALUES(3, 1, 3, '2015.10.2')
 end
+go
