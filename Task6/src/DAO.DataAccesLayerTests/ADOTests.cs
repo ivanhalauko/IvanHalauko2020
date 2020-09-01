@@ -20,9 +20,32 @@ namespace DAO.DataAccesLayer.Tests
             //Assert.Fail();
         }
 
+        [Test()]
+        public void DeleteExamForGroupByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id = 1;
+            ADO<ExamForGroup> instance = new ADO<ExamForGroup>(connectionString);
+            instance.DeleteElement(Id);
+
+            //Assert.Fail();
+        }
 
         [Test()]
-        public void DeleteStudentTest()
+        public void DeleteGroupeByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            int Id = 1;
+            ADO<Groups> instance = new ADO<Groups>(connectionString);
+            instance.DeleteElement(Id);
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void DeleteStudentByIdTest()
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 

@@ -83,6 +83,9 @@
     <Build Include="dbo\StoredProcedure\spExamTerms\AddExamTerms.sql" />
     <Build Include="dbo\StoredProcedure\spExamForGroup\AddExamForGroup.sql" />
     <Build Include="dbo\StoredProcedure\spExamStudResults\AddExamStudResults.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\DeleteGroupsById.sql" />
+    <Build Include="dbo\StoredProcedure\spExamForGroup\DeleteExamForGroupById.sql" />
+    <Build Include="dbo\StoredProcedure\spExamStudResults\DeleteExamStudResultsById.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
