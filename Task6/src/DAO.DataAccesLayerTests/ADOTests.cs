@@ -7,6 +7,33 @@ namespace DAO.DataAccesLayer.Tests
     [TestFixture()]
     public class ADOTests
     {
+
+        [Test()]
+        public void UpdateGroupsTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            
+            Groups student = new Groups() { Id=1,GroupeName="TOO" };
+            ADO<Groups> instance = new ADO<Groups>(connectionString);
+            //instance.CreateElement(student);
+            instance.UpdateDatabase(student);         
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void UpdateStudentTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            DateTime birth = new DateTime(2015, 10, 5, 3, 4, 5);
+            Students student = new Students() { Id=1,Name = "Vasya", Surname = "Ivanov", Patronymic = "NEW", BirthDate = birth, IDGroupe = 1 };
+            ADO<Students> instance = new ADO<Students>(connectionString);
+            instance.UpdateDatabase(student);
+
+            //Assert.Fail();
+        }
+
         [Test()]
         public void ReadExamForGroupFromDatabaseByIdTest()
         {
@@ -70,10 +97,13 @@ namespace DAO.DataAccesLayer.Tests
         [Test()]
         public void DeleteGroupeByIdTest()
         {
+
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-            int Id = 1;
+            int Id = 6;
             ADO<Groups> instance = new ADO<Groups>(connectionString);
+            //instance.CreateElement(new Groups() { GroupeName = "NEW" });
+            
             instance.DeleteElement(Id);
 
             //Assert.Fail();

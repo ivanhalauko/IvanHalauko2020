@@ -12,7 +12,7 @@ namespace DAO.DataAccesLayer
 
         T ReadElementFromDatabase(int byId);
 
-        void UpdateDatabase(T substance);
+        T UpdateDatabase(T substance);
 
         void DeleteElement(int byId);
     }

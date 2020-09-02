@@ -89,6 +89,7 @@
     <Build Include="dbo\StoredProcedure\spGroups\ShowGroupsById.sql" />
     <Build Include="dbo\StoredProcedure\spExamStudResults\ShowExamStudResultsById.sql" />
     <Build Include="dbo\StoredProcedure\spExamForGroup\ShowExamForGroupById.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\UpdateGroups.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />

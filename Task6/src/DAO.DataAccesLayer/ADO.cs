@@ -133,10 +133,60 @@ namespace DAO.DataAccesLayer
             return list;
         }
 
-
-        public void UpdateDatabase(T substance)
+        public T UpdateDatabase(T substance)
         {
-            throw new NotImplementedException();
+            if (substance == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            string tableName = new T().GetType().Name;
+            string storedProcedure = "Update" + tableName;
+
+            using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+            {
+
+                SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCommand.Parameters.AddRange(GetUpdateParameter(substance).ToArray());
+
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataSet ds = new DataSet();
+
+                try
+                {
+                    sqlDataAdapter.Fill(ds);
+                    DataTable test = ds.Tables[0];
+                    T test2 = ToEnumerable(test).ToList().SingleOrDefault();
+                    return test2;
+                }
+                catch (SqlException sqlEx)
+                {
+                    throw new ArgumentException("Class Name and Table name must be same for this method. See inner exception", sqlEx);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Private method for get property from objects and add their to list for sqlParameters
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns>returns list of sqlParameters.</returns>
+        private List<SqlParameter> GetUpdateParameter(object obj)
+        {
+            PropertyInfo[] fields = obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var sqlParams = new List<SqlParameter>();
+            foreach (var f in fields)
+            {
+                sqlParams.Add(new SqlParameter(f.Name, f.GetValue(obj, null)));
+            }
+            return sqlParams;
         }
 
         /// <summary>
