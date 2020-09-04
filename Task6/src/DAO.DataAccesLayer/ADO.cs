@@ -101,7 +101,6 @@ namespace DAO.DataAccesLayer
             }
         }
 
-
         /// <summary>
         /// Method to convert table to IEnumerable<T>
         /// </summary>
@@ -145,7 +144,6 @@ namespace DAO.DataAccesLayer
 
             using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
             {
-
                 SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
                 {
                     CommandType = CommandType.StoredProcedure

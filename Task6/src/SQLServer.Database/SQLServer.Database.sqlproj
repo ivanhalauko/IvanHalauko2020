@@ -90,6 +90,14 @@
     <Build Include="dbo\StoredProcedure\spExamStudResults\ShowExamStudResultsById.sql" />
     <Build Include="dbo\StoredProcedure\spExamForGroup\ShowExamForGroupById.sql" />
     <Build Include="dbo\StoredProcedure\spGroups\UpdateGroups.sql" />
+    <Build Include="dbo\StoredProcedure\spExamTerms\UpdateExamTerms.sql" />
+    <Build Include="dbo\StoredProcedure\spExamStudResults\UpdateExamStudResults.sql" />
+    <Build Include="dbo\StoredProcedure\spExamForGroup\UpdateExamForGroup.sql" />
+    <Build Include="dbo\StoredProcedure\spExamTerms\ShowExamTermsById.sql" />
+    <Build Include="dbo\StoredProcedure\spExamTerms\DeleteExamTermsById.sql" />
+    <Build Include="dbo\StoredProcedure\spExam\UpdateExam.sql" />
+    <Build Include="dbo\StoredProcedure\spExam\DeleteExamById.sql" />
+    <Build Include="dbo\StoredProcedure\spExam\ShowExamById.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />

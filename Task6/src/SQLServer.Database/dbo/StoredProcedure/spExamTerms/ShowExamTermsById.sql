@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[ShowExamTerms]
+﻿CREATE PROCEDURE [dbo].[ShowExamTermsById]
 	@Id INT
 AS
 	SELECT * FROM dbo.ExamTerms WHERE Id=@Id
