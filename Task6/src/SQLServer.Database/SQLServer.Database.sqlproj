@@ -98,6 +98,12 @@
     <Build Include="dbo\StoredProcedure\spExam\UpdateExam.sql" />
     <Build Include="dbo\StoredProcedure\spExam\DeleteExamById.sql" />
     <Build Include="dbo\StoredProcedure\spExam\ShowExamById.sql" />
+    <Build Include="dbo\StoredProcedure\spStudents\ShowAllStudents.sql" />
+    <Build Include="dbo\StoredProcedure\spGroups\ShowAllGroups.sql" />
+    <Build Include="dbo\StoredProcedure\spExamTerms\ShowAllExamTerms.sql" />
+    <Build Include="dbo\StoredProcedure\spExamStudResults\ShowAllExamStudResults.sql" />
+    <Build Include="dbo\StoredProcedure\spExamForGroup\ShowAllExamForGroup.sql" />
+    <Build Include="dbo\StoredProcedure\spExam\ShowAllExam.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />

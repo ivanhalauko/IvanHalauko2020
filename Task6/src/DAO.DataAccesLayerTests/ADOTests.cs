@@ -9,6 +9,69 @@ namespace DAO.DataAccesLayer.Tests
     {
 
         [Test()]
+        public void ReadAllExamFromDatabaseByIdTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            ADO<Exam> instance = new ADO<Exam>(connectionString);
+            var result = instance.ReadAllElementFromDatabase();
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void ReadAllExamForGroupFromDatabaseTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ADO<ExamForGroup> instance = new ADO<ExamForGroup>(connectionString);
+            var result = instance.ReadAllElementFromDatabase();
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void ReadAllExamStudResultsFromDatabaseTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ADO<ExamStudResults> instance = new ADO<ExamStudResults>(connectionString);
+            var result = instance.ReadAllElementFromDatabase();
+
+            //Assert.Fail();
+        }
+
+
+        [Test()]
+        public void ReadAllExamTermsFromDatabaseTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ADO<ExamTerms> instance = new ADO<ExamTerms>(connectionString);
+            var result = instance.ReadAllElementFromDatabase();
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void ReadAllGroupFromDatabaseTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ADO<Groups> instance = new ADO<Groups>(connectionString);
+            var result = instance.ReadAllElementFromDatabase();
+
+            //Assert.Fail();
+        }
+
+        [Test()]
+        public void ReadAllInformationAboutStudentFromDatabaseTest()
+        {
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            ADO<Students> instance = new ADO<Students>(connectionString);
+            var result = instance.ReadAllElementFromDatabase();
+            //Assert.Fail();
+        }
+
+        //TODO: !!!
+
+        [Test()]
         public void DeleteExamByIdTest()
         {
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";

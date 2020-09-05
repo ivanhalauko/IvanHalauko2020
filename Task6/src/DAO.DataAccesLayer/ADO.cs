@@ -61,6 +61,39 @@ namespace DAO.DataAccesLayer
             }
         }
 
+        public IEnumerable<T> ReadAllElementFromDatabase()
+        {
+            string tableName = new T().GetType().Name;
+            string storedProcedure = "ShowAll" + tableName;
+
+            using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                try
+                {
+                    DataSet ds = new DataSet();
+                    sqlDataAdapter.Fill(ds);
+                    DataTable test = ds.Tables[0];
+                    IEnumerable<T> test3 = ToEnumerable(test);
+
+                    return test3;
+                }
+                catch (SqlException sqlEx)
+                {
+                    throw new ArgumentException("Some Error occured at database, if error in stored procedure: " + storedProcedure, sqlEx);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
+
         public T ReadElementFromDatabase(int byId)
         {
             if (byId == 0)
