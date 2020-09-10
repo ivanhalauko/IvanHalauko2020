@@ -11,7 +11,7 @@ namespace SQLServerView
     {
         SingletonAccessToDbo SingletonAccessToDbo { get; set; }
 
-        IView View;
+        protected IView View;
         public ParentView() { }
         public ParentView(IView view) : this() => View = view;
         public ParentView(SingletonAccessToDbo singletonAccessToDbo, IView view):this(view)

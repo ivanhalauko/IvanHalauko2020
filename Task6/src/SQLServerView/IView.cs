@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SQLServerView
 {
-    public class IView
+    public interface IView
     {
 
         IEnumerable<Exam> Exams { get; }
