@@ -5,10 +5,22 @@ using System.Linq;
 
 namespace SQLServerView
 {
+    /// <summary>
+    /// Class session result view.
+    /// </summary>
     public class SessionsResultsView : ParentView
     {
+        /// <summary>
+        /// Name of session property.
+        /// </summary>
         public string NameOfSession { get; set; }
+        /// <summary>
+        /// Name of group property.
+        /// </summary>
         public string NameOfGroup { get; set; }
+        /// <summary>
+        /// Student's name property.
+        /// </summary>
         public string Name { get; set; }
         /// <summary>
         /// Student's surname property.
@@ -19,25 +31,40 @@ namespace SQLServerView
         /// </summary>
         public string Patronymic { get; set; }
         /// <summary>
-        /// Student's birth date property.
+        /// Name of exam property.
         /// </summary>
-
         public string NameOfExam { get; set; }
-
-        public int Value { get; set; }
-
+        /// <summary>
+        /// Student's rating.
+        /// </summary>
+        public int Rating { get; set; }
+        /// <summary>
+        /// Constructor without parameters.
+        /// </summary>
         public SessionsResultsView()
         {
         }
-
+        /// <summary>
+        /// Constructor with initialize parameters.
+        /// </summary>
+        /// <param name="view">View property.</param>
         public SessionsResultsView(IView view) : base(view)
         {
         }
-
+        /// <summary>
+        /// Constructor with initialize parameters.
+        /// </summary>
+        /// <param name="singletonAccessToDbo">SingletonAccessToDbo parameter.</param>
+        /// <param name="view">View property.</param>
         public SessionsResultsView(SingletonAccessToDbo singletonAccessToDbo, IView view) : base(singletonAccessToDbo, view)
         {
         }
-
+        /// <summary>
+        /// Method for get view.
+        /// </summary>
+        /// <param name="nameOfSession">Name of session parameter.</param>
+        /// <param name="nameOfGroup">Name of group parameter.</param>
+        /// <returns>Return view.</returns>
         public IEnumerable<SessionsResultsView> GetView(string nameOfSession, string nameOfGroup)
         {
             IEnumerable<SessionsResultsView> sessionResultsView =
@@ -67,20 +94,22 @@ namespace SQLServerView
                     Name = itemStudents.Name,
                     Patronymic = itemStudents.Patronymic,
                     NameOfExam = itemExam.ExamName,
-                    Value = itemSessionResult.Rating  
+                    Rating = itemSessionResult.Rating  
                 };
             return sessionResultsView;
         }
-
+        /// <summary>
+        /// Method convert view to string.
+        /// </summary>
+        /// <param name="sessionResultView"></param>
+        /// <returns></returns>
         public string ToString(IEnumerable<SessionsResultsView> sessionResultView)
         {
             string[] header = { "SessionName; GroupName; FirstName; LastName; MiddleName; SubjectName; Value" };
             string[] data = sessionResultView.Select(p => string.Format("{0}; {1}; {2}; {3}; {4}; {5}; {6}", p.NameOfSession, p.NameOfGroup, 
-                p.Name, p.Surname, p.Patronymic, p.NameOfExam, p.Value)).ToArray();
+                p.Name, p.Surname, p.Patronymic, p.NameOfExam, p.Rating)).ToArray();
 
             return string.Join(System.Environment.NewLine, header.Concat(data));
-
         }
-
     }
 }
