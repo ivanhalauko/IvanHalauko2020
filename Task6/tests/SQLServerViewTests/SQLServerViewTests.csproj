@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="MockParentView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionsResultsViewTests.cs" />
+    <Compile Include="TestCaseSourcesSessionsResultsViewTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

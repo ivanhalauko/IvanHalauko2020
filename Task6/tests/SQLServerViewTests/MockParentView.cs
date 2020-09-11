@@ -7,6 +7,9 @@ using NUnit.Framework;
 
 namespace SQLServerViewTests
 {
+    /// <summary>
+    /// Class for tests.
+    /// </summary>
     
     public class MockParentView
     {
@@ -101,7 +104,7 @@ namespace SQLServerViewTests
             Exams = new List<Exam>()
             {
                 new Exam(){Id=1,ExamName="Phisic"},
-                new Exam(){Id=2,ExamName="Philisiphi"},
+                new Exam(){Id=2,ExamName="Philosophy"},
                 new Exam(){Id=3,ExamName="Math"},
                 new Exam(){Id=4,ExamName="Chemistry"},
                 new Exam(){Id=5,ExamName="Language"},

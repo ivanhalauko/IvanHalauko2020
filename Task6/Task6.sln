@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccesLayerTests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerView", "src\SQLServerView\SQLServerView.csproj", "{9AD04E66-C262-40A3-AE76-356643CD57A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerViewTests", "tests\SQLServerViewTests\SQLServerViewTests.csproj", "{CA1C0767-967D-4A84-BACC-13BAF630846A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{9AD04E66-C262-40A3-AE76-356643CD57A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AD04E66-C262-40A3-AE76-356643CD57A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AD04E66-C262-40A3-AE76-356643CD57A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{76C93121-56A7-4808-BACD-E627401516D6} = {C90586EC-D015-4F5A-987E-C8F33EE9BD12}
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B} = {C90586EC-D015-4F5A-987E-C8F33EE9BD12}
 		{9AD04E66-C262-40A3-AE76-356643CD57A3} = {C90586EC-D015-4F5A-987E-C8F33EE9BD12}
+		{CA1C0767-967D-4A84-BACC-13BAF630846A} = {701AB260-AD48-4A37-B505-4DC565C0AB8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {856AC24C-F408-480D-8A64-C86FC3EB38A8}
