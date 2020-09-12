@@ -62,7 +62,7 @@
     <Folder Include="dbo\StoredProcedure" />
     <Folder Include="dbo\StoredProcedure\spStudents" />
     <Folder Include="dbo\StoredProcedure\spGroups" />
-    <Folder Include="dbo\StoredProcedure\spExam" />
+    <Folder Include="dbo\StoredProcedure\spSubjects" />
     <Folder Include="dbo\StoredProcedure\spExamTerms" />
     <Folder Include="dbo\StoredProcedure\spExamForGroup" />
     <Folder Include="dbo\StoredProcedure\spExamStudResults" />
@@ -79,7 +79,7 @@
     <Build Include="dbo\StoredProcedure\spStudents\UpdateStudents.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\DeleteStudentsById.sql" />
     <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
-    <Build Include="dbo\StoredProcedure\spExam\AddExam.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\AddSubjects.sql" />
     <Build Include="dbo\StoredProcedure\spExamTerms\AddExamTerms.sql" />
     <Build Include="dbo\StoredProcedure\spExamForGroup\AddExamForGroup.sql" />
     <Build Include="dbo\StoredProcedure\spExamStudResults\AddExamStudResults.sql" />
@@ -95,15 +95,15 @@
     <Build Include="dbo\StoredProcedure\spExamForGroup\UpdateExamForGroup.sql" />
     <Build Include="dbo\StoredProcedure\spExamTerms\ShowExamTermsById.sql" />
     <Build Include="dbo\StoredProcedure\spExamTerms\DeleteExamTermsById.sql" />
-    <Build Include="dbo\StoredProcedure\spExam\UpdateExam.sql" />
-    <Build Include="dbo\StoredProcedure\spExam\DeleteExamById.sql" />
-    <Build Include="dbo\StoredProcedure\spExam\ShowExamById.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\UpdateSubjects.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\DeleteSubjectsById.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\ShowSubjectsById.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\ShowAllStudents.sql" />
     <Build Include="dbo\StoredProcedure\spGroups\ShowAllGroups.sql" />
     <Build Include="dbo\StoredProcedure\spExamTerms\ShowAllExamTerms.sql" />
     <Build Include="dbo\StoredProcedure\spExamStudResults\ShowAllExamStudResults.sql" />
     <Build Include="dbo\StoredProcedure\spExamForGroup\ShowAllExamForGroup.sql" />
-    <Build Include="dbo\StoredProcedure\spExam\ShowAllExam.sql" />
+    <Build Include="dbo\StoredProcedure\spSubjects\ShowAllSubjects.sql" />
     <Build Include="dbo\Tables\Examiners.sql" />
     <Build Include="dbo\Tables\Specialties.sql" />
     <Build Include="dbo\Tables\Subjects.sql" />
