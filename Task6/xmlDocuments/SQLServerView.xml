@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SQLServerView</name>
+    </assembly>
+    <members>
+        <member name="T:SQLServerView.AverageMinMaxRatingOnGroup">
+            <summary>
+            Class session result view.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.AverageMinMaxRatingOnGroup.NameOfSession">
+            <summary>
+            Name of session property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.AverageMinMaxRatingOnGroup.NameOfGroup">
+            <summary>
+            Name of group property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.AverageMinMaxRatingOnGroup.MaxRating">
+            <summary>
+            MaxValue column.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.AverageMinMaxRatingOnGroup.MinRating">
+            <summary>
+            MinValue column.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.AverageMinMaxRatingOnGroup.AverageRating">
+            <summary>
+            AverageRating column.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.AverageMinMaxRatingOnGroup.#ctor">
+            <summary>
+            Constructor without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.AverageMinMaxRatingOnGroup.#ctor(SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.AverageMinMaxRatingOnGroup.#ctor(DAO.DataAccesLayer.Singleton.SingletonAccessToDbo,SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="singletonAccessToDbo">SingletonAccessToDbo parameter.</param>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.AverageMinMaxRatingOnGroup.GetView(System.String,System.String)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="groupName">Group name parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServerView.AverageMinMaxRatingOnGroup.ToString(SQLServerView.AverageMinMaxRatingOnGroup)">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="view">Aggregate operations view parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServerView.ExpelledStudentsView">
+            <summary>
+            Students to be expelled view.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ExpelledStudentsView.NameOfSession">
+            <summary>
+            Name of session property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ExpelledStudentsView.NameOfGroup">
+            <summary>
+            Name of group property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ExpelledStudentsView.Name">
+            <summary>
+            Student's name property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ExpelledStudentsView.Surname">
+            <summary>
+            Student's surname property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ExpelledStudentsView.Patronymic">
+            <summary>
+            Student's patronymic property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ExpelledStudentsView.IDStudent">
+            <summary>
+            Student's ID property.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.ExpelledStudentsView.#ctor">
+            <summary>
+            Constructor without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.ExpelledStudentsView.#ctor(SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.ExpelledStudentsView.#ctor(DAO.DataAccesLayer.Singleton.SingletonAccessToDbo,SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="singletonAccessToDbo">SingletonAccessToDbo parameter.</param>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.ExpelledStudentsView.GetView(System.String,System.Int32)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="sessionName">Session name parameter.</param>
+            <param name="minPassingGrade">Session minimum passing grade parameter.</param>
+            <returns>Returns new view.</returns>
+        </member>
+        <member name="M:SQLServerView.ExpelledStudentsView.ToString(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{SQLServerView.ExpelledStudentsView}})">
+            <summary>
+            Conver view to string.
+            </summary>
+            <param name="studentsToBeExpelledGrouped">Students to be expelled grouped parameter.</param>
+            <returns>Returns string.</returns>
+        </member>
+        <member name="T:SQLServerView.IView">
+            <summary>
+            Interface with tables contract.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.IView.Exams">
+            <summary>
+            Exams tables.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.IView.ExamsForGroups">
+            <summary>
+            Exams for groups tables.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.IView.ExamStudResults">
+            <summary>
+            Exam with students results tables.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.IView.ExamTerms">
+            <summary>
+            Exams's terms tables.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.IView.Groups">
+            <summary>
+            Groups tables.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.IView.Students">
+            <summary>
+            Students tables.
+            </summary>
+        </member>
+        <member name="T:SQLServerView.ParentView">
+            <summary>
+            Base class for view.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.ParentView.SingletonAccessToDbo">
+            <summary>
+            Access to database.
+            </summary>
+        </member>
+        <member name="F:SQLServerView.ParentView.View">
+            <summary>
+            Tables for view.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.ParentView.#ctor">
+            <summary>
+            Constructor without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.ParentView.#ctor(SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.ParentView.#ctor(DAO.DataAccesLayer.Singleton.SingletonAccessToDbo,SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="singletonAccessToDbo">SingletonAccessToDbo parameter.</param>
+            <param name="view">View property.</param>
+        </member>
+        <member name="T:SQLServerView.SessionsResultsView">
+            <summary>
+            Class session result view.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.NameOfSession">
+            <summary>
+            Name of session property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.NameOfGroup">
+            <summary>
+            Name of group property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.Name">
+            <summary>
+            Student's name property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.Surname">
+            <summary>
+            Student's surname property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.Patronymic">
+            <summary>
+            Student's patronymic property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.NameOfExam">
+            <summary>
+            Name of exam property.
+            </summary>
+        </member>
+        <member name="P:SQLServerView.SessionsResultsView.Rating">
+            <summary>
+            Student's rating.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.SessionsResultsView.#ctor">
+            <summary>
+            Constructor without parameters.
+            </summary>
+        </member>
+        <member name="M:SQLServerView.SessionsResultsView.#ctor(SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.SessionsResultsView.#ctor(DAO.DataAccesLayer.Singleton.SingletonAccessToDbo,SQLServerView.IView)">
+            <summary>
+            Constructor with initialize parameters.
+            </summary>
+            <param name="singletonAccessToDbo">SingletonAccessToDbo parameter.</param>
+            <param name="view">View property.</param>
+        </member>
+        <member name="M:SQLServerView.SessionsResultsView.GetView(System.String,System.String)">
+            <summary>
+            Method for get view.
+            </summary>
+            <param name="nameOfSession">Name of session parameter.</param>
+            <param name="nameOfGroup">Name of group parameter.</param>
+            <returns>Return view.</returns>
+        </member>
+        <member name="M:SQLServerView.SessionsResultsView.ToString(System.Collections.Generic.IEnumerable{SQLServerView.SessionsResultsView})">
+            <summary>
+            Method convert view to string.
+            </summary>
+            <param name="sessionResultView"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
