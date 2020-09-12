@@ -60,11 +60,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAO.DataAccesLayer\DAO.DataAccesLayer.csproj">
+    <ProjectReference Include="..\..\src\DAO.DataAccesLayer\DAO.DataAccesLayer.csproj">
       <Project>{E2D5516A-5443-43AE-ABA8-4A8742128F7B}</Project>
       <Name>DAO.DataAccesLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ModelsInformation\ModelsInformation.csproj">
+    <ProjectReference Include="..\..\src\ModelsInformation\ModelsInformation.csproj">
       <Project>{02879790-A40D-4D6C-AC18-620608883869}</Project>
       <Name>ModelsInformation</Name>
     </ProjectReference>

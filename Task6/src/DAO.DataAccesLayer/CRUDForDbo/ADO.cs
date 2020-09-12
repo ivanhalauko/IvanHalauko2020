@@ -5,28 +5,34 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAO.DataAccesLayer
 {
+    /// <summary>
+    /// Class with implemented CRUD methods.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ADO<T> : ICRUD<T> where T : ISubstance, new()
     {
+        /// <summary>
+        /// Connection string property to database.
+        /// </summary>
         public string ConnectionString { get; set; }
+        /// <summary>
+        /// Constructor with parameter.
+        /// </summary>
+        /// <param name="connectionString"></param>
         public ADO(string connectionString)
         {
             ConnectionString = connectionString;
         }
-
         /// <summary>
         /// Create element and add to data base.
         /// </summary>
         /// <param name="substance">Object type of T.</param>
         public void CreateElement(T substance)
         {
-            // название процедуры
             var storedProcedure = "Add" + substance.GetType().Name;
-
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand(storedProcedure, connection)
@@ -39,12 +45,14 @@ namespace DAO.DataAccesLayer
                 sqlCommand.ExecuteScalar();
             }
         }
-
+        /// <summary>
+        /// Delete element from data base.
+        /// </summary>
+        /// <param name="byId">Element's Id.</param>
         public void DeleteElement(int byId)
         {
             string tableName = new T().GetType().Name;
             string storedProcedure = "Delete" + tableName + "ById";
-
             using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
             {
                 SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
@@ -60,7 +68,10 @@ namespace DAO.DataAccesLayer
                 sqlCommand.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Read all elements from database.
+        /// </summary>
+        /// <returns>Return elements from data base.</returns>
         public IEnumerable<T> ReadAllElementFromDatabase()
         {
             string tableName = new T().GetType().Name;
@@ -73,14 +84,12 @@ namespace DAO.DataAccesLayer
                     CommandType = CommandType.StoredProcedure
                 };
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-
                 try
                 {
                     DataSet ds = new DataSet();
                     sqlDataAdapter.Fill(ds);
                     DataTable test = ds.Tables[0];
                     IEnumerable<T> test3 = ToEnumerable(test);
-
                     return test3;
                 }
                 catch (SqlException sqlEx)
@@ -93,27 +102,26 @@ namespace DAO.DataAccesLayer
                 }
             }
         }
-
+        /// <summary>
+        /// Read all elements from database.
+        /// </summary>
+        /// <param name="byId">Element's Id.</param>
+        /// <returns>Return element from data base.</returns>
         public T ReadElementFromDatabase(int byId)
         {
             if (byId == 0)
                 throw new NullReferenceException("byId should not be 0");
-
             string tableName = new T().GetType().Name;
             string storedProcedure = "Show" + tableName + "ById";
-
             using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
             {
                 SqlParameter[] parameters = new SqlParameter[] { new SqlParameter("Id", byId) };
-
                 SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
                 sqlCommand.Parameters.AddRange(parameters);
-
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
-
                 try
                 {
                     DataSet ds = new DataSet();
@@ -143,11 +151,9 @@ namespace DAO.DataAccesLayer
         public IEnumerable<T> ToEnumerable(DataTable table)
         {
             List<T> list = new List<T>();
-
             foreach (var row in table.AsEnumerable())
             {
                 T obj = new T();
-
                 foreach (var prop in obj.GetType().GetProperties())
                 {
                     try
@@ -164,17 +170,19 @@ namespace DAO.DataAccesLayer
             }
             return list;
         }
-
+        /// <summary>
+        /// Update all elements in database.
+        /// </summary>
+        /// <param name="substance">Substance with new data.</param>
+        /// <returns>Returns updated element.</returns>
         public T UpdateDatabase(T substance)
         {
             if (substance == null)
             {
                 throw new ArgumentNullException();
             }
-
             string tableName = new T().GetType().Name;
             string storedProcedure = "Update" + tableName;
-
             using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection)
@@ -182,10 +190,8 @@ namespace DAO.DataAccesLayer
                     CommandType = CommandType.StoredProcedure
                 };
                 sqlCommand.Parameters.AddRange(GetUpdateParameter(substance).ToArray());
-
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                 DataSet ds = new DataSet();
-
                 try
                 {
                     sqlDataAdapter.Fill(ds);
@@ -207,8 +213,8 @@ namespace DAO.DataAccesLayer
         /// <summary>
         /// Private method for get property from objects and add their to list for sqlParameters
         /// </summary>
-        /// <param name="obj"></param>
-        /// <returns>returns list of sqlParameters.</returns>
+        /// <param name="obj">Parameter.</param>
+        /// <returns>Returns list of sqlParameters.</returns>
         private List<SqlParameter> GetUpdateParameter(object obj)
         {
             PropertyInfo[] fields = obj.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
@@ -245,7 +251,5 @@ namespace DAO.DataAccesLayer
             }
             return sqlParams;
         }
-
-
     }
 }
