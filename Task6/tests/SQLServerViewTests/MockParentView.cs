@@ -67,8 +67,8 @@ namespace SQLServerViewTests
 
             ExamTerms = new List<ExamTerms>
             {
-                new ExamTerms(){Id=1,ExamTermName="First session"},
-                new ExamTerms(){Id=2,ExamTermName="Second session"}
+                new ExamTerms(){Id=1,ExamTermName="First"},
+                new ExamTerms(){Id=2,ExamTermName="Second"}
             };
 
             ExamStudResults = new List<ExamStudResults>

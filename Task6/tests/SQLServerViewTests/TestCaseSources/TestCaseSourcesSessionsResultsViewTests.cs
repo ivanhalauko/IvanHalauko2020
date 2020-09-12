@@ -12,7 +12,7 @@ namespace SQLServerViewTests
         /// String implementation for session one group RF and no ordered.
         /// </summary>
         public static readonly string SessionOneGroupRF_NoOrdered =
-            "SessionName; GroupName; Name; Surname; Patronymic; Exam; Rating\r\n" +
+            "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
             "1; RF; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
             "1; RF; Name2; Surname2; Patronymic2; Math; 3\r\n" +
             "1; RF; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
@@ -33,7 +33,7 @@ namespace SQLServerViewTests
         /// String implementation for session one group TM and no ordered.
         /// </summary>
         public static readonly string SessionOneGroupTM_NoOrdered =
-            "SessionName; GroupName; Name; Surname; Patronymic; Exam; Rating\r\n" +
+            "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
             "1; TM; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
             "1; TM; Name2; Surname2; Patronymic2; Math; 3\r\n" +
             "1; TM; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
@@ -54,7 +54,7 @@ namespace SQLServerViewTests
         /// String implementation for session one group RF and  ordered.
         /// </summary>
         public static readonly string SessionOneGroupRF_Ordered =
-            "SessionName; GroupName; Name; Surname; Patronymic; Exam; Rating\r\n" +
+            "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
             "1; RF; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
             "1; RF; Name2; Surname2; Patronymic2; Math; 3\r\n" +
             "1; RF; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
@@ -75,7 +75,7 @@ namespace SQLServerViewTests
         /// String implementation for session one group TM and  ordered.
         /// </summary>
         public static readonly string SessionOneGroupTM_Ordered =
-            "SessionName; GroupName; Name; Surname; Patronymic; Exam; Rating\r\n" +
+            "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
             "1; TM; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
             "1; TM; Name2; Surname2; Patronymic2; Math; 3\r\n" +
             "1; TM; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +

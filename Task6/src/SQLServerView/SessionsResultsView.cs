@@ -105,7 +105,7 @@ namespace SQLServerView
         /// <returns></returns>
         public string ToString(IEnumerable<SessionsResultsView> sessionResultView)
         {
-            string[] header = { "SessionName; GroupName; FirstName; LastName; MiddleName; SubjectName; Value" };
+            string[] header = { "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating" };
             string[] data = sessionResultView.Select(p => string.Format("{0}; {1}; {2}; {3}; {4}; {5}; {6}", p.NameOfSession, p.NameOfGroup, 
                 p.Name, p.Surname, p.Patronymic, p.NameOfExam, p.Rating)).ToArray();
 
