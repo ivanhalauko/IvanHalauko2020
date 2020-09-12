@@ -23,7 +23,7 @@ namespace ModelsInformation
         /// <summary>
         /// Student's exam ID property.
         /// </summary>
-        public int IDExam { get; set; }
+        public int IDSubjects { get; set; }
        
         /// <summary>
         /// Student's groupe ID property.

@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
-    [Table("ExamStudentResults")]
+    [Table("Subjects")]
     /// <summary>
-    /// Class student's examine results.
+    /// Student's exam.
     /// </summary>
-    public class ExamStudResults : ISubstance
+    public class Subjects : ISubstance
     {
         [Key]
         /// <summary>
@@ -15,18 +15,17 @@ namespace ModelsInformation
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// Student's ID property.
+        /// Student's exam name property.
         /// </summary>
-        public int IDStudent { get; set; }
+        public string SubjectsName { get; set; }
+        /// <summary>
+        /// IsAssessment collumn.
+        /// </summary>
+        public string IsAssessment { get; set; }
 
         /// <summary>
-        /// Student's groupe ID property.
+        /// ExaminersId collumn.
         /// </summary>
-        public int IDExamForGroupe { get; set; }
-
-        /// <summary>
-        /// Student's rating after exam property.
-        /// </summary>
-        public int Rating { get; set; }
+        public int IDExaminers { get; set; }
     }
 }

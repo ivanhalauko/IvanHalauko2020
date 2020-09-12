@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ModelsInformation
+namespace ModelsInformation.Models
 {
-    [Table("Groups")]
+    [Table("Specialties")]
     /// <summary>
-    /// Student's groupe class.
+    /// Specialtie's class.
     /// </summary>
-    public class Groups : ISubstance
+    public class Specialties : ISubstance
     {
         [Key]
         /// <summary>
@@ -15,12 +15,13 @@ namespace ModelsInformation
         /// </summary>
         public int Id { get; set; }
         /// <summary>
-        /// Student's groupe name property.
-        /// </summary>
-        public string GroupeName { get; set; }
+		/// Name column in table.
+		/// </summary>
+        public string NameOfSpecialty { get; set; }
+
         /// <summary>
-        /// SpecialtiesId column in table.
+        /// Info column in table. 
         /// </summary>
-        public int IDSpecialties { get; set; }
+        public string InfoOfSpecialty { get; set; }
     }
 }

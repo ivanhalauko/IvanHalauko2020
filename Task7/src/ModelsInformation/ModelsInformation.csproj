@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\ISubstance.cs" />
-    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\Examiners.cs" />
+    <Compile Include="Models\Specialties.cs" />
+    <Compile Include="Models\Subjects.cs" />
     <Compile Include="Models\ExamForGroup.cs" />
     <Compile Include="Models\ExamStudResults.cs" />
     <Compile Include="Models\ExamTerms.cs" />
