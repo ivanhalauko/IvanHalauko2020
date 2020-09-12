@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE ExamPostDeploy
 AS
-IF not exists (SELECT * from dbo.Exam WHERE ExamName='Phisics')
+IF not exists (SELECT * from dbo.Subjects WHERE SubjectsName='Phisics')
 begin
-INSERT INTO Exam(ExamName) VALUES('Phisics')
-INSERT INTO Exam(ExamName) VALUES('Chemist')
-INSERT INTO Exam(ExamName) VALUES('Math')
-INSERT INTO Exam(ExamName) VALUES('English')
+INSERT INTO Subjects(SubjectsName) VALUES('Phisics')
+INSERT INTO Subjects(SubjectsName) VALUES('Chemist')
+INSERT INTO Subjects(SubjectsName) VALUES('Math')
+INSERT INTO Subjects(SubjectsName) VALUES('English')
 end
 GO

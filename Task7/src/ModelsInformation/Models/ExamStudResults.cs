@@ -3,16 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
-    [Table("ExamStudentResults")]
+
     /// <summary>
     /// Class student's examine results.
     /// </summary>
+    [Table("ExamStudentResults")]
     public class ExamStudResults : ISubstance
     {
-        [Key]
+
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
+        [Key]
         public int Id { get; set; }
         /// <summary>
         /// Student's ID property.

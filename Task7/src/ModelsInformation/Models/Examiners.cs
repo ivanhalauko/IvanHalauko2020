@@ -6,10 +6,11 @@ namespace ModelsInformation.Models
     [Table("Examiners")]
     public class Examiners : ISubstance
     {
-        [Key]
+
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
+        [Key]
         public int Id { get; set; }
         /// <summary>
         /// Examiner's name property.

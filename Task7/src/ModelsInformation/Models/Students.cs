@@ -4,16 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
-    [Table("Students")]
+
     /// <summary>
     /// Student's class.
     /// </summary>
+    [Table("Students")]
     public class Students : ISubstance
     {
-        [Key]
+
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
+        [Key]
         public int Id { get ; set; }
         /// <summary>
         /// Student's name property.

@@ -14,4 +14,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ExamTermName" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="17a7fe3c-7466-412c-ba40-0024c4c1e47a" ChangeDateTime="09/12/2020 20:05:06">
+    <Property Name="ElementName" Value="[dbo].[FK_ExamForGroup_Exam]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ExamForGroup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ExamForGroup_Subjects]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="50b84418-c129-44f0-be58-335e9dd8b4dd" ChangeDateTime="09/12/2020 20:05:33">
+    <Property Name="ElementName" Value="[dbo].[ExamForGroup].[IDExam]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExamForGroup]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IDSubjects" />
+  </Operation>
 </Operations>

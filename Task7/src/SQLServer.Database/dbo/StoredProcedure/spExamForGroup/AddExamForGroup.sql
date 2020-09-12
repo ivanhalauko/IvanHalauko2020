@@ -4,7 +4,7 @@
 	@IDGroupe		INT,
 	@DateGroupeExam	DATE
 AS
-	INSERT INTO ExamForGroup(IDExamTerm,IDExam,IDGroupe,DateGroupeExam)
+	INSERT INTO ExamForGroup(IDExamTerm,IDSubjects,IDGroupe,DateGroupeExam)
 	VALUES(@IDExamTerm,@IDExam,@IDGroupe,@DateGroupeExam)
 
 	SELECT SCOPE_IDENTITY()

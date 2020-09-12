@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[ExamTerms]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [ExamTermName] NVARCHAR(50) NULL
+	[Id] INT IDENTITY(1,1)   PRIMARY KEY, 
+    [ExamTermName] NVARCHAR(50) NOT NULL
 )

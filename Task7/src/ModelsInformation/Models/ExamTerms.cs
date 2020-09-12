@@ -4,16 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation
 {
-    [Table ("ExamTerms")]
+
     /// <summary>
     /// Examination terms.
     /// </summary>
+    [Table("ExamTerms")]
     public class ExamTerms  : ISubstance
     {
-        [Key]
+
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
+        [Key]
         public int Id { get; set; }
         /// <summary>
         /// Student's exam name property.

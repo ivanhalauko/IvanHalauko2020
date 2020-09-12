@@ -1,5 +1,0 @@
-﻿CREATE PROCEDURE [dbo].[DeleteExamById]
-	@Id INT
-AS
-	DELETE FROM Exam WHERE Id=@Id 
-GO

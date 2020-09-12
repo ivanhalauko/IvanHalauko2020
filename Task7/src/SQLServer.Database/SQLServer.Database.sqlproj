@@ -72,7 +72,6 @@
     <Build Include="dbo\Tables\Students.sql" />
     <Build Include="dbo\Tables\Groups.sql" />
     <Build Include="dbo\Tables\ExamTerms.sql" />
-    <Build Include="dbo\Tables\Exam.sql" />
     <Build Include="dbo\Tables\ExamStudResults.sql" />
     <Build Include="dbo\Tables\ExamForGroup.sql" />
     <Build Include="dbo\StoredProcedure\spStudents\ShowStudentsById.sql" />
@@ -105,6 +104,9 @@
     <Build Include="dbo\StoredProcedure\spExamStudResults\ShowAllExamStudResults.sql" />
     <Build Include="dbo\StoredProcedure\spExamForGroup\ShowAllExamForGroup.sql" />
     <Build Include="dbo\StoredProcedure\spExam\ShowAllExam.sql" />
+    <Build Include="dbo\Tables\Examiners.sql" />
+    <Build Include="dbo\Tables\Specialties.sql" />
+    <Build Include="dbo\Tables\Subjects.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />

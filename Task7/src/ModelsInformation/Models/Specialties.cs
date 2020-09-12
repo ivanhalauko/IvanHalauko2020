@@ -3,16 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation.Models
 {
-    [Table("Specialties")]
+
     /// <summary>
     /// Specialtie's class.
     /// </summary>
+    [Table("Specialties")]
     public class Specialties : ISubstance
     {
-        [Key]
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
+        [Key]
         public int Id { get; set; }
         /// <summary>
 		/// Name column in table.
