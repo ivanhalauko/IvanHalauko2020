@@ -13,11 +13,20 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLServer.Database", "src\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccesLayer", "src\DAO.DataAccesLayer\DAO.DataAccesLayer.csproj", "{E2D5516A-5443-43AE-ABA8-4A8742128F7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccesLayerTests", "src\DAO.DataAccesLayerTests\DAO.DataAccesLayerTests.csproj", "{1F73877A-2B00-42C3-B01A-3B5FAB217E92}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerView", "src\SQLServerView\SQLServerView.csproj", "{9AD04E66-C262-40A3-AE76-356643CD57A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerViewTests", "tests\SQLServerViewTests\SQLServerViewTests.csproj", "{CA1C0767-967D-4A84-BACC-13BAF630846A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO.DataAccesLayerTests", "tests\DAO.DataAccesLayerTests\DAO.DataAccesLayerTests.csproj", "{1F73877A-2B00-42C3-B01A-3B5FAB217E92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xmlDocuments", "xmlDocuments", "{83080DB9-912F-4AFC-9E73-77EFC02F22CF}"
+	ProjectSection(SolutionItems) = preProject
+		xmlDocuments\DAO.DataAccesLayer.xml = xmlDocuments\DAO.DataAccesLayer.xml
+		xmlDocuments\DAO.DataAccesLayerTests.xml = xmlDocuments\DAO.DataAccesLayerTests.xml
+		xmlDocuments\ModelsInformation.xml = xmlDocuments\ModelsInformation.xml
+		xmlDocuments\SQLServer.Database.xml = xmlDocuments\SQLServer.Database.xml
+		xmlDocuments\SQLServerView.xml = xmlDocuments\SQLServerView.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +48,6 @@ Global
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9AD04E66-C262-40A3-AE76-356643CD57A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9AD04E66-C262-40A3-AE76-356643CD57A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AD04E66-C262-40A3-AE76-356643CD57A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +56,10 @@ Global
 		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA1C0767-967D-4A84-BACC-13BAF630846A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +70,7 @@ Global
 		{E2D5516A-5443-43AE-ABA8-4A8742128F7B} = {C90586EC-D015-4F5A-987E-C8F33EE9BD12}
 		{9AD04E66-C262-40A3-AE76-356643CD57A3} = {C90586EC-D015-4F5A-987E-C8F33EE9BD12}
 		{CA1C0767-967D-4A84-BACC-13BAF630846A} = {701AB260-AD48-4A37-B505-4DC565C0AB8D}
+		{1F73877A-2B00-42C3-B01A-3B5FAB217E92} = {701AB260-AD48-4A37-B505-4DC565C0AB8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {856AC24C-F408-480D-8A64-C86FC3EB38A8}

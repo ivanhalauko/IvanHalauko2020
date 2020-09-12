@@ -43,9 +43,10 @@ namespace SQLServerView.Tests
                 //Arrange
                 ExpelledStudentsView expelledStudentsView = new ExpelledStudentsView(Mock.Object);
                 //Act
-                var actual = expelledStudentsView.GetView(sessionName, minPassingGrade).ToList().OrderBy(x => x.Key).Select(k => k.OrderBy(g => g.GroupName).ThenBy(i => i.StudentId));
+                var actual = expelledStudentsView.GetView(sessionName, minPassingGrade).ToList().OrderBy(x => x.Key).Select(k => k.OrderBy(g => g.NameOfGroup).ThenBy(i => i.IDStudent));
                 var actualString = expelledStudentsView.ToString(actual);
                 return actualString;
             }
         }
+    }
 }
