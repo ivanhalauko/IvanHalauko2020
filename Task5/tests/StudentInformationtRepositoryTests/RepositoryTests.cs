@@ -13,9 +13,66 @@ namespace StudentInformationtRepositoryTests
     class RepositoryTests
     {
         /// <summary>
+        /// Given show all tree when order by student results then out order descending.
+        /// </summary>
+        [TestCase]
+        public void GivenShowAllTree_WhenOrderByStudentResults_ThenOutOrderDescending()
+        {
+            //Arrange
+            Repository<TestsResult> rep = new Repository<TestsResult>();
+            rep.AVLTree.Add(new TestsResult() { Id = 0, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 02, 15), StudentTestRating = 6 });
+            rep.AVLTree.Add(new TestsResult() { Id = 1, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 03, 15), StudentTestRating = 5 });
+            rep.AVLTree.Add(new TestsResult() { Id = 2, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 04, 15), StudentTestRating = 7 });
+            rep.AVLTree.Add(new TestsResult() { Id = 3, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 05, 15), StudentTestRating = 8 });
+
+            List<TestsResult> expectedStudentsResults = new List<TestsResult>()
+            {
+                
+                new TestsResult() { Id = 3, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 04, 15), StudentTestRating = 8 },
+                new TestsResult() { Id = 2, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 04, 15), StudentTestRating = 7 },
+                new TestsResult() { Id = 0, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 02, 15), StudentTestRating = 6 },
+                new TestsResult() { Id = 1, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 03, 15), StudentTestRating = 5 },
+            };
+
+            //Act
+            var actualStudentsResults = rep.ShowAllTree().OrderByDescending(x => x.StudentTestRating);
+            //Assert
+            Assert.AreEqual(expectedStudentsResults, actualStudentsResults);
+        }
+
+        /// <summary>
+        /// Given show all tree when order by student results then out order.
+        /// </summary>
+        [TestCase]
+        public void GivenShowAllTree_WhenOrderByStudentResults_ThenOutOrder()
+        {
+            //Arrange
+            Repository<TestsResult> rep = new Repository<TestsResult>();
+            rep.AVLTree.Add(new TestsResult() { Id = 0, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 02, 15), StudentTestRating= 6 });
+            rep.AVLTree.Add(new TestsResult() { Id = 1, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 03, 15), StudentTestRating = 5 });
+            rep.AVLTree.Add(new TestsResult() { Id = 2, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 04, 15), StudentTestRating = 7 });
+            rep.AVLTree.Add(new TestsResult() { Id = 3, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 05, 15), StudentTestRating = 8 });
+
+            List<TestsResult> expectedStudentsResults = new List<TestsResult>()
+            {
+                new TestsResult() { Id = 1, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 03, 15), StudentTestRating = 5 },
+                new TestsResult() { Id = 0, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 02, 15), StudentTestRating= 6 },
+                new TestsResult() { Id = 2, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 04, 15), StudentTestRating = 7 },
+                new TestsResult() { Id = 3, IdTest = 0, IdStudent = 0, DateOfExams = new System.DateTime(2020, 04, 15), StudentTestRating = 8 },
+            };
+
+            //Act
+            var actualStudentsResults = rep.ShowAllTree().OrderBy(x => x.StudentTestRating);
+            //Assert
+            Assert.AreEqual(expectedStudentsResults, actualStudentsResults);
+        
+        
+        }
+
+        /// <summary>
         /// Given show all tree when order by student name then out is ordered.
         /// </summary>
-        [Test]
+        [TestCase]
         public void GivenShowAllTree_WhenOrderByStudentName_ThenOutIsOrdered()
         {
             //Arrange
@@ -41,7 +98,7 @@ namespace StudentInformationtRepositoryTests
         /// <summary>
         /// Given show all tree when order descending by student name then out is order descending.
         /// </summary>
-        [Test]
+        [TestCase]
         public void GivenShowAllTree_WhenOrderDescendingByStudentName_ThenOutIsOrderDescending()
         {
             //Arrange
