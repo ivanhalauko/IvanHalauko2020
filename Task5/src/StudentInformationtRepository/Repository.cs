@@ -30,12 +30,9 @@ namespace StudentInformationtRepository
         /// <param name="keySelector">Key.</param>
         /// <param name="desinding">Desinding.</param>
         /// <returns>Nodes of tree.</returns>
-        public IEnumerable<T> ShowAllTree(Func<T, string> keySelector, bool desinding)
+        public IEnumerable<T> ShowAllTree()
         {
-            if (desinding)
-                return AVLTree.InOrderTravesal().OrderBy(keySelector);
-            else
-                return AVLTree.InOrderTravesal().OrderByDescending(keySelector);
+                return AVLTree.InOrderTravesal();
         }
 
         /// <summary>

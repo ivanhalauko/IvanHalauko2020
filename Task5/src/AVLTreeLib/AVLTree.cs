@@ -13,11 +13,7 @@ namespace AVLTreeLib
         /// <summary>
         /// Property of head.
         /// </summary>
-        public AVLTreeNode<T> Head
-        {
-            get;
-            set;
-        }
+        public AVLTreeNode<T> Head{ get; set;}
 
         /// <summary>
         /// Quantity nodes of tree.
@@ -35,13 +31,10 @@ namespace AVLTreeLib
         public void Add(T value)
         {
             if (Head == null)
-            {
                 Head = new AVLTreeNode<T>(value, null, this);
-            }
             else
-            {
                 AddTo(Head, value);
-            }
+            
             Count++;
         }
 
