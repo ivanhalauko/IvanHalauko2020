@@ -25,11 +25,11 @@ namespace SerializersTests
             expectedStudentAVLTree.Add(firstStudent);
             expectedStudentAVLTree.Add(secondStudent);
             expectedStudentAVLTree.Add(thirdStudent);
-            xMLSerializer.Serialize(expectedStudentAVLTree);
+            xMLSerializer.Serialize(expectedStudentAVLTree, "xmlSerializeData");
 
-            var actualRepository = xMLSerializer.Deserialize<AVLTree<StudentInfo>>("AVLTree`1.xml");
+            var actualRepository = xMLSerializer.Deserialize<AVLTree<StudentInfo>>("xmlSerializeData/AVLTree`1.xml");
 
-            Assert.AreEqual(actualRepository, expectedStudentAVLTree);
+            Assert.AreEqual(expectedStudentAVLTree, actualRepository);
 
         }
     }

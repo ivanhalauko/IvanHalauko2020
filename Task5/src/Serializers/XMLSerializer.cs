@@ -13,12 +13,13 @@ namespace Serializers
         /// </summary>
         /// <typeparam name="T">Object type.</typeparam>
         /// <param name="obj">Object.</param>
-        public void Serialize<T>(T obj)
+        public void Serialize<T>(T obj, string path)
         {
+            
             var nameOfObjectType = obj.GetType().Name;
             XmlSerializer formatter = new XmlSerializer(typeof(T));
 
-            using (FileStream fs = new FileStream(nameOfObjectType+".xml", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream(path+"/"+nameOfObjectType+".xml", FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, obj);
             }
