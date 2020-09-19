@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarkerISerialize;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentInformationClass
 {
-    public class TestsResult : Entity
+    public class TestsResult : Entity, ISerialize
     {
         public int IdStudent { get; set; }
 

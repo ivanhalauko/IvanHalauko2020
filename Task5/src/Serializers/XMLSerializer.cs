@@ -6,7 +6,7 @@ namespace Serializers
     /// <summary>
     /// Xml serializer class.
     /// </summary>
-    public class XMLSerializer
+    public class XMLSerializer : ISerialiser
     {
         /// <summary>
         /// Serialize object.

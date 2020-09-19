@@ -30,7 +30,6 @@ namespace SerializersTests
             var actualRepository = xMLSerializer.Deserialize<AVLTree<StudentInfo>>("xmlSerializeData/AVLTree`1.xml");
 
             Assert.AreEqual(expectedStudentAVLTree, actualRepository);
-
         }
     }
 }
