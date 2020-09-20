@@ -1,21 +1,53 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Serializers
 {
-    public class JSONSerializer : ISerialiser
+    /// <summary>
+    /// Serialise class.
+    /// </summary>
+    public class JsonSerializer : ISerialiser
     {
-        T ISerialiser.Deserialize<T>(string pathToFile)
+        /// <summary>
+        /// Serialize method.
+        /// </summary>
+        /// <typeparam name="T">Type.</typeparam>
+        /// <param name="obj">Object.</param>
+        /// <param name="path">File's path.</param>
+        public void Serialize<T>(T obj, string path)
         {
-            throw new NotImplementedException();
+            var nameOfObj = obj.GetType().Name;
+            
+            using (FileStream fs = new FileStream(path + "/" + nameOfObj + ".json", FileMode.OpenOrCreate))
+            {
+                byte[] array = Encoding.Default.GetBytes(JsonConvert.SerializeObject(obj));
+                fs.Write(array, 0, array.Length);
+            }
         }
-
-        void ISerialiser.Serialize<T>(T obj, string path)
+        /// <summary>
+        /// Deserialize method.
+        /// </summary>
+        /// <typeparam name="T">Type.</typeparam>
+        /// <param name="pathToFile">File's path.</param>
+        /// <returns></returns>
+        public T Deserialize<T>(string pathToFile)
         {
-            throw new NotImplementedException();
+            if (!new FileInfo(pathToFile).Exists)
+            {
+                throw new FileNotFoundException("Path to file is not correct.");
+            }  
+            T newDeserialaize;
+
+            using (FileStream fs = new FileStream(pathToFile, FileMode.OpenOrCreate))
+            {
+                byte[] array = new byte[fs.Length];
+                fs.Read(array, 0, array.Length);
+                var str = Encoding.Default.GetString(array);
+
+                newDeserialaize = JsonConvert.DeserializeObject<T>(str);
+            }
+            return newDeserialaize;
         }
     }
 }
