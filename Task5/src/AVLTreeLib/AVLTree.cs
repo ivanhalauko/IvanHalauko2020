@@ -8,6 +8,7 @@ namespace AVLTreeLib
     /// AVL tree class.
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [Serializable]
     public class AVLTree<T> : IEnumerable<T> where T : IComparable
     {
         /// <summary>

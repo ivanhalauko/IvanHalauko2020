@@ -5,6 +5,7 @@ namespace StudentInformationClass
     /// <summary>
     /// Abstract entity class.
     /// </summary>
+    [Serializable]
     public abstract class Entity : IComparable
     {
         /// <summary>

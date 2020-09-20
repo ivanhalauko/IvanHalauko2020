@@ -5,6 +5,7 @@ namespace AVLTreeLib
     /// <summary>
     /// Node's type.
     /// </summary>
+    [Serializable]
     public class AVLTreeNode<TNode> : IComparable<TNode> where TNode : IComparable
     {
         /// <summary>

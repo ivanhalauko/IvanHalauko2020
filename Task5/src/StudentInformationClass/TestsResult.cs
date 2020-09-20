@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentInformationClass
 {
+    [Serializable]
     public class TestsResult : Entity, ISerialize
     {
         public int IdStudent { get; set; }
