@@ -57,10 +57,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BinarySerializerTests.cs" />
-    <Compile Include="JsonSerializerTest.cs" />
+    <Compile Include="SerializersTests\BinarySerializerTests.cs" />
+    <Compile Include="SerializersTests\JsonSerializerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XMLSerializerTests.cs" />
+    <Compile Include="SerializersTests\XMLSerializerTests.cs" />
+    <Compile Include="SerializerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

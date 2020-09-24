@@ -9,6 +9,7 @@ namespace StudentInformationtRepository
     /// Clas repository for varios types.
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [Serializable]
     public class Repository<T>  where T : IComparable
     {
         /// <summary>
@@ -44,6 +45,23 @@ namespace StudentInformationtRepository
             if (obj != null)
                 AVLTree.Add(obj);
         }
+        /// <summary>
+        /// Comparing one StudentTestResultRepository with another.
+        /// </summary>
+        /// <param name="obj">The compared StudentTestResultRepository.</param>
+        /// <returns>True if equal. False if not equal.</returns>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+            Repository<T> repository = (Repository<T>)obj;
+            return AVLTree.Equals(repository.AVLTree);
+        }
+        /// <summary>
+        /// Calculate hash code.
+        /// </summary>
+        /// <returns>The total hash code.</returns>
+        public override int GetHashCode() => AVLTree.GetHashCode();
 
     }
 }

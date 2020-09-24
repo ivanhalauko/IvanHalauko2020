@@ -11,6 +11,8 @@ namespace AVLTreeLib
     [Serializable]
     public class AVLTree<T> : IEnumerable<T> where T : IComparable
     {
+       
+
         /// <summary>
         /// Property of head.
         /// </summary>
@@ -25,6 +27,11 @@ namespace AVLTreeLib
             private set;
         }
 
+        public AVLTree()
+        {
+            Head = null;
+            Count = 0;
+        }
         /// <summary>
         /// Adding method nodes to tree.
         /// </summary>

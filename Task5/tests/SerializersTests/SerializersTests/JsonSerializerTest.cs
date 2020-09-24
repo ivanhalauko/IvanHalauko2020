@@ -31,5 +31,19 @@ namespace SerializersTests
 
             Assert.AreEqual(expectedStudentAVLTree, actualRepository);
         }
+
+        [Test()]
+        public void GivenJsonSerializeStudentInfoRepository_ThenOutJsonSerialize()
+        {
+            //Actual
+            JsonSerializer jsonSerializer = new JsonSerializer();
+            StudentInfo firstStudent = new StudentInfo() { Id = 0, StudentName = "Pasha" };
+           
+            //Act          
+            jsonSerializer.Serialize(firstStudent, "SerializeData");
+            var actualRepository = jsonSerializer.Deserialize<StudentInfo>("SerializeData/StudentInfo.json");
+            Assert.AreEqual(firstStudent, actualRepository);
+        }
+
     }
 }

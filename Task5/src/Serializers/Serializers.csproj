@@ -61,6 +61,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarkerISerialize\MarkerISerialize.csproj">
+      <Project>{0f78f269-11bd-4bed-aca2-3f1ff0b1713d}</Project>
+      <Name>MarkerISerialize</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

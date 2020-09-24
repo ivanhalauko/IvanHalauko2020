@@ -7,7 +7,7 @@ using MarkerISerialize;
 
 namespace Serializers
 {
-    public class Serializer<T>
+    public class Serializer
     {
         /// <summary>
         /// Property path to file.
@@ -16,7 +16,7 @@ namespace Serializers
         /// <summary>
         /// Property object.
         /// </summary>
-        public T Obj { get; set; }
+        //public T Obj { get; set; }
         /// <summary>
         /// Property serializer.
         /// </summary>
@@ -51,12 +51,12 @@ namespace Serializers
         /// <param name="serialiser">Serializer parameter.</param>
         /// <param name="obj">Object for serializing.</param>
         /// <param name="path">File's path for saving after serializing.</param>
-        public Serializer(ISerialiser serialiser, T obj, string path)
-        {
-            this.Serialiser = serialiser;
-            this.Obj = obj;
-            this.Path = path;
-        }
+        //public Serializer(ISerialiser serialiser, T obj, string path)
+        //{
+        //    this.Serialiser = serialiser;
+        //    this.Obj = obj;
+        //    this.Path = path;
+        //}
 
         public Serializer(ISerialiser serialiser, bool checkISerialize, bool checkVersion, Version version) : this(serialiser)
         {
@@ -69,7 +69,7 @@ namespace Serializers
         /// <summary>
         /// Serialize method.
         /// </summary>
-        public void Serialize(T obj, string path)
+        public void Serialize<T>(T obj, string path)
         {
             ISerialiser serialiser = (ISerialiser)Serialiser;
             if (CheckISerialize)
@@ -89,7 +89,7 @@ namespace Serializers
         /// <summary>
         /// Deserialize method.
         /// </summary>
-        public T Deserialize(string path)
+        public T Deserialize<T>(string path)
         {
             ISerialiser deserialize = (ISerialiser)Serialiser;
             var deserializeObj = deserialize.Deserialize<T>(path);
