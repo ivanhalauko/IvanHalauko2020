@@ -9,7 +9,7 @@ namespace AVLTreeLib
     /// </summary>
     /// <typeparam name="T"></typeparam>
     [Serializable]
-    public class AVLTree<T> : IEnumerable<T> where T : IComparable
+    public class AVLTree<T> where T : IComparable
     {
        
 
@@ -126,14 +126,6 @@ namespace AVLTreeLib
         {
             List<T> test = InOrderTravesal().ToList();
             return test.GetEnumerator();
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
 
         /// <summary>

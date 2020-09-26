@@ -71,6 +71,10 @@
       <Project>{AB7BFC8C-FEF7-46F0-BC36-47DE3563D240}</Project>
       <Name>AVLTreeLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\MarkerISerialize\MarkerISerialize.csproj">
+      <Project>{0F78F269-11BD-4BED-ACA2-3F1FF0B1713D}</Project>
+      <Name>MarkerISerialize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Serializers\Serializers.csproj">
       <Project>{BBCA06AA-22C8-45C5-9197-B99034ADB185}</Project>
       <Name>Serializers</Name>

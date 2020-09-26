@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using Serializers;
 using StudentInformationClass;
+using StudentInformationtRepository;
 
 namespace SerializersTests
 {

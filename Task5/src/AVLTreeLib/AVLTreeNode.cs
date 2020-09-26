@@ -6,26 +6,26 @@ namespace AVLTreeLib
     /// Node's type.
     /// </summary>
     [Serializable]
-    public class AVLTreeNode<TNode> : IComparable<TNode> where TNode : IComparable
+    public class AVLTreeNode<T> : IComparable<T> where T : IComparable
     {
         /// <summary>
         /// Field tree.
         /// </summary>
-        AVLTree<TNode> _tree;
+        AVLTree<T> _tree;
         /// <summary>
         /// Root's left descendent.
         /// </summary>
-        AVLTreeNode<TNode> _left;
+        AVLTreeNode<T> _left;
         /// <summary>
         /// Root's right descendent.
         /// </summary>
-        AVLTreeNode<TNode> _right;
+        AVLTreeNode<T> _right;
         /// <summary>
         /// Node's constructor.
         /// </summary>
         /// <param name="value">Value of node.</param>
         /// <param name="parent">Parent of node.</param>
-        public AVLTreeNode(TNode value, AVLTreeNode<TNode> parent, AVLTree<TNode> tree)
+        public AVLTreeNode(T value, AVLTreeNode<T> parent, AVLTree<T> tree)
         {
             Value = value;
             Parent = parent;
@@ -35,7 +35,7 @@ namespace AVLTreeLib
         /// Constructor AVL tree node class.
         /// </summary>
         /// <param name="value">Value of node.</param>
-        public AVLTreeNode(TNode value)
+        public AVLTreeNode(T value)
         {
             Value = value;
         }
@@ -45,17 +45,21 @@ namespace AVLTreeLib
         /// <param name="value">Node's value.</param>
         /// <param name="left">Root's left descendent.</param>
         /// <param name="right">Root's right descendent.</param>
-        public AVLTreeNode(TNode value, AVLTreeNode<TNode> left, AVLTreeNode<TNode> right )
+        public AVLTreeNode(T value, AVLTreeNode<T> left, AVLTreeNode<T> right )
         {
             Value = value;
             Left = left;
             Right = right;
         }
 
+        public AVLTreeNode()
+        {
+        }
+
         /// <summary>
         /// Node's parent reference.
         /// </summary>
-        public AVLTreeNode<TNode> Parent
+        public AVLTreeNode<T> Parent
         {
             get;
             set;
@@ -64,7 +68,7 @@ namespace AVLTreeLib
         /// <summary>
         /// Reference on the left descendent.
         /// </summary>
-        public AVLTreeNode<TNode> Left
+        public AVLTreeNode<T> Left
         {
             get
             {
@@ -83,7 +87,7 @@ namespace AVLTreeLib
         /// <summary>
         /// Reference on the right descendent.
         /// </summary>
-        public AVLTreeNode<TNode> Right
+        public AVLTreeNode<T> Right
         {
             get
             {
@@ -102,7 +106,7 @@ namespace AVLTreeLib
         /// <summary>
         /// Node's value.
         /// </summary>
-        public TNode Value
+        public T Value
         {
             get;
             set;
@@ -113,7 +117,7 @@ namespace AVLTreeLib
         /// </summary>
         /// <param name="other">Node for comparison.</param>
         /// <returns>Return 1 if other less then current.</returns>
-        public int CompareTo(TNode other)
+        public int CompareTo(T other)
         {
             return Value.CompareTo(other);
         }
@@ -175,7 +179,7 @@ namespace AVLTreeLib
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        private int MaxChildHeight(AVLTreeNode<TNode> node)
+        private int MaxChildHeight(AVLTreeNode<T> node)
         {
             if (node != null)
             {
@@ -189,7 +193,7 @@ namespace AVLTreeLib
         /// </summary>
         private void LeftRotation()
         {
-            AVLTreeNode<TNode> newRoot = Right;
+            AVLTreeNode<T> newRoot = Right;
             ReplaceRoot(newRoot);
 
             Right = newRoot.Left;
@@ -202,7 +206,7 @@ namespace AVLTreeLib
         /// </summary>
         private void RightRotation()
         {
-            AVLTreeNode<TNode> newRoot = Left;
+            AVLTreeNode<T> newRoot = Left;
             ReplaceRoot(newRoot);
 
             Left = newRoot.Right;
@@ -213,7 +217,7 @@ namespace AVLTreeLib
         /// Method root repalace.
         /// </summary>
         /// <param name="newRoot">New root.</param>
-        private void ReplaceRoot(AVLTreeNode<TNode> newRoot)
+        private void ReplaceRoot(AVLTreeNode<T> newRoot)
         {
             if (this.Parent != null)
             {
@@ -259,7 +263,7 @@ namespace AVLTreeLib
         {
             if (obj == null || GetType() != obj.GetType())
                 return false;
-            AVLTreeNode<TNode> node = (AVLTreeNode<TNode>)obj;
+            AVLTreeNode<T> node = (AVLTreeNode<T>)obj;
             return Value.Equals(node.Value);
         }
 

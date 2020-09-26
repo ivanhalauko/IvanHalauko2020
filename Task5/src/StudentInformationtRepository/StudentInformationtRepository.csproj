@@ -49,6 +49,10 @@
       <Project>{AB7BFC8C-FEF7-46F0-BC36-47DE3563D240}</Project>
       <Name>AVLTreeLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MarkerISerialize\MarkerISerialize.csproj">
+      <Project>{0F78F269-11BD-4BED-ACA2-3F1FF0B1713D}</Project>
+      <Name>MarkerISerialize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StudentInformationClass\StudentInformationClass.csproj">
       <Project>{FD352200-1574-43D3-B5E0-5BB407ED0AF0}</Project>
       <Name>StudentInformationClass</Name>

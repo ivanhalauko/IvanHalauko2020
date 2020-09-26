@@ -1,6 +1,9 @@
 ﻿using System.IO;
 using System.Text;
 using Newtonsoft.Json;
+using NUnit.Framework;
+//using System.Text.Json;
+
 
 namespace Serializers
 {
@@ -41,11 +44,12 @@ namespace Serializers
 
             using (FileStream fs = new FileStream(pathToFile, FileMode.OpenOrCreate))
             {
+                                              
                 byte[] array = new byte[fs.Length];
                 fs.Read(array, 0, array.Length);
-                var str = Encoding.Default.GetString(array);
-
+                string str = Encoding.Default.GetString(array);
                 newDeserialaize = JsonConvert.DeserializeObject<T>(str);
+
             }
             return newDeserialaize;
         }
