@@ -8,16 +8,15 @@ namespace AVLTreeLib
     /// AVL tree class.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class AVLTree<T> : IEnumerable<T> where T : IComparable
+    [Serializable]
+    public class AVLTree<T> where T : IComparable
     {
+       
+
         /// <summary>
         /// Property of head.
         /// </summary>
-        public AVLTreeNode<T> Head
-        {
-            get;
-            set;
-        }
+        public AVLTreeNode<T> Head{ get; set;}
 
         /// <summary>
         /// Quantity nodes of tree.
@@ -28,6 +27,11 @@ namespace AVLTreeLib
             private set;
         }
 
+        public AVLTree()
+        {
+            Head = null;
+            Count = 0;
+        }
         /// <summary>
         /// Adding method nodes to tree.
         /// </summary>
@@ -35,13 +39,10 @@ namespace AVLTreeLib
         public void Add(T value)
         {
             if (Head == null)
-            {
                 Head = new AVLTreeNode<T>(value, null, this);
-            }
             else
-            {
                 AddTo(Head, value);
-            }
+            
             Count++;
         }
 
@@ -125,14 +126,6 @@ namespace AVLTreeLib
         {
             List<T> test = InOrderTravesal().ToList();
             return test.GetEnumerator();
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
         }
 
         /// <summary>
