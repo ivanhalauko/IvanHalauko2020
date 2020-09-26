@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentInformationClass
 {
+    [Serializable]
     public class TestsInfo : Entity
     {
         public string TestName { get; set; }
