@@ -7,7 +7,7 @@ namespace StudentInformationClass
     /// </summary>
     [Serializable]
     public class StudentInfo : Entity
-    {   
+    {
         /// <summary>
         /// Property student's name.
         /// </summary>

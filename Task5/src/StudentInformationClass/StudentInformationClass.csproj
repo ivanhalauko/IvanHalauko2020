@@ -47,5 +47,15 @@
     <Compile Include="TestsInfo.cs" />
     <Compile Include="TestsResult.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarkerISerialize\MarkerISerialize.csproj">
+      <Project>{0F78F269-11BD-4BED-ACA2-3F1FF0B1713D}</Project>
+      <Name>MarkerISerialize</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serializers\Serializers.csproj">
+      <Project>{bbca06aa-22c8-45c5-9197-b99034adb185}</Project>
+      <Name>Serializers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
