@@ -107,6 +107,8 @@
     <Build Include="dbo\Tables\Examiners.sql" />
     <Build Include="dbo\Tables\Specialties.sql" />
     <Build Include="dbo\Tables\Subjects.sql" />
+    <Build Include="dbo\PostDeploy\ExaminersPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\SpecialtiesPostDeploy.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
@@ -118,7 +120,7 @@
   <ItemGroup>
     <PostDeploy Include="dbo\PostDeploy\Main.Script.PostDeployment.sql" />
     <Build Include="dbo\PostDeploy\StudentsPostDeploy.sql" />
-    <Build Include="dbo\PostDeploy\ExamPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\SubjectsPostDeploy.sql" />
     <Build Include="dbo\PostDeploy\ExamForGroupPostDeploy.sql" />
     <Build Include="dbo\PostDeploy\ExamTermsPostDeploy.sql" />
     <Build Include="dbo\PostDeploy\ExamStudResultsPostDeploy.sql" />

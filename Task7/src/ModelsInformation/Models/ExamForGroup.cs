@@ -36,5 +36,9 @@ namespace ModelsInformation
         /// Student's examination date property.
         /// </summary>
         public DateTime DateGroupeExam { get; set; }
+        /// <summary>
+        /// Examiners's ID property.
+        /// </summary>
+        public int IDExaminers { get; set; }
     }
 }
