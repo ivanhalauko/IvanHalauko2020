@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Data.Linq.Mapping;
 
-namespace ModelsInformation
+namespace ModelsInformation.Interfaces
 { 
     /// <summary>
     /// Interface substances class.
@@ -10,7 +10,7 @@ namespace ModelsInformation
         /// <summary>
         /// Property interfaces's Id.
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         int Id { get; set; }
     }
 }

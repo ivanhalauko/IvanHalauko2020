@@ -1,21 +1,20 @@
-﻿using System;
+﻿using ModelsInformation.Interfaces;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ModelsInformation
+namespace ModelsInformation.Models
 {
 
     /// <summary>
     /// Class student's exam groupe.
     /// </summary>
-    [Table("ExamForGroupe")]
     public class ExamForGroup : ISubstance
     {
 
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        [Key]
         public int Id { get; set; }
         /// <summary>
         /// Student's examination term ID property.

@@ -1,16 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ModelsInformation.Interfaces;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelsInformation.Models
 {
-    [Table("Examiners")]
+    /// <summary>
+    /// Examiner's class.
+    /// </summary>
     public class Examiners : ISubstance
     {
 
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        [Key]
         public int Id { get; set; }
         /// <summary>
         /// Examiner's name property.

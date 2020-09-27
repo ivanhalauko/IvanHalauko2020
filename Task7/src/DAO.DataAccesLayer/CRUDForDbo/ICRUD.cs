@@ -1,4 +1,6 @@
-﻿namespace DAO.DataAccesLayer
+﻿using System.Collections.Generic;
+
+namespace DAO.DataAccesLayer
 {
     /// <summary>
     /// Interface describes CRUD methods.
@@ -7,7 +9,7 @@
     public interface ICRUD<T>
     {
         /// <summary>
-        /// Create elements in database.
+        /// Create and Add elements to database.
         /// </summary>
         /// <param name="substance">Object add in database.</param>
         void CreateElement(T substance);
@@ -28,5 +30,10 @@
         /// </summary>
         /// <param name="byId">Object's id.</param>
         void DeleteElement(int byId);
+        /// <summary>
+        /// Read all elements from database.
+        /// </summary>
+        /// <returns>Return elements from data base.</returns>
+        IEnumerable<T> ReadAllElementFromDatabase();
     }
 }

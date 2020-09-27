@@ -1,21 +1,18 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ModelsInformation.Interfaces;
+using System;
 
-namespace ModelsInformation
+namespace ModelsInformation.Models
 {
 
     /// <summary>
     /// Student's class.
     /// </summary>
-    [Table("Students")]
     public class Students : ISubstance
     {
 
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        [Key]
         public int Id { get ; set; }
         /// <summary>
         /// Student's name property.
