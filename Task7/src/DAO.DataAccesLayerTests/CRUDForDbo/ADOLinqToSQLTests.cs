@@ -37,5 +37,21 @@ namespace DAO.DataAccesLayer.Tests
             //Assert
             Assert.AreEqual(lastAddedName, actualName);
         }
+
+        [TestCase("NameSpecialteTest3", "VaseFour")]
+        public void GivenUpdate_WhenAdded_ThenOutUpdateThisSpecialties(string name, string actualUpdateName)
+        {
+            //Arrage
+            Specialties actual = new Specialties() { NameOfSpecialty = name };
+            //Act
+            specialties = new ADOLinqToSQL<Specialties>(connectionString);
+            specialties.CreateElement(actual);
+            var lastAddedId = specialties.ReadAllElementFromDatabase().ToList().Last().Id;
+            specialties.UpdateDatabase(new Specialties() { Id = lastAddedId, NameOfSpecialty = actualUpdateName });
+            var expectedUpdetedName = specialties.ReadElementFromDatabase(lastAddedId);
+            specialties.DeleteElement(lastAddedId); //clear last addded element
+            //Assert
+            Assert.AreEqual(expectedUpdetedName.NameOfSpecialty, actualUpdateName);
+        }
     }
 }
