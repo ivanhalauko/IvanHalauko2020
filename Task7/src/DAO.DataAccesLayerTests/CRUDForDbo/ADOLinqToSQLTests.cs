@@ -1,14 +1,12 @@
 ﻿using NUnit.Framework;
-using DAO.DataAccesLayer;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ModelsInformation.Models;
 
 namespace DAO.DataAccesLayer.Tests
 {
+    /// <summary>
+    /// Test class for testing CRUD methods.
+    /// </summary>
     [TestFixture()]
     public class ADOLinqToSQLTests
     {
@@ -19,7 +17,7 @@ namespace DAO.DataAccesLayer.Tests
 
         private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SQLServer.Database_task7;Integrated Security = True; Connect Timeout=30 ; Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout = 60; Encrypt=False;TrustServerCertificate=True";
         /// <summary>
-        /// Test cases for Add.
+        /// Test cases for Add, Read and Delete CRUD-methods.
         /// </summary>
         /// <param name="actualName">Name parameter.</param>
         [TestCase("NewModernSpecialties")]
@@ -37,7 +35,11 @@ namespace DAO.DataAccesLayer.Tests
             //Assert
             Assert.AreEqual(lastAddedName, actualName);
         }
-
+        /// <summary>
+        /// Test cases for Update CRUD-method.
+        /// </summary>
+        /// <param name="name">Name of object's field.</param>
+        /// <param name="actualUpdateName">Actual update name</param>
         [TestCase("NameSpecialteTest3", "VaseFour")]
         public void GivenUpdate_WhenAdded_ThenOutUpdateThisSpecialties(string name, string actualUpdateName)
         {
