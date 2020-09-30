@@ -9,8 +9,7 @@ namespace SQLServerViewTests
 {
     /// <summary>
     /// Class for tests.
-    /// </summary>
-    
+    /// </summary>   
     public class MockParentView
     {
         /// <summary>
