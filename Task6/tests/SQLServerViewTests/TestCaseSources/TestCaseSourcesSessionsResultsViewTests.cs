@@ -13,84 +13,40 @@ namespace SQLServerViewTests
         /// </summary>
         public static readonly string SessionOneGroupRF_NoOrdered =
             "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
-            "1; RF; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
-            "1; RF; Name2; Surname2; Patronymic2; Math; 3\r\n" +
-            "1; RF; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
-            "1; RF; Name3; Surname3; Patronymic3; Philosophy; 6\r\n" +
-            "1; RF; Name3; Surname3; Patronymic3; Math; 7\r\n" +
-            "1; RF; Name3; Surname3; Patronymic3; Chemistry; 7\r\n" +
-            "1; RF; Name4; Surname4; Patronymic4; Philosophy; 5\r\n" +
-            "1; RF; Name4; Surname4; Patronymic4; Math; 8\r\n" +
-            "1; RF; Name4; Surname4; Patronymic4; Chemistry; 9\r\n" +
-            "1; RF; Name5; Surname5; Patronymic5; Philosophy; 5\r\n" +
-            "1; RF; Name5; Surname5; Patronymic5; Math; 6\r\n" +
-            "1; RF; Name5; Surname5; Patronymic5; Chemistry; 4\r\n" +
-            "1; RF; Name8; Surname8; Patronymic8; Philosophy; 8\r\n" +
-            "1; RF; Name8; Surname8; Patronymic8; Math; 9\r\n" +
-            "1; RF; Name8; Surname8; Patronymic8; Chemistry; 4";
+            "First; RF; Name1; Surname1; Patronymic1; Phisic; 4\r\n" +
+            "First; RF; Name1; Surname1; Patronymic1; Philosophy; 5\r\n" +
+            "First; RF; Name1; Surname1; Patronymic1; Math; 6\r\n" +
+            "First; RF; Name3; Surname3; Patronymic3; Phisic; 4\r\n" +
+            "First; RF; Name3; Surname3; Patronymic3; Philosophy; 5";
 
         /// <summary>
         /// String implementation for session one group TM and no ordered.
         /// </summary>
         public static readonly string SessionOneGroupTM_NoOrdered =
             "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
-            "1; TM; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
-            "1; TM; Name2; Surname2; Patronymic2; Math; 3\r\n" +
-            "1; TM; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
-            "1; TM; Name3; Surname3; Patronymic3; Philosophy; 6\r\n" +
-            "1; TM; Name3; Surname3; Patronymic3; Math; 7\r\n" +
-            "1; TM; Name3; Surname3; Patronymic3; Chemistry; 7\r\n" +
-            "1; TM; Name4; Surname4; Patronymic4; Philosophy; 5\r\n" +
-            "1; TM; Name4; Surname4; Patronymic4; Math; 8\r\n" +
-            "1; TM; Name4; Surname4; Patronymic4; Chemistry; 9\r\n" +
-            "1; TM; Name5; Surname5; Patronymic5; Philosophy; 5\r\n" +
-            "1; TM; Name5; Surname5; Patronymic5; Math; 6\r\n" +
-            "1; TM; Name5; Surname5; Patronymic5; Chemistry; 4\r\n" +
-            "1; TM; Name8; Surname8; Patronymic8; Philosophy; 8\r\n" +
-            "1; TM; Name8; Surname8; Patronymic8; Math; 9\r\n" +
-            "1; TM; Name8; Surname8; Patronymic8; Chemistry; 4";
+            "First; TM; Name2; Surname2; Patronymic2; Chemistry; 7\r\n" +
+            "First; TM; Name4; Surname4; Patronymic4; Math; 6\r\n" +
+            "First; TM; Name4; Surname4; Patronymic4; Chemistry; 7";
 
         /// <summary>
         /// String implementation for session one group RF and  ordered.
         /// </summary>
         public static readonly string SessionOneGroupRF_Ordered =
             "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
-            "1; RF; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
-            "1; RF; Name2; Surname2; Patronymic2; Math; 3\r\n" +
-            "1; RF; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
-            "1; RF; Name3; Surname3; Patronymic3; Philosophy; 6\r\n" +
-            "1; RF; Name3; Surname3; Patronymic3; Math; 7\r\n" +
-            "1; RF; Name3; Surname3; Patronymic3; Chemistry; 7\r\n" +
-            "1; RF; Name4; Surname4; Patronymic4; Philosophy; 5\r\n" +
-            "1; RF; Name4; Surname4; Patronymic4; Math; 8\r\n" +
-            "1; RF; Name4; Surname4; Patronymic4; Chemistry; 9\r\n" +
-            "1; RF; Name5; Surname5; Patronymic5; Philosophy; 5\r\n" +
-            "1; RF; Name5; Surname5; Patronymic5; Math; 6\r\n" +
-            "1; RF; Name5; Surname5; Patronymic5; Chemistry; 4\r\n" +
-            "1; RF; Name8; Surname8; Patronymic8; Philosophy; 8\r\n" +
-            "1; RF; Name8; Surname8; Patronymic8; Math; 9\r\n" +
-            "1; RF; Name8; Surname8; Patronymic8; Chemistry; 4";
+            "First; RF; Name3; Surname3; Patronymic3; Philosophy; 5\r\n" +
+            "First; RF; Name3; Surname3; Patronymic3; Math; 4\r\n" +
+            "First; RF; Name1; Surname1; Patronymic1; Chemistry; 6\r\n" +
+            "First; RF; Name1; Surname1; Patronymic1; Philosophy; 5\r\n" +
+            "First; RF; Name1; Surname1; Patronymic1; Math; 4";
 
         /// <summary>
         /// String implementation for session one group TM and  ordered.
         /// </summary>
         public static readonly string SessionOneGroupTM_Ordered =
             "SessionName; GroupName; Name; Surname; Patronymic; NameOfExam; Rating\r\n" +
-            "1; TM; Name2; Surname2; Patronymic2; Philosophy; 5\r\n" +
-            "1; TM; Name2; Surname2; Patronymic2; Math; 3\r\n" +
-            "1; TM; Name2; Surname2; Patronymic2; Chemistry; 8\r\n" +
-            "1; TM; Name3; Surname3; Patronymic3; Philosophy; 6\r\n" +
-            "1; TM; Name3; Surname3; Patronymic3; Math; 7\r\n" +
-            "1; TM; Name3; Surname3; Patronymic3; Chemistry; 7\r\n" +
-            "1; TM; Name4; Surname4; Patronymic4; Philosophy; 5\r\n" +
-            "1; TM; Name4; Surname4; Patronymic4; Math; 8\r\n" +
-            "1; TM; Name4; Surname4; Patronymic4; Chemistry; 9\r\n" +
-            "1; TM; Name5; Surname5; Patronymic5; Philosophy; 5\r\n" +
-            "1; TM; Name5; Surname5; Patronymic5; Math; 6\r\n" +
-            "1; TM; Name5; Surname5; Patronymic5; Chemistry; 4\r\n" +
-            "1; TM; Name8; Surname8; Patronymic8; Philosophy; 8\r\n" +
-            "1; TM; Name8; Surname8; Patronymic8; Math; 9\r\n" +
-            "1; TM; Name8; Surname8; Patronymic8; Chemistry; 4";
+            "First; TM; Name4; Surname4; Patronymic4; Philosophy; 7\r\n" +
+            "First; TM; Name4; Surname4; Patronymic4; Math; 6\r\n" +
+            "First; TM; Name2; Surname2; Patronymic2; Chemistry; 7";
 
         /// <summary>
         /// Parameters for tests TestCaseSourcesSessionsResultsViewTests
@@ -99,8 +55,8 @@ namespace SQLServerViewTests
         {
             get
             {
-                yield return new TestCaseData("1", "RF").Returns(SessionOneGroupRF_NoOrdered);
-                yield return new TestCaseData("1", "TM").Returns(SessionOneGroupTM_NoOrdered);
+                yield return new TestCaseData("First", "RF").Returns(SessionOneGroupRF_NoOrdered);
+                yield return new TestCaseData("First", "TM").Returns(SessionOneGroupTM_NoOrdered);
             }
         }
         /// <summary>
@@ -110,8 +66,8 @@ namespace SQLServerViewTests
         {
             get
             {
-                yield return new TestCaseData("1", "RF").Returns(SessionOneGroupRF_Ordered);
-                yield return new TestCaseData("1", "TM").Returns(SessionOneGroupTM_Ordered);
+                yield return new TestCaseData("First", "RF").Returns(SessionOneGroupRF_Ordered);
+                yield return new TestCaseData("First", "TM").Returns(SessionOneGroupTM_Ordered);
             }
         }
     }

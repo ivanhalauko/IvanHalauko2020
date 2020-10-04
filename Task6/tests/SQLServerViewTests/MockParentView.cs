@@ -90,15 +90,15 @@ namespace SQLServerViewTests
 
             Students = new List<Students>
             {
-                new Students(){Id=1, Name="Name1", Surname="Surname1", Patronymic="Patronomic1",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
-                new Students(){Id=2, Name="Name2", Surname="Surname2", Patronymic="Patronomic2",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
-                new Students(){Id=3, Name="Name3", Surname="Surname3", Patronymic="Patronomic3",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
-                new Students(){Id=4, Name="Name4", Surname="Surname4", Patronymic="Patronomic4",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
-                new Students(){Id=5, Name="Name5", Surname="Surname5", Patronymic="Patronomic5",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
-                new Students(){Id=6, Name="Name6", Surname="Surname6", Patronymic="Patronomic6",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
-                new Students(){Id=7, Name="Name7", Surname="Surname7", Patronymic="Patronomic7",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
-                new Students(){Id=8, Name="Name8", Surname="Surname8", Patronymic="Patronomic8",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
-                new Students(){Id=9, Name="Name9", Surname="Surname9", Patronymic="Patronomic9",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
+                new Students(){Id=1, Name="Name1", Surname="Surname1", Patronymic="Patronymic1",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
+                new Students(){Id=2, Name="Name2", Surname="Surname2", Patronymic="Patronymic2",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
+                new Students(){Id=3, Name="Name3", Surname="Surname3", Patronymic="Patronymic3",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
+                new Students(){Id=4, Name="Name4", Surname="Surname4", Patronymic="Patronymic4",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
+                new Students(){Id=5, Name="Name5", Surname="Surname5", Patronymic="Patronymic5",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
+                new Students(){Id=6, Name="Name6", Surname="Surname6", Patronymic="Patronymic6",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
+                new Students(){Id=7, Name="Name7", Surname="Surname7", Patronymic="Patronymic7",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
+                new Students(){Id=8, Name="Name8", Surname="Surname8", Patronymic="Patronymic8",BirthDate=new DateTime(2020,07,20), IDGroupe=2 },
+                new Students(){Id=9, Name="Name9", Surname="Surname9", Patronymic="Patronymic9",BirthDate=new DateTime(2020,07,20), IDGroupe=1 },
             };
             Exams = new List<Exam>()
             {
@@ -115,6 +115,7 @@ namespace SQLServerViewTests
             Mock.Setup(x => x.ExamsForGroups).Returns(ExamForGroup);
             Mock.Setup(x => x.ExamStudResults).Returns(ExamStudResults);
             Mock.Setup(x => x.ExamTerms).Returns(ExamTerms);
+            Mock.Setup(x => x.Students).Returns(Students);
             Mock.Setup(x => x.Exams).Returns(Exams);
         }
     }

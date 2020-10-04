@@ -34,7 +34,7 @@ namespace SQLServerView.Tests
         /// <param name="sessionName">Session name parameter.</param>
         /// <param name="groupName">Group name parameter.</param>
         /// <returns>Returns string.</returns>
-        [Test, TestCaseSource(typeof(TestCaseSourcesSessionsResultsViewTests), "GiveToString_WhenOrderByDescendingNameAndRating_ThenOutIsToStringOrderBy")]
+        [Test, TestCaseSource(typeof(TestCaseSourcesSessionsResultsViewTests), "GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy")]
         public string GiveToString_WhenOrderByDescendingFirstNameAndValue_ThenOutIsToStringOrderBy(string sessionName, string groupName)
         {
             //Arrange
