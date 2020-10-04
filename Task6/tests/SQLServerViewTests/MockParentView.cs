@@ -85,7 +85,7 @@ namespace SQLServerViewTests
                 new ExamStudResults(){Id=11, IDStudent=4, IDExamForGroupe=4, Rating=7},
                 new ExamStudResults(){Id=12, IDStudent=4, IDExamForGroupe=5, Rating=8},
                 new ExamStudResults(){Id=13, IDStudent=4, IDExamForGroupe=6, Rating=9},
-                new ExamStudResults(){Id=14, IDStudent=5, IDExamForGroupe=7, Rating=10},
+                new ExamStudResults(){Id=14, IDStudent=5, IDExamForGroupe=7, Rating=6},
             };
 
             Students = new List<Students>
