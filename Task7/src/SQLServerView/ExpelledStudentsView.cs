@@ -57,45 +57,45 @@ namespace SQLServerView
         public ExpelledStudentsView(SingletonAccessToDbo singletonAccessToDbo, IView view) : base(singletonAccessToDbo, view)
         {
         }
-        /// <summary>
-        /// Method for get view.
-        /// </summary>
-        /// <param name="sessionName">Session name parameter.</param>
-        /// <param name="minPassingGrade">Session minimum passing grade parameter.</param>
-        /// <returns>Returns new view.</returns>
-        public IEnumerable<IGrouping<string, ExpelledStudentsView>> GetView(string sessionName, int minPassingGrade)
-        {
-            IEnumerable<ExpelledStudentsView> studentsToBeExpelled =
-                (from itemSessionsResult in View.ExamStudResults
-                 join itemStudents in View.Students
-                     on itemSessionsResult.IDStudent equals itemStudents.Id
-                 join itemExamShedules in View.ExamsForGroups
-                     on itemSessionsResult.IDExamForGroupe equals itemExamShedules.Id
-                 join itemGroups in View.Groups
-                     on itemStudents.IDGroupe equals itemGroups.Id
-                 join itemSessions in View.ExamTerms
-                     on itemExamShedules.IDExamTerm equals itemSessions.Id
-                 join itemSubjects in View.Exams
-                     on itemExamShedules.IDExam equals itemSubjects.Id
-                 where itemSessions.ExamTermName == sessionName
-                     & itemSessionsResult.Rating != 0
-                 where Convert.ToInt32(itemSessionsResult.Rating) < minPassingGrade
-                 select new ExpelledStudentsView
-                 {
-                     IDStudent = itemStudents.Id,
-                     NameOfSession = itemSessions.ExamTermName,
-                     NameOfGroup = itemGroups.GroupeName,
-                     Name = itemStudents.Name,
-                     Surname = itemStudents.Surname,
-                     Patronymic = itemStudents.Patronymic
-                 }).GroupBy(x => x.IDStudent).Select(y => y.First());
+        ///// <summary>
+        ///// Method for get view.
+        ///// </summary>
+        ///// <param name="sessionName">Session name parameter.</param>
+        ///// <param name="minPassingGrade">Session minimum passing grade parameter.</param>
+        ///// <returns>Returns new view.</returns>
+        //public IEnumerable<IGrouping<string, ExpelledStudentsView>> GetView(string sessionName, int minPassingGrade)
+        //{
+        //    IEnumerable<ExpelledStudentsView> studentsToBeExpelled =
+        //        (from itemSessionsResult in View.ExamStudResults
+        //         join itemStudents in View.Students
+        //             on itemSessionsResult.IDStudent equals itemStudents.Id
+        //         join itemExamShedules in View.ExamsForGroups
+        //             on itemSessionsResult.IDExamForGroupe equals itemExamShedules.Id
+        //         join itemGroups in View.Groups
+        //             on itemStudents.IDGroupe equals itemGroups.Id
+        //         join itemSessions in View.ExamTerms
+        //             on itemExamShedules.IDExamTerm equals itemSessions.Id
+        //         join itemSubjects in View.Exams
+        //             on itemExamShedules.IDExam equals itemSubjects.Id
+        //         where itemSessions.ExamTermName == sessionName
+        //             & itemSessionsResult.Rating != 0
+        //         where Convert.ToInt32(itemSessionsResult.Rating) < minPassingGrade
+        //         select new ExpelledStudentsView
+        //         {
+        //             IDStudent = itemStudents.Id,
+        //             NameOfSession = itemSessions.ExamTermName,
+        //             NameOfGroup = itemGroups.GroupeName,
+        //             Name = itemStudents.Name,
+        //             Surname = itemStudents.Surname,
+        //             Patronymic = itemStudents.Patronymic
+        //         }).GroupBy(x => x.IDStudent).Select(y => y.First());
 
-            var studentsToBeExpelledGroupedByGroup =
-                from itemStudentsToBeExpelled in studentsToBeExpelled
-                group itemStudentsToBeExpelled by itemStudentsToBeExpelled.NameOfGroup;
+        //    var studentsToBeExpelledGroupedByGroup =
+        //        from itemStudentsToBeExpelled in studentsToBeExpelled
+        //        group itemStudentsToBeExpelled by itemStudentsToBeExpelled.NameOfGroup;
 
-            return studentsToBeExpelledGroupedByGroup;
-        }
+        //    return studentsToBeExpelledGroupedByGroup;
+        //}
 
         /// <summary>
         /// Conver view to string.

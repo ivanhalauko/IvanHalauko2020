@@ -1,33 +1,36 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ModelsInformation.Interfaces;
+using System.Data.Linq.Mapping;
 
 namespace ModelsInformation
 {
-
     /// <summary>
     /// Student's exam.
     /// </summary>
-    [Table("Subjects")]
+    [Table(Name = "Subjects")]
     public class Subjects : ISubstance
     {
-
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
+
         /// <summary>
         /// Student's exam name property.
         /// </summary>
+        [Column(Name = "SubjectsName")]
         public string SubjectsName { get; set; }
+
         /// <summary>
         /// IsAssessment collumn.
         /// </summary>
+        [Column(Name = "IsAssessment")]
         public string IsAssessment { get; set; }
 
         /// <summary>
         /// ExaminersId collumn.
         /// </summary>
+        [Column(Name = "IDExaminers")]
         public int IDExaminers { get; set; }
     }
 }

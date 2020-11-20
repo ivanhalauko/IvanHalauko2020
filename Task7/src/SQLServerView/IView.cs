@@ -1,4 +1,5 @@
 ﻿using ModelsInformation;
+using ModelsInformation.Models;
 using System.Collections.Generic;
 
 namespace SQLServerView
@@ -11,7 +12,7 @@ namespace SQLServerView
         /// <summary>
         /// Exams tables.
         /// </summary>
-        IEnumerable<Exam> Exams { get; }
+        IEnumerable<Subjects> Subjects { get; }
         /// <summary>
         /// Exams for groups tables.
         /// </summary>

@@ -1,28 +1,29 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ModelsInformation.Interfaces;
+using System.Data.Linq.Mapping;
 
 namespace ModelsInformation.Models
 {
-
     /// <summary>
     /// Specialtie's class.
     /// </summary>
-    [Table("Specialties")]
+    [Table(Name = "Specialties")]
     public class Specialties : ISubstance
     {
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
         /// <summary>
 		/// Name column in table.
 		/// </summary>
+        [Column(Name = "NameOfSpecialty")]
         public string NameOfSpecialty { get; set; }
 
         /// <summary>
         /// Info column in table. 
         /// </summary>
+        [Column(Name = "InfoOfSpecialty")]
         public string InfoOfSpecialty { get; set; }
     }
 }

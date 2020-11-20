@@ -1,25 +1,23 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using ModelsInformation.Interfaces;
+using System.Data.Linq.Mapping;
 
-namespace ModelsInformation
+namespace ModelsInformation.Models
 {
-
     /// <summary>
     /// Examination terms.
     /// </summary>
-    [Table("ExamTerms")]
+    [Table(Name = "ExamTerms")]
     public class ExamTerms  : ISubstance
     {
-
         /// <summary>
         /// Implement interface ISubstance. 
         /// </summary>
-        [Key]
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
         /// <summary>
         /// Student's exam name property.
         /// </summary>
+        [Column(Name = "ExamTermName")]
         public string ExamTermName { get; set; }
     }
 }
