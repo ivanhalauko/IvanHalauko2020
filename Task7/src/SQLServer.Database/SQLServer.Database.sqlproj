@@ -59,13 +59,6 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
-    <Folder Include="dbo\StoredProcedure" />
-    <Folder Include="dbo\StoredProcedure\spStudents" />
-    <Folder Include="dbo\StoredProcedure\spGroups" />
-    <Folder Include="dbo\StoredProcedure\spSubjects" />
-    <Folder Include="dbo\StoredProcedure\spExamTerms" />
-    <Folder Include="dbo\StoredProcedure\spExamForGroup" />
-    <Folder Include="dbo\StoredProcedure\spExamStudResults" />
     <Folder Include="dbo\PostDeploy" />
   </ItemGroup>
   <ItemGroup>
@@ -74,39 +67,11 @@
     <Build Include="dbo\Tables\ExamTerms.sql" />
     <Build Include="dbo\Tables\ExamStudResults.sql" />
     <Build Include="dbo\Tables\ExamForGroup.sql" />
-    <Build Include="dbo\StoredProcedure\spStudents\ShowStudentsById.sql" />
-    <Build Include="dbo\StoredProcedure\spStudents\AddStudents.sql" />
-    <Build Include="dbo\StoredProcedure\spStudents\UpdateStudents.sql" />
-    <Build Include="dbo\StoredProcedure\spStudents\DeleteStudentsById.sql" />
-    <Build Include="dbo\StoredProcedure\spGroups\AddGroups.sql" />
-    <Build Include="dbo\StoredProcedure\spSubjects\AddSubjects.sql" />
-    <Build Include="dbo\StoredProcedure\spExamTerms\AddExamTerms.sql" />
-    <Build Include="dbo\StoredProcedure\spExamForGroup\AddExamForGroup.sql" />
-    <Build Include="dbo\StoredProcedure\spExamStudResults\AddExamStudResults.sql" />
-    <Build Include="dbo\StoredProcedure\spGroups\DeleteGroupsById.sql" />
-    <Build Include="dbo\StoredProcedure\spExamForGroup\DeleteExamForGroupById.sql" />
-    <Build Include="dbo\StoredProcedure\spExamStudResults\DeleteExamStudResultsById.sql" />
-    <Build Include="dbo\StoredProcedure\spGroups\ShowGroupsById.sql" />
-    <Build Include="dbo\StoredProcedure\spExamStudResults\ShowExamStudResultsById.sql" />
-    <Build Include="dbo\StoredProcedure\spExamForGroup\ShowExamForGroupById.sql" />
-    <Build Include="dbo\StoredProcedure\spGroups\UpdateGroups.sql" />
-    <Build Include="dbo\StoredProcedure\spExamTerms\UpdateExamTerms.sql" />
-    <Build Include="dbo\StoredProcedure\spExamStudResults\UpdateExamStudResults.sql" />
-    <Build Include="dbo\StoredProcedure\spExamForGroup\UpdateExamForGroup.sql" />
-    <Build Include="dbo\StoredProcedure\spExamTerms\ShowExamTermsById.sql" />
-    <Build Include="dbo\StoredProcedure\spExamTerms\DeleteExamTermsById.sql" />
-    <Build Include="dbo\StoredProcedure\spSubjects\UpdateSubjects.sql" />
-    <Build Include="dbo\StoredProcedure\spSubjects\DeleteSubjectsById.sql" />
-    <Build Include="dbo\StoredProcedure\spSubjects\ShowSubjectsById.sql" />
-    <Build Include="dbo\StoredProcedure\spStudents\ShowAllStudents.sql" />
-    <Build Include="dbo\StoredProcedure\spGroups\ShowAllGroups.sql" />
-    <Build Include="dbo\StoredProcedure\spExamTerms\ShowAllExamTerms.sql" />
-    <Build Include="dbo\StoredProcedure\spExamStudResults\ShowAllExamStudResults.sql" />
-    <Build Include="dbo\StoredProcedure\spExamForGroup\ShowAllExamForGroup.sql" />
-    <Build Include="dbo\StoredProcedure\spSubjects\ShowAllSubjects.sql" />
     <Build Include="dbo\Tables\Examiners.sql" />
     <Build Include="dbo\Tables\Specialties.sql" />
     <Build Include="dbo\Tables\Subjects.sql" />
+    <Build Include="dbo\PostDeploy\ExaminersPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\SpecialtiesPostDeploy.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SQLServer.Database.publish.xml" />
@@ -118,7 +83,7 @@
   <ItemGroup>
     <PostDeploy Include="dbo\PostDeploy\Main.Script.PostDeployment.sql" />
     <Build Include="dbo\PostDeploy\StudentsPostDeploy.sql" />
-    <Build Include="dbo\PostDeploy\ExamPostDeploy.sql" />
+    <Build Include="dbo\PostDeploy\SubjectsPostDeploy.sql" />
     <Build Include="dbo\PostDeploy\ExamForGroupPostDeploy.sql" />
     <Build Include="dbo\PostDeploy\ExamTermsPostDeploy.sql" />
     <Build Include="dbo\PostDeploy\ExamStudResultsPostDeploy.sql" />

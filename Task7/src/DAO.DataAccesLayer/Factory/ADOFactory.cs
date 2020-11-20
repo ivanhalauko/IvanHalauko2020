@@ -1,4 +1,5 @@
 ﻿using ModelsInformation;
+using ModelsInformation.Models;
 
 namespace DAO.DataAccesLayer.Factory
 {
@@ -10,47 +11,52 @@ namespace DAO.DataAccesLayer.Factory
         /// <summary>
         /// Represent access to Exam table.
         /// </summary>
-        protected internal ADO<Exam> Exam { get; set; }
+        protected internal ADOLinqToSQL<Subjects> Subjects { get; set; }
         /// <summary>
         /// Represent access to ExamForGroup table.
         /// </summary>
-        protected internal ADO<ExamForGroup> ExamForGroup { get; set; }
+        protected internal ADOLinqToSQL<ExamForGroup> ExamForGroup { get; set; }
         /// <summary>
         /// Represent access to ExamStudResults table.
         /// </summary>
-        protected internal ADO<ExamStudResults> ExamStudResults { get; set; }
+        protected internal ADOLinqToSQL<ExamStudResults> ExamStudResults { get; set; }
         /// <summary>
         /// Represent access to ExamTerms table.
         /// </summary>
-        protected internal ADO<ExamTerms> ExamTerms { get; set; }
+        protected internal ADOLinqToSQL<ExamTerms> ExamTerms { get; set; }
         /// <summary>
         /// Represent access to Groups table.
         /// </summary>
-        protected internal ADO<Groups> Groups { get; set; }
+        protected internal ADOLinqToSQL<Groups> Groups { get; set; }
         /// <summary>
         /// Represent access to Students table.
         /// </summary>
-        protected internal ADO<Students> Students { get; set; }
+        protected internal ADOLinqToSQL<Students> Students { get; set; }
+        /// <summary>
+        /// Represent access to Examiners table.
+        /// </summary>
+        protected internal ADOLinqToSQL<Examiners> Examiners { get; set; }
+
         /// <summary>
         /// Constructor to initializing access with tables and get connection string to database.
         /// </summary>
         /// <param name="dbConnectionString"></param>
         public ADOFactory(string dbConnectionString)
         {
-            Exam = new ADO<Exam>(dbConnectionString);
-            ExamForGroup = new ADO<ExamForGroup>(dbConnectionString);
-            ExamStudResults = new ADO<ExamStudResults>(dbConnectionString);
-            ExamTerms = new ADO<ExamTerms>(dbConnectionString);
-            Groups = new ADO<Groups>(dbConnectionString);
-            Students = new ADO<Students>(dbConnectionString);
+            Subjects = new ADOLinqToSQL<Subjects>(dbConnectionString);
+            ExamForGroup = new ADOLinqToSQL<ExamForGroup>(dbConnectionString);
+            ExamStudResults = new ADOLinqToSQL<ExamStudResults>(dbConnectionString);
+            ExamTerms = new ADOLinqToSQL<ExamTerms>(dbConnectionString);
+            Groups = new ADOLinqToSQL<Groups>(dbConnectionString);
+            Students = new ADOLinqToSQL<Students>(dbConnectionString);
         }
         /// <summary>
         /// Factory method to create Exam table.
         /// </summary>
         /// <returns></returns>
-        public override ICRUD<Exam> CreateExam()
+        public override ICRUD<Subjects> CreateSubjects()
         {
-            return Exam;
+            return Subjects;
         }
         /// <summary>
         /// Factory method to create ExamForGroup table.
@@ -91,6 +97,14 @@ namespace DAO.DataAccesLayer.Factory
         public override ICRUD<Students> CreateStudents()
         {
             return Students;
+        }
+        /// <summary>
+        /// Factory method to create Examiners table.
+        /// </summary>
+        /// <returns></returns>
+        public override ICRUD<Examiners> CreateExaminers()
+        {
+            return Examiners;
         }
     }
 }

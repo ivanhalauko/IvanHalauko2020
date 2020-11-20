@@ -1,4 +1,5 @@
 ﻿using ModelsInformation;
+using ModelsInformation.Models;
 
 namespace DAO.DataAccesLayer.Factory
 {
@@ -36,7 +37,12 @@ namespace DAO.DataAccesLayer.Factory
         /// Create Exam abstract method.
         /// </summary>
         /// <returns></returns>
-        public abstract ICRUD<Exam> CreateExam();
+        public abstract ICRUD<Subjects> CreateSubjects();
+        /// <summary>
+        /// Create Examiners abstract method.
+        /// </summary>
+        /// <returns></returns>
+        public abstract ICRUD<Examiners> CreateExaminers();
 
 
     }

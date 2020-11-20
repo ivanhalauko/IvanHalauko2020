@@ -59,45 +59,45 @@ namespace SQLServerView
         public SessionsResultsView(SingletonAccessToDbo singletonAccessToDbo, IView view) : base(singletonAccessToDbo, view)
         {
         }
-        /// <summary>
-        /// Method for get view.
-        /// </summary>
-        /// <param name="nameOfSession">Name of session parameter.</param>
-        /// <param name="nameOfGroup">Name of group parameter.</param>
-        /// <returns>Return view.</returns>
-        public IEnumerable<SessionsResultsView> GetView(string nameOfSession, string nameOfGroup)
-        {
-            IEnumerable<SessionsResultsView> sessionResultsView =
-                from itemSessionResult in View.ExamStudResults
-                join itemStudents in View.Students
-                    on itemSessionResult.IDStudent equals itemStudents.Id
+        ///// <summary>
+        ///// Method for get view.
+        ///// </summary>
+        ///// <param name="nameOfSession">Name of session parameter.</param>
+        ///// <param name="nameOfGroup">Name of group parameter.</param>
+        ///// <returns>Return view.</returns>
+        //public IEnumerable<SessionsResultsView> GetView(string nameOfSession, string nameOfGroup)
+        //{
+        //    IEnumerable<SessionsResultsView> sessionResultsView =
+        //        from itemSessionResult in View.ExamStudResults
+        //        join itemStudents in View.Students
+        //            on itemSessionResult.IDStudent equals itemStudents.Id
 
-                join itemExamForGroups in View.ExamsForGroups
-                    on itemSessionResult.IDExamForGroupe equals itemExamForGroups.Id
+        //        join itemExamForGroups in View.ExamsForGroups
+        //            on itemSessionResult.IDExamForGroupe equals itemExamForGroups.Id
 
-                join itemGroups in View.Groups
-                    on itemStudents.IDGroupe equals itemGroups.Id
+        //        join itemGroups in View.Groups
+        //            on itemStudents.IDGroupe equals itemGroups.Id
 
-                join itemSession in View.ExamTerms
-                on itemExamForGroups.IDExamTerm equals itemSession.Id
+        //        join itemSession in View.ExamTerms
+        //        on itemExamForGroups.IDExamTerm equals itemSession.Id
 
-                join itemExam in View.Exams
-                    on itemExamForGroups.IDExam equals itemExam.Id
+        //        join itemExam in View.Exams
+        //            on itemExamForGroups.IDExam equals itemExam.Id
 
-                where itemSession.ExamTermName == nameOfSession & itemGroups.GroupeName==nameOfGroup //& int.I //IsNullOrEmpty(itemSessionResult.Rating)!=true
+        //        where itemSession.ExamTermName == nameOfSession & itemGroups.GroupeName==nameOfGroup //& int.I //IsNullOrEmpty(itemSessionResult.Rating)!=true
 
-                select new SessionsResultsView
-                {
-                    NameOfSession = itemSession.ExamTermName,
-                    NameOfGroup = itemGroups.GroupeName,
-                    Surname = itemStudents.Surname,
-                    Name = itemStudents.Name,
-                    Patronymic = itemStudents.Patronymic,
-                    NameOfExam = itemExam.ExamName,
-                    Rating = itemSessionResult.Rating  
-                };
-            return sessionResultsView;
-        }
+        //        select new SessionsResultsView
+        //        {
+        //            NameOfSession = itemSession.ExamTermName,
+        //            NameOfGroup = itemGroups.GroupeName,
+        //            Surname = itemStudents.Surname,
+        //            Name = itemStudents.Name,
+        //            Patronymic = itemStudents.Patronymic,
+        //            NameOfExam = itemExam.ExamName,
+        //            Rating = itemSessionResult.Rating  
+        //        };
+        //    return sessionResultsView;
+        //}
         /// <summary>
         /// Method convert view to string.
         /// </summary>
